@@ -131,6 +131,8 @@ NAVIGATION_LINKS = {
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
+        ("https://github.com/brianbaquiran", "Github"),
+        ("https://ph.linkedin.com/in/bbaquiran", "Linkedin"),
     ),
 }
 
