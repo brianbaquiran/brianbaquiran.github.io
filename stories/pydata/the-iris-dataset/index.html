@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="http://brianbaquiran.github.io/stories/pydata/the-iris-dataset/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Iris dataset | Lateral Thunking</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="http://brianbaquiran.github.io/stories/pydata/the-iris-dataset/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian Baquiran">
+<meta property="og:site_name" content="Lateral Thunking">
+<meta property="og:title" content="The Iris dataset">
+<meta property="og:url" content="http://brianbaquiran.github.io/stories/pydata/the-iris-dataset/">
+<meta property="og:description" content="In [1]:
+
+    
+from matplotlib import pyplot as plt
+from sklearn.datasets import load_iris
+import numpy as np
+
+
+
+
+
+
+
+
+
+In [2]:
+
+    
+data = load_iris()
+
+
+
+
+
+
+
+
+
+In [8]:
+
+    
+feature_names = data['feat">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-11-11T10:03:05+08:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://brianbaquiran.github.io/">
+
+                <span id="blog-title">Lateral Thunking</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="https://github.com/brianbaquiran">Github</a>
+                </li>
+<li>
+<a href="https://ph.linkedin.com/in/bbaquiran">Linkedin</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.ipynb" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">The Iris dataset</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">feature_names</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'feature_names'</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">feature_names</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">features</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'data'</span><span class="p">]</span>
+<span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 4.9,  3. ,  1.4,  0.2],
+       [ 4.7,  3.2,  1.3,  0.2],
+       [ 4.6,  3.1,  1.5,  0.2],
+       [ 5. ,  3.6,  1.4,  0.2],
+       [ 5.4,  3.9,  1.7,  0.4],
+       [ 4.6,  3.4,  1.4,  0.3],
+       [ 5. ,  3.4,  1.5,  0.2],
+       [ 4.4,  2.9,  1.4,  0.2],
+       [ 4.9,  3.1,  1.5,  0.1]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">target</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'target'</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="k">for</span> <span class="n">t</span><span class="p">,</span><span class="n">marker</span><span class="p">,</span><span class="n">c</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">xrange</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="s">"&gt;ox"</span><span class="p">,</span><span class="s">"rgb"</span><span class="p">):</span>
+    <span class="c"># We plot each class on its own to get different colored markers</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="n">target</span> <span class="o">==</span> <span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> 
+                <span class="n">features</span><span class="p">[</span><span class="n">target</span> <span class="o">==</span> <span class="n">t</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+                <span class="n">marker</span><span class="o">=</span><span class="n">marker</span><span class="p">,</span>
+                <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>//anaconda/envs/pydata/lib/python2.7/site-packages/matplotlib/collections.py:590: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if self._edgecolors == str('face'):
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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%0ADFJyFxHJoP8POhvoTQt4cJAAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">data</span><span class="o">.</span><span class="n">target_names</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[26]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array(['setosa', 'versicolor', 'virginica'], 
+      dtype='|S10')</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">petal_length</span> <span class="o">=</span> <span class="n">features</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">labels</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">target_names</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">is_setosa</span> <span class="o">=</span> <span class="p">(</span><span class="n">labels</span> <span class="o">==</span> <span class="s">'setosa'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    
+            <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+            </script></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2015         Brian Baquiran - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

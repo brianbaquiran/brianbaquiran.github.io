@@ -11,7 +11,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/archive.html</loc>
-  <lastmod>2015-11-10T10:59:00Z</lastmod>
+  <lastmod>2015-11-11T02:08:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/</loc>
@@ -35,7 +35,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/listings/hello.py.html</loc>
-  <lastmod>2015-11-10T10:59:00Z</lastmod>
+  <lastmod>2015-11-11T02:08:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/a-study-in-scarlet/</loc>
@@ -80,6 +80,10 @@
  <url>
   <loc>http://brianbaquiran.github.io/stories/path-handlers/</loc>
   <lastmod>2015-11-10T09:29:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/stories/pydata/the-iris-dataset/</loc>
+  <lastmod>2015-11-11T02:08:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/quickref/</loc>
