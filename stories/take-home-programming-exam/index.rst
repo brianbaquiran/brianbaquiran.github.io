@@ -1,7 +1,7 @@
 .. title: Take Home Programming Exam
 .. slug: take-home-programming-exam
 .. date: 2015-11-25 14:06:08 UTC+08:00
-.. tags: mathjax
+.. tags: mathjax programming risingtide
 .. category:
 .. link:
 .. description:
@@ -19,9 +19,12 @@ You should follow the following steps before beginning work on the problems.
 #. Create a new project repository in GitLab with the name **rtprogexam-<firstname>-<lastname>** (using your own first/last name, of course).
 #. Set the visibility level to **Private (Project access must be granted explicitly for each user)**
 #. Add Brian Baquiran (brian_risingtide) to the project members, with Guest access permissions.
-#. ``git clone`` the project to your local machine. You can begin working on the problems locally.
-#. Be sure to commit and push often.
-#. You are strongly encouraged to provide unit tests and documentation for your work.
+
+You can begin working on the problems locally.
+
+- ``git clone`` the project to your local machine.
+- Be sure to commit and push often.
+- You are strongly encouraged to provide unit tests and documentation for your work.
 
 Problem 1: Translate a block of text into an array structure
 ------------------------------------------------------------
