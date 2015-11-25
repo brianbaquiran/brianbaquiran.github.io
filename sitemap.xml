@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/archive.html</loc>
-  <lastmod>2015-11-25T11:05:00Z</lastmod>
+  <lastmod>2015-11-25T12:17:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/authors/</loc>
@@ -60,6 +60,10 @@
  <url>
   <loc>http://brianbaquiran.github.io/posts/hello-world/</loc>
   <lastmod>2015-11-25T05:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/posts/the-art-of-data-science/</loc>
+  <lastmod>2015-11-25T12:17:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/a-study-in-scarlet/</loc>
