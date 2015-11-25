@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lateral Thunking</title><link>http://brianbaquiran.github.io/</link><description>This is a demo site for Nikola.</description><atom:link href="http://brianbaquiran.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 25 Nov 2015 10:37:48 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Hello, World!</title><link>http://brianbaquiran.github.io/posts/hello-world/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;pre class="code c"&gt;&lt;a name="rest_code_8f2f7bd084344c2eb6d3c38b63f85d29-1"&gt;&lt;/a&gt;&lt;span class="cm"&gt;/* Hello World program */&lt;/span&gt;
-&lt;a name="rest_code_8f2f7bd084344c2eb6d3c38b63f85d29-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_8f2f7bd084344c2eb6d3c38b63f85d29-3"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_8f2f7bd084344c2eb6d3c38b63f85d29-4"&gt;&lt;/a&gt;
-&lt;a name="rest_code_8f2f7bd084344c2eb6d3c38b63f85d29-5"&gt;&lt;/a&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;a name="rest_code_8f2f7bd084344c2eb6d3c38b63f85d29-6"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_8f2f7bd084344c2eb6d3c38b63f85d29-7"&gt;&lt;/a&gt;    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello World"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_8f2f7bd084344c2eb6d3c38b63f85d29-8"&gt;&lt;/a&gt;
-&lt;a name="rest_code_8f2f7bd084344c2eb6d3c38b63f85d29-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;</description><category>programming</category><guid>http://brianbaquiran.github.io/posts/hello-world/</guid><pubDate>Wed, 25 Nov 2015 05:02:45 GMT</pubDate></item></channel></rss>
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lateral Thunking</title><link>http://brianbaquiran.github.io/</link><description>Random thoughts and stories</description><atom:link type="application/rss+xml" rel="self" href="http://brianbaquiran.github.io/rss.xml"></atom:link><language>en</language><lastBuildDate>Wed, 25 Nov 2015 11:05:16 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Hello, World!</title><link>http://brianbaquiran.github.io/posts/hello-world/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;pre class="code c"&gt;&lt;a name="rest_code_0bdd2e77e6764e5995b768344383d5a1-1"&gt;&lt;/a&gt;&lt;span class="cm"&gt;/* Hello World program */&lt;/span&gt;
+&lt;a name="rest_code_0bdd2e77e6764e5995b768344383d5a1-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0bdd2e77e6764e5995b768344383d5a1-3"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0bdd2e77e6764e5995b768344383d5a1-4"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0bdd2e77e6764e5995b768344383d5a1-5"&gt;&lt;/a&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_0bdd2e77e6764e5995b768344383d5a1-6"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_0bdd2e77e6764e5995b768344383d5a1-7"&gt;&lt;/a&gt;    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello World"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_0bdd2e77e6764e5995b768344383d5a1-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0bdd2e77e6764e5995b768344383d5a1-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;</description><category>programming</category><guid>http://brianbaquiran.github.io/posts/hello-world/</guid><pubDate>Sun, 25 Oct 2015 05:02:45 GMT</pubDate></item></channel></rss>
