@@ -1,7 +1,7 @@
 .. title: Take Home Programming Exam
 .. slug: take-home-programming-exam
 .. date: 2015-11-25 14:06:08 UTC+08:00
-.. tags: mathjax programming risingtide
+.. tags: mathjax, programming,risingtide,work
 .. category:
 .. link:
 .. description:
