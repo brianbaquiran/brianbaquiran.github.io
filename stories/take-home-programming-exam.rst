@@ -94,7 +94,7 @@ that contains 8 X's and 7 O's, we would compute the Index of Dissimilarity as
 
 **Write a function** ``dissimilarity`` **that computes the index of dissimilarity for a subregion in a grid**
 
-- The function should take five parameters: the grid data structure or object returned by ``loadgrid``, the X and Y indexes of one corner of the subregion, the X and Y indexes of the diagonally opposite corner of the subregion
+- The function should take five parameters: the grid data structure or object returned by ``loadgrid``, the row and column indexes of one corner of the subregion, the row and column indexes of the diagonally opposite corner of the subregion, e.g. ``dissimilarity(grid, row1, col1, row2, col2)``
 - The function should return a numeric value, the index of dissimilarity
 
 Problem 3: Simulate Schelling's Segregation Model
