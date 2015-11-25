@@ -1,12 +1,13 @@
 .. title: The Art of Data Science
 .. slug: the-art-of-data-science
 .. date: 2015-11-25 20:16:28 UTC+08:00
-.. tags:
+.. tags: datascience, books,
 .. category:
 .. link:
 .. description:
 .. type: text
 
+.. thumbnail:: /images/art-of-data-science-book.png
 
 I will admit, I was pretty stoked yesterday when `Roger Peng`_ retweeted my announcement that his new book was available.
 
@@ -19,7 +20,5 @@ I will admit, I was pretty stoked yesterday when `Roger Peng`_ retweeted my anno
 
 
 In the book, Peng and co-author Elizabeth Matsui walk us through the different activites of data analysis, from formulating questions, basic exploratory data analysis to get a rough feel for the data, to modelling the data with familiar distributions through to basic inference and prediction.
-
-.. thumbnail:: /images/art-of-data-science-book.png
 
 Using R and the datasets that come bundled with it, Peng and Matsui demonstrate how each activity is actually an iterative process itself. At each stage, it's important to evaluate what you already know (or think you know) and revise your expectations based on the data.
