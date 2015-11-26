@@ -26,6 +26,7 @@ You can begin working on the problems locally.
 - ``git clone`` the project to your local machine.
 - Be sure to commit and push often.
 - You are strongly encouraged to provide unit tests and documentation for your work.
+- You are given 48 hours to complete all three problems. Most applicants finish within 12 hours.
 
 Problem 1: Translate a block of text into an array structure
 ------------------------------------------------------------
