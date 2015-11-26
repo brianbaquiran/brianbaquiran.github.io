@@ -1,6 +1,6 @@
 .. title: Hello, World!
 .. slug: hello-world
-.. date: 2015-11-25 13:02:45 UTC+08:00
+.. date: 2015-10-25 13:02:45 UTC+08:00
 .. tags: programming
 .. category:
 .. link:
