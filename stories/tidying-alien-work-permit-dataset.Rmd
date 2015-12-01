@@ -1,0 +1,39 @@
+---
+title: "Tidying up with reshape"
+author: "Brian Baquiran"
+date: "November 29, 2015"
+output: html_document
+---
+We often get data that's preformatted for Excel. Let's demonstrate how to get it back into a workable format for data analysis.
+
+```{r}
+aliens <- read.csv("../files/data/dolealienemppermsbynatlity1978-2012.csv")
+str(aliens)
+```
+Fix: 
+Column names are in the form X<YYYY>. We want to remove the X.
+Remove the Total row. 
+
+```{r}
+aliens <- read.csv("../files/data/dolealienemppermsbynatlity1978-2012.csv",
+                   colClasses = c("factor", rep("numeric",35)), na.strings = "-")
+```
+We can eliminate the total row:
+```{r}
+library(dplyr)
+aliens <- filter(aliens, nationality != "Total")
+```
+And use reshape to convert it to a "long" table. 
+
+```{r}
+aliens <- reshape(aliens, idvar="nationality", direction="long", sep="", varying = c(2:36))
+names(aliens)[3] <- "permits"
+```
+Let's try plotting:
+```{r}
+library(ggplot2)
+p <- ggplot(data=aliens, geom="box")
+```
+
+
+
