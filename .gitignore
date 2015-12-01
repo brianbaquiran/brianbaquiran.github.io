@@ -3,3 +3,6 @@
 cache/
 output/
 .Rproj.user
+.RData
+.Rhistory
+*.Rproj
