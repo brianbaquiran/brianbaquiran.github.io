@@ -10,7 +10,8 @@ We'll be using functions from the `ddply` and `ggplot2` packages, so let's load
 them first.
 
 ```{r,warning=FALSE,message=FALSE}
-library(dplyr, ggplot2)
+library(dplyr)
+library(ggplot2)
 ```
 
 ## Loading the data
@@ -81,19 +82,14 @@ We now have a nice tidy data frame and can apply visualization.
 # Visualization 
 Our initial plot will be of a simple bar graph.
 
-```{r}
-library(ggplot2)
-
-ggplot(aliens, aes(x=time, y=permits)) + geom_bar(stat="identity")
-```
-
-We could conceiveably create a stacked bar graph with colors for each 
+Here's a stacked bar graph with colors for each 
 nationality, but with 43 nationalities it will be difficult to discern 
 individual nationalities by bar color. 
 
 ```{r}
 ggplot(aliens, aes(x=time, y=permits, fill=nationality)) + geom_bar(stat="identity") + guides(fill=FALSE)
 ```
+*Note the dip in permits issued during 1984-1985. This was a time of political turmoil that culminated in the [1986 EDSA revolution](https://en.wikipedia.org/wiki/People_Power_Revolution).*
 
 It might is easier to view them individually, which we can do by filtering the 
 dataframe before sending it to `ggplot`.
