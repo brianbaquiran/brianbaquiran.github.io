@@ -110,10 +110,11 @@ aliens %>% filter(nationality == "Japanese" |
         ggplot( aes(x=time, y=permits, color=nationality)) + geom_line()
 ```
 
-Finally, we can take a high level view of all the nationalities separately using a `facet_wrap()`. Since all the graphs are going to be tiny, we can remove the axes and tickmarks. 
+Finally, we can take a high level view of all the nationalities (except "Other Nationalities") separately using a `facet_wrap()`. Since all the graphs are 
+going to be tiny, we can remove the axes and tickmarks. 
 
 ```{r}
-aliens %>% 
+aliens %>% filter(! nationality == "Other Nationalities") %>%
         ggplot( aes(x=time, y=permits)) + geom_line() + 
         facet_wrap(~ nationality) + 
         theme(axis.title.x=element_blank()) +
