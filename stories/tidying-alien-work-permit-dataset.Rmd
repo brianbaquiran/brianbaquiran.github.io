@@ -89,6 +89,7 @@ individual nationalities by bar color.
 ```{r}
 ggplot(aliens, aes(x=time, y=permits, fill=nationality)) + geom_bar(stat="identity") + guides(fill=FALSE)
 ```
+
 *Note the dip in permits issued during 1984-1985. This was a time of political turmoil that culminated in the [1986 EDSA revolution](https://en.wikipedia.org/wiki/People_Power_Revolution).*
 
 It might is easier to view them individually, which we can do by filtering the 
