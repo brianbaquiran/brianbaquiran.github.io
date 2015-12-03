@@ -1,39 +1,128 @@
 ---
-title: "Tidying up with reshape"
-author: "Brian Baquiran"
-date: "November 29, 2015"
+title: "Tidying up and visualizing the Alien Employment Permit dataset"
 output: html_document
 ---
-We often get data that's preformatted for Excel. Let's demonstrate how to get it back into a workable format for data analysis.
+This is a cleanup-and-visualize exercise using R's reshape, dplyr and ggplot2.
+
+Our dataset will be the [Alien Employment Permits by Nationality](http://data.gov.ph/catalogue/dataset/alien-employment-permits-by-nationality), obtained from [data.gov.ph](http://data.gov.ph/). This dataset contains the number of Alien Employment Permits (AEP) issued to foreign nationals who wanted to work in the Philippines from 1978 to 2012 dissagregated by Nationality sourced from the Bureau of Local Employment (BLE).
+
+We'll be using functions from the `ddply` and `ggplot2` packages, so let's load 
+them first.
+
+```{r,warning=FALSE,message=FALSE}
+library(dplyr, ggplot2)
+```
+
+## Loading the data
+The data is provided in CSV format, so we can try `read.csv` which usually does 
+the right thing. Let's also figure out the dimensions of the dataset and take a 
+peek at the first few rows.
+```{r}
+aliens_wide <- read.csv("../files/data/dolealienemppermsbynatlity1978-2012.csv")
+dim(aliens_wide)
+```
+36 columns is a pretty wide dataset. Let's take a look at the first few rows to 
+determine what variables the columns represent.
+```{r}
+head(aliens_wide)
+```
+`read.csv` was able to load the file into a data frame and correctly identify 
+header rows. However from our initial peek at the data, we see a couple of 
+potential problems. 
+
+The first is that instead of zeros, a dash (`-`) is used to indicate no permits 
+were issued for a nationality that year. This causes read.csv to interpret any 
+column with a dash as containing factors rather than numeric data, as can be 
+seen if we use `str` to display the structure of the data frame:
 
 ```{r}
-aliens <- read.csv("../files/data/dolealienemppermsbynatlity1978-2012.csv")
-str(aliens)
+str(aliens_wide)
 ```
-Fix: 
-Column names are in the form X<YYYY>. We want to remove the X.
-Remove the Total row. 
+
+Note how some of the X<year> columns (those with dashes in the data) are 
+interpreted as factors while others are interpreted as int. 
+
+This is trivial to fix. We can specify column classes and markers for NA values
+n `read.csv`. The first column, nationality, can be read in as factors while the
+remaining columns are numeric. 
 
 ```{r}
-aliens <- read.csv("../files/data/dolealienemppermsbynatlity1978-2012.csv",
-                   colClasses = c("factor", rep("numeric",35)), na.strings = "-")
+aliens_wide <- read.csv("../files/data/dolealienemppermsbynatlity1978-2012.csv", 
+                        colClasses = c("factor", rep("numeric",35)), 
+                        na.strings = "-")
 ```
-We can eliminate the total row:
+
+The second issue is that the data comes in a wide format, with the year varying across columns and the year
+column names are in the form `X<YYYY>`. We want to remove the X.
+Lastly, there is a `Total` row, which is redundant and should be removed.
+We can eliminate the `Total` row first.
+
 ```{r}
-library(dplyr)
-aliens <- filter(aliens, nationality != "Total")
+aliens_wide <- filter(aliens_wide, nationality != "Total")
 ```
+
 And use reshape to convert it to a "long" table. 
 
 ```{r}
-aliens <- reshape(aliens, idvar="nationality", direction="long", sep="", varying = c(2:36))
+aliens <- reshape(aliens_wide, idvar="nationality", direction="long", sep="", varying = c(2:36))
 names(aliens)[3] <- "permits"
+head(aliens)
 ```
-Let's try plotting:
+
+Note that we still have NA values. We can filter these out as well.
+
+```{r}
+aliens <- filter(aliens, ! is.na(permits))
+head(aliens)
+```
+
+We now have a nice tidy data frame and can apply visualization. 
+
+# Visualization 
+Our initial plot will be of a simple bar graph.
+
 ```{r}
 library(ggplot2)
-p <- ggplot(data=aliens, geom="box")
+
+ggplot(aliens, aes(x=time, y=permits)) + geom_bar(stat="identity")
 ```
 
+We could conceiveably create a stacked bar graph with colors for each 
+nationality, but with 43 nationalities it will be difficult to discern 
+individual nationalities by bar color. 
 
+```{r}
+ggplot(aliens, aes(x=time, y=permits, fill=nationality)) + geom_bar(stat="identity") + guides(fill=FALSE)
+```
 
+It might is easier to view them individually, which we can do by filtering the 
+dataframe before sending it to `ggplot`.
+
+```{r}
+aliens %>% filter(nationality == "Japanese") %>% ggplot( aes(x=time, y=permits, fill=nationality)) + geom_bar(stat="identity")
+
+```
+
+We can filter to two or more nationalities as well, but use a line graph rather than box graph.
+
+```{r}
+aliens %>% filter(nationality == "Japanese" | 
+                          nationality =="Korean" | 
+                          nationality == "Chinese"|
+                          nationality == "American") %>% 
+        ggplot( aes(x=time, y=permits, color=nationality)) + geom_line()
+```
+
+Finally, we can take a high level view of all the nationalities separately using a `facet_wrap()`. Since all the graphs are going to be tiny, we can remove the axes and tickmarks. 
+
+```{r}
+aliens %>% 
+        ggplot( aes(x=time, y=permits)) + geom_line() + 
+        facet_wrap(~ nationality) + 
+        theme(axis.title.x=element_blank()) +
+        theme(axis.title.y=element_blank()) + 
+        theme(axis.text.y = element_blank()) +
+        theme(axis.ticks.y=element_blank()) + 
+        theme(axis.text.x = element_blank()) + 
+        theme(axis.ticks.x = element_blank())
+```
