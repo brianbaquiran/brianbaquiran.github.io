@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://brianbaquiran.github.io/</loc>
-  <lastmod>2015-11-25T09:35:00Z</lastmod>
+  <lastmod>2015-12-01T10:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/2015/</loc>
@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/archive.html</loc>
-  <lastmod>2015-11-25T12:17:00Z</lastmod>
+  <lastmod>2015-12-03T01:46:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/authors/</loc>
@@ -31,7 +31,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/</loc>
-  <lastmod>2015-11-25T13:12:00Z</lastmod>
+  <lastmod>2015-12-03T01:46:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/books/</loc>
@@ -42,8 +42,24 @@
   <lastmod>2015-11-25T13:12:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.github.io/categories/dplyr/</loc>
+  <lastmod>2015-12-03T01:46:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/categories/ggplot2/</loc>
+  <lastmod>2015-12-03T01:46:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.github.io/categories/programming/</loc>
   <lastmod>2015-11-25T10:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/categories/r-language/</loc>
+  <lastmod>2015-12-03T01:46:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/categories/visualization/</loc>
+  <lastmod>2015-12-03T01:46:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/galleries/</loc>
@@ -66,12 +82,28 @@
   <lastmod>2015-11-25T11:05:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.github.io/posts/alien-employment-permit-dataset/</loc>
+  <lastmod>2015-12-03T01:46:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/posts/asdf/</loc>
+  <lastmod>2015-12-01T12:43:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.github.io/posts/hello-world/</loc>
   <lastmod>2015-11-25T05:04:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/posts/the-art-of-data-science/</loc>
   <lastmod>2015-11-25T12:17:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/posts/tidying-alien-work-permit-dataset/</loc>
+  <lastmod>2015-12-01T10:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/posts/tidying-alien-work-permit-dataset/index.src.html</loc>
+  <lastmod>2015-12-01T12:46:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/a-study-in-scarlet/</loc>
@@ -144,6 +176,14 @@
  <url>
   <loc>http://brianbaquiran.github.io/stories/theming/</loc>
   <lastmod>2015-11-10T09:29:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/stories/tidying-alien-work-permit-dataset/</loc>
+  <lastmod>2015-12-03T01:46:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/stories/tidying-alien-work-permit-dataset/index.src.html</loc>
+  <lastmod>2015-12-03T01:55:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/upgrading-to-v6/</loc>
