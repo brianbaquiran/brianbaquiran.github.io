@@ -1,7 +1,7 @@
 .. title: Take Home Programming Exam
 .. slug: take-home-programming-exam
 .. date: 2015-11-25 14:06:08 UTC+08:00
-.. tags: mathjax, programming,risingtide,work
+.. tags: mathjax, programming, risingtide, work
 .. category:
 .. link:
 .. description:
@@ -19,7 +19,7 @@ You should follow the following steps before beginning work on the problems.
 
 #. Create a new project repository in GitLab with the name **rtprogexam-<firstname>-<lastname>** (using your own first/last name, of course).
 #. Set the visibility level to **Private (Project access must be granted explicitly for each user)**
-#. Add Brian Baquiran (brian_risingtide) to the project members, with Guest access permissions.
+#. Add Brian Baquiran (brian_risingtide) to the project members, with **Reporter** access permissions.
 
 You can begin working on the problems locally.
 
