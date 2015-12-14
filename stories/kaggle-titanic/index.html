@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="http://brianbaquiran.github.io/stories/kaggle-titanic/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Save test's passengerIds | Lateral Thunking</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://brianbaquiran.github.io/stories/kaggle-titanic/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian Baquiran">
+<meta property="og:site_name" content="Lateral Thunking">
+<meta property="og:title" content=" Save test's passengerIds">
+<meta property="og:url" content="http://brianbaquiran.github.io/stories/kaggle-titanic/">
+<meta property="og:description" content=".main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img { 
+  max-width:100%; 
+  height: auto; 
+}
+
+
+
+
+">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-12-07T16:31:07+08:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://brianbaquiran.github.io/">
+
+                <span id="blog-title">Lateral Thunking</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="https://github.com/brianbaquiran">Github</a>
+                </li>
+<li>
+<a href="https://ph.linkedin.com/in/bbaquiran">Linkedin</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.src.html" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url"> Save test's passengerIds</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img { 
+  max-width:100%; 
+  height: auto; 
+}
+</style>
+<div class="container-fluid main-container">
+
+
+<div id="header">
+<h1 class="title">Kaggle Titanic Dataset</h1>
+<h4 class="author"><em>Brian Baquiran</em></h4>
+<h4 class="date"><em>December 7, 2015</em></h4>
+</div>
+
+
+<pre class="r"><code>train &lt;- read.csv("../files/data/titanic/train.csv",stringsAsFactors = FALSE)
+test &lt;- read.csv("../files/data/titanic/test.csv",stringsAsFactors = FALSE)</code></pre>
+<p>Check for missing data</p>
+<pre class="r"><code>plyr::ldply(train, function(x){sum(is.na(x))},.id="Column")</code></pre>
+<pre><code>##         Column  V1
+## 1  PassengerId   0
+## 2     Survived   0
+## 3       Pclass   0
+## 4         Name   0
+## 5          Sex   0
+## 6          Age 177
+## 7        SibSp   0
+## 8        Parch   0
+## 9       Ticket   0
+## 10        Fare   0
+## 11       Cabin   0
+## 12    Embarked   0</code></pre>
+<pre class="r"><code>plyr::ldply(test, function(x){sum(is.na(x))},.id="Column")</code></pre>
+<pre><code>##         Column V1
+## 1  PassengerId  0
+## 2       Pclass  0
+## 3         Name  0
+## 4          Sex  0
+## 5          Age 86
+## 6        SibSp  0
+## 7        Parch  0
+## 8       Ticket  0
+## 9         Fare  1
+## 10       Cabin  0
+## 11    Embarked  0</code></pre>
+<p>Age information is missing from both the training and test datasets. There is also one row in the test set that is missing its fare. We will have to resolve this later.</p>
+<div id="remove-passengerid-and-convert-survived-sex-and-embarked-to-factors" class="section level1">
+<h1>Remove PassengerId and convert Survived, Sex, and Embarked to factors</h1>
+<pre class="r"><code>library(dplyr)
+train &lt;- transmute(train, Survived=as.factor(Survived), Pclass=as.factor(Pclass),Name,Sex=as.factor(Sex),Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked=as.factor(Embarked))
+# Save test's passengerIds
+test_PassengerId &lt;- test$PassengerId
+test &lt;- transmute(test, Pclass=as.factor(Pclass),Name,Sex=as.factor(Sex),Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked=as.factor(Embarked))</code></pre>
+</div>
+<div id="fill-in-missing-age-with-average-age" class="section level1">
+<h1>Fill in missing age with average age</h1>
+<pre class="r"><code>mean_age &lt;- mean(train$Age, na.rm=TRUE)
+train[is.na(train$Age),"Age"] &lt;- mean_age
+test[is.na(test$Age),"Age"]&lt;-mean_age</code></pre>
+</div>
+<div id="fill-in-missing-fare" class="section level1">
+<h1>Fill in missing Fare</h1>
+<p>Can we use the same strategy for filling in the one passenger without fare information?</p>
+<pre class="r"><code>mean(c(train$Fare), na.rm=TRUE)</code></pre>
+<pre><code>## [1] 32.20421</code></pre>
+<p>This looks exceedingly high for the times.</p>
+<pre class="r"><code>summary(train$Fare)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    0.00    7.91   14.45   32.20   31.00  512.30</code></pre>
+<p>Perhaps the median would be a better replacement</p>
+<pre class="r"><code>median_fare &lt;-median(train$Fare, na.rm=TRUE)
+test[is.na(test$Fare),"Fare"] &lt;- median_fare</code></pre>
+</div>
+<div id="split-training-set-into-a-training-and-cross-validation-set" class="section level1">
+<h1>Split training set into a training and cross-validation set</h1>
+<pre class="r"><code>train_train &lt;- train[1:791,]
+train_cv &lt;- train[792:891,]</code></pre>
+</div>
+<div id="naivebayes" class="section level1">
+<h1>NaiveBayes</h1>
+<pre class="r"><code>library(e1071)</code></pre>
+<pre><code>## Warning: package 'e1071' was built under R version 3.2.2</code></pre>
+<pre class="r"><code>convert_age &lt;- function(x) {
+        r &lt;- c()
+        children &lt;- x &lt; 18
+        adults &lt;- !children
+        r[children] &lt;- "Child"
+        r[adults] &lt;- "Adult"
+        as.factor(r)
+}
+train_train$Age_class &lt;- convert_age(train_train$Age)
+train_cv$Age_class &lt;- convert_age(train_cv$Age)
+m_bayes_1 &lt;- naiveBayes(Survived ~ Pclass+Sex+
+                                SibSp+Parch+Fare+Embarked+Name
+                ,data=train_train,laplace=1)
+preds_bayes_1 &lt;- predict(m_bayes_1, as.data.frame(train_cv))</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre class="r"><code>mean(preds_bayes_1==train_cv$Survived)</code></pre>
+<pre><code>## [1] 0.84</code></pre>
+<p>Let’s try factoring in family size.</p>
+<pre class="r"><code>train_train &lt;-mutate(train_train, family_size=SibSp+Parch )
+train_cv &lt;- mutate(train_cv, family_size=SibSp+Parch)
+m_bayes_2 &lt;- naiveBayes(Survived ~ Pclass+Sex+Age_class+SibSp+Parch+Fare+Embarked+Name+family_size,
+                train_train, laplace=1)
+preds_bayes_2 &lt;- predict(m_bayes_2, as.data.frame(train_cv))</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre class="r"><code>mean(preds_bayes_2==train_cv$Survived)</code></pre>
+<pre><code>## [1] 0.87</code></pre>
+<p>Let’s try extracting title</p>
+<pre class="r"><code>titles_train &lt;- regmatches(train_train$Name, regexpr("Mr.|Mrs.|Miss.|Master.|Lady.|Countess.|Col.|Dr.|Rev.|Don.|Mme.|Major.|Ms.|Mlle.|Capt.|Jonkheer.",train_train$Name))
+train_train$title &lt;- titles_train
+
+titles_cv &lt;- regmatches(train_cv$Name, regexpr("Mr.|Mrs.|Miss.|Master.|Lady.|Countess.|Col.|Dr.|Rev.|Don.|Mme.|Major.|Ms.|Mlle.|Capt.|Jonkheer.",train_cv$Name))
+train_cv$title &lt;- titles_cv
+
+train_train &lt;- mutate(train_train, title=as.factor(title))
+train_cv &lt;- mutate(train_cv, title=as.factor(title))
+
+m_bayes_3 &lt;- naiveBayes(Survived ~ Pclass+Sex+Age_class+SibSp+Parch+Fare+Embarked+Name+family_size+title,
+                train_train, laplace=1)
+preds_bayes_3 &lt;- predict(m_bayes_3, as.data.frame(train_cv))</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre class="r"><code>mean(preds_bayes_3==train_cv$Survived)</code></pre>
+<pre><code>## [1] 0.83</code></pre>
+<table>
+<thead><tr class="header">
+<th align="left">Naive Bayesian Model</th>
+<th align="left">Features</th>
+<th align="left">Accuracy</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">m_bayes_1</td>
+<td align="left">Pclass+Sex+Age+SibSp+Parch+Fare+Embarked+Name</td>
+<td align="left">0.85</td>
+</tr>
+<tr class="even">
+<td align="left">m_bayes_2</td>
+<td align="left">+ family size</td>
+<td align="left">0.87</td>
+</tr>
+<tr class="odd">
+<td align="left">m_bayes_3</td>
+<td align="left">+ title</td>
+<td align="left">0.82</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="knn" class="section level1">
+<h1>KNN</h1>
+<p>KNN doesn’t handle factors. They have to be converted to integer dummy variables</p>
+<pre class="r"><code>train_knn &lt;- transmute(train_train, Pclass,Age,
+                       Sex=as.numeric(train_train$Sex=="male"),
+                       SibSp,Parch,Fare,
+                       Embarked_C=as.numeric(train_train$Embarked=="C"),
+                       Embarked_Q=as.numeric(train_train$Embarked=="Q"),
+                       Embarked_S=as.numeric(train_train$Embarked=="S"))
+train_cv_knn &lt;- transmute(train_cv, Pclass,Age,
+                          Sex=as.numeric(train_cv$Sex=="male"),
+                          SibSp,Parch,Fare,
+                          Embarked_C=as.numeric(train_cv$Embarked=="C"),
+                          Embarked_Q=as.numeric(train_cv$Embarked=="Q"),
+                          Embarked_S=as.numeric(train_cv$Embarked=="S"))</code></pre>
+<pre class="r"><code>library(class)</code></pre>
+<pre><code>## Warning: package 'class' was built under R version 3.2.2</code></pre>
+<pre class="r"><code>preds_knn_1 &lt;- knn(train_knn, train_cv_knn, train_train$Survived)
+#preds_knn_1 == train_cv$Survived
+mean(preds_knn_1 == train_cv$Survived)</code></pre>
+<pre><code>## [1] 0.71</code></pre>
+</div>
+<div id="prepare-submission-to-kaggle" class="section level1">
+<h1>Prepare submission to Kaggle</h1>
+<pre class="r"><code>test_prediction &lt;- predict(m_bayes_1, as.data.frame(test))</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre><code>## Warning in data.matrix(newdata): NAs introduced by coercion</code></pre>
+<pre class="r"><code>solution &lt;- data_frame(PassengerId=test_PassengerId, Survived=test_prediction)
+write.csv(solution,"bayesian.csv", row.names=FALSE)</code></pre>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</div>
+    
+
+</article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2015
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-10693543-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

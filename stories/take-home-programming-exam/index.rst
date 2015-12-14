@@ -92,7 +92,7 @@ that contains 8 X's and 7 O's, we would compute the Index of Dissimilarity as
 
     Index of Dissimilarity = :math:`0.5 |\frac{8}{44} - \frac{7}{50}|` (there are 44 X's and 50 O's in the entire region)
 
-    Index of Dissimilarity = :math:`0.04181818181818 \approx 0.042`
+    Index of Dissimilarity = :math:`0.02090909090909 \approx 0.021`
 
 **Write a function** ``dissimilarity`` **that computes the index of dissimilarity for a subregion in a grid**
 

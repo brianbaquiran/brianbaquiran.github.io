@@ -111,16 +111,16 @@ To submit your work, you will need an account on <a class="reference external" h
 <div class="section" id="problem-1-translate-a-block-of-text-into-an-array-structure">
 <h2>Problem 1: Translate a block of text into an array structure</h2>
 <p>Given a text file that looks like this:</p>
-<pre class="code text"><a name="rest_code_7ccf1afae1474ef48dea98573b142b2a-1"></a>XXOOXOXOXO
-<a name="rest_code_7ccf1afae1474ef48dea98573b142b2a-2"></a>XOOXOXOXOX
-<a name="rest_code_7ccf1afae1474ef48dea98573b142b2a-3"></a>OXX XOOXOX
-<a name="rest_code_7ccf1afae1474ef48dea98573b142b2a-4"></a>OXXXOOX XO
-<a name="rest_code_7ccf1afae1474ef48dea98573b142b2a-5"></a>XOOXOXOXXO
-<a name="rest_code_7ccf1afae1474ef48dea98573b142b2a-6"></a>XOX XXO OX
-<a name="rest_code_7ccf1afae1474ef48dea98573b142b2a-7"></a>XXOOXOXOXO
-<a name="rest_code_7ccf1afae1474ef48dea98573b142b2a-8"></a>XO OXOOXOO
-<a name="rest_code_7ccf1afae1474ef48dea98573b142b2a-9"></a>OXXXOO OXO
-<a name="rest_code_7ccf1afae1474ef48dea98573b142b2a-10"></a>OOOOOOOXOX
+<pre class="code text"><a name="rest_code_6335b7abda7b43d4a0700a5e33dc806b-1"></a>XXOOXOXOXO
+<a name="rest_code_6335b7abda7b43d4a0700a5e33dc806b-2"></a>XOOXOXOXOX
+<a name="rest_code_6335b7abda7b43d4a0700a5e33dc806b-3"></a>OXX XOOXOX
+<a name="rest_code_6335b7abda7b43d4a0700a5e33dc806b-4"></a>OXXXOOX XO
+<a name="rest_code_6335b7abda7b43d4a0700a5e33dc806b-5"></a>XOOXOXOXXO
+<a name="rest_code_6335b7abda7b43d4a0700a5e33dc806b-6"></a>XOX XXO OX
+<a name="rest_code_6335b7abda7b43d4a0700a5e33dc806b-7"></a>XXOOXOXOXO
+<a name="rest_code_6335b7abda7b43d4a0700a5e33dc806b-8"></a>XO OXOOXOO
+<a name="rest_code_6335b7abda7b43d4a0700a5e33dc806b-9"></a>OXXXOO OXO
+<a name="rest_code_6335b7abda7b43d4a0700a5e33dc806b-10"></a>OOOOOOOXOX
 </pre>
 <p>Each character represents a space in a rectangular grid. The space may be occupied by either an agent, or it may be an empty space. There are two types of agents: X and O.</p>
 <p><strong>Write a function</strong> <tt class="docutils literal">loadgrid</tt> <strong>that reads a text file and returns an object or data structure array representing the grid, populated with the contents of the text file.</strong></p>
@@ -155,15 +155,15 @@ To submit your work, you will need an account on <a class="reference external" h
 <span class="math">\(Index of Dissimilarity = 0.5 |\frac{x_i}{X} - \frac{o_i}{O}|\)</span>
 </blockquote>
 <p>For example, if we take the upper rightmost 4x4 region from the example grid above:</p>
-<pre class="code text"><a name="rest_code_ea6de32aeffa40fd9964a72b0ae6eef8-1"></a>XOXO
-<a name="rest_code_ea6de32aeffa40fd9964a72b0ae6eef8-2"></a>OXOX
-<a name="rest_code_ea6de32aeffa40fd9964a72b0ae6eef8-3"></a>OXOX
-<a name="rest_code_ea6de32aeffa40fd9964a72b0ae6eef8-4"></a>X XO
+<pre class="code text"><a name="rest_code_6c115a8c3b07470da8b71907716e6d69-1"></a>XOXO
+<a name="rest_code_6c115a8c3b07470da8b71907716e6d69-2"></a>OXOX
+<a name="rest_code_6c115a8c3b07470da8b71907716e6d69-3"></a>OXOX
+<a name="rest_code_6c115a8c3b07470da8b71907716e6d69-4"></a>X XO
 </pre>
 <p>that contains 8 X's and 7 O's, we would compute the Index of Dissimilarity as</p>
 <blockquote>
 <p>Index of Dissimilarity = <span class="math">\(0.5 |\frac{8}{44} - \frac{7}{50}|\)</span> (there are 44 X's and 50 O's in the entire region)</p>
-<p>Index of Dissimilarity = <span class="math">\(0.04181818181818 \approx 0.042\)</span></p>
+<p>Index of Dissimilarity = <span class="math">\(0.02090909090909 \approx 0.021\)</span></p>
 </blockquote>
 <p><strong>Write a function</strong> <tt class="docutils literal">dissimilarity</tt> <strong>that computes the index of dissimilarity for a subregion in a grid</strong></p>
 <ul class="simple">
