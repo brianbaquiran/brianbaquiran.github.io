@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>http://brianbaquiran.github.io/authors/brian-baquiran.xml</loc>
-  <lastmod>2015-12-03T02:16:00Z</lastmod>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.github.io/authors/roberto-alsina.xml</loc>
@@ -18,43 +18,59 @@
   <lastmod>2015-11-25T13:12:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.github.io/categories/coding.xml</loc>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.github.io/categories/datascience.xml</loc>
   <lastmod>2015-11-25T13:12:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.github.io/categories/dplyr.xml</loc>
-  <lastmod>2015-12-03T02:16:00Z</lastmod>
+  <lastmod>2015-12-20T01:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.github.io/categories/ggplot2.xml</loc>
-  <lastmod>2015-12-03T02:16:00Z</lastmod>
+  <lastmod>2015-12-20T01:53:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://brianbaquiran.github.io/categories/namedtuple.xml</loc>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.github.io/categories/programming.xml</loc>
   <lastmod>2015-11-25T10:59:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.github.io/categories/pycharm.xml</loc>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://brianbaquiran.github.io/categories/python.xml</loc>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.github.io/categories/r-language.xml</loc>
-  <lastmod>2015-12-03T02:16:00Z</lastmod>
+  <lastmod>2015-12-20T01:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.github.io/categories/visualization.xml</loc>
-  <lastmod>2015-12-03T02:16:00Z</lastmod>
+  <lastmod>2015-12-20T01:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.github.io/galleries/demo/rss.xml</loc>
-  <lastmod>2015-12-04T05:48:00Z</lastmod>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.github.io/galleries/rss.xml</loc>
-  <lastmod>2015-12-04T05:48:00Z</lastmod>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.github.io/rss.xml</loc>
-  <lastmod>2015-12-14T16:03:00Z</lastmod>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.github.io/sitemap.xml</loc>
-  <lastmod>2015-12-14T16:03:00Z</lastmod>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
  </sitemap>
 </sitemapindex>

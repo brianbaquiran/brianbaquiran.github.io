@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/archive.html</loc>
-  <lastmod>2015-12-04T05:48:00Z</lastmod>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/authors/</loc>
@@ -31,11 +31,15 @@
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/</loc>
-  <lastmod>2015-12-03T01:46:00Z</lastmod>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/books/</loc>
   <lastmod>2015-11-25T13:12:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/categories/coding/</loc>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/datascience/</loc>
@@ -50,8 +54,20 @@
   <lastmod>2015-12-03T01:46:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.github.io/categories/namedtuple/</loc>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.github.io/categories/programming/</loc>
   <lastmod>2015-11-25T10:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/categories/pycharm/</loc>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/categories/python/</loc>
+  <lastmod>2015-12-20T01:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/r-language/</loc>
@@ -79,7 +95,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/listings/hello.py.html</loc>
-  <lastmod>2015-12-04T05:48:00Z</lastmod>
+  <lastmod>2015-12-20T03:24:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/posts/alien-employment-permit-dataset/</loc>
@@ -88,6 +104,10 @@
  <url>
   <loc>http://brianbaquiran.github.io/posts/hello-world/</loc>
   <lastmod>2015-11-25T05:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/posts/namedtuple-comes-in-handy/</loc>
+  <lastmod>2015-12-20T01:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/posts/the-art-of-data-science/</loc>
