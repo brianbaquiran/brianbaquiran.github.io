@@ -141,7 +141,7 @@ def fork():
 </pre>
 <p>There are already applications and other libraries using our functions <tt class="docutils literal">teaspoon</tt>, <tt class="docutils literal">knife</tt> and <tt class="docutils literal">fork</tt>:</p>
 <pre class="literal-block">
-# an app or module that uses our silverware module
+# this is dinnertable.py, an app or module that uses our silverware module
 from silverware import teaspoon
 
 teaspoon()
@@ -152,14 +152,30 @@ silverware/
   silverware/
     __init__.py
     silverware.py
+    spoons.py
+    forks.py
   setup.py
   .gitignore
 </pre>
 <p>To maintain API compatibility with the applications and modules that were already using <tt class="docutils literal">silverware</tt>, we place the following in <tt class="docutils literal">__init__.py</tt>:</p>
 <pre class="literal-block">
 # __init__.py of the silverware package
-from .silverware import teaspoon, knife, fork
+from silverware.spoons import teaspoon
+from silverware.forks import fork
+from silverware.silverware import knife
 </pre>
+<p>This effectively places teaspoon, knife and fork in the <cite>silverware</cite> namespace and allows <tt class="docutils literal">dinnertable.py</tt> to still use <tt class="docutils literal">from silverware import teaspoon</tt> even if <tt class="docutils literal">teaspoon</tt> is defined in the <tt class="docutils literal">silverware.spoons</tt> module and <tt class="docutils literal">fork</tt> in the <tt class="docutils literal">silverware.forks</tt> module.</p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p>I used absolute imports in this example. You could, conceivably, use relative imports like this:</p>
+<pre class="literal-block">
+# __init__.py of the silverware package
+from spoons import teaspoon
+from forks import fork
+from silverware import knife
+</pre>
+<p class="last">And it would work just fine. But explicit is better than implicit.</p>
+</div>
 </div>
 </div>
     </div>

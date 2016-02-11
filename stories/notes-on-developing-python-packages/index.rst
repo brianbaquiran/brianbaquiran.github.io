@@ -67,7 +67,7 @@ For example, if we have an existing module ``silverware``::
 
 There are already applications and other libraries using our functions ``teaspoon``, ``knife`` and ``fork``::
 
-  # an app or module that uses our silverware module
+  # this is dinnertable.py, an app or module that uses our silverware module
   from silverware import teaspoon
 
   teaspoon()
@@ -78,17 +78,28 @@ If we want to turn the ``silverware`` module into a package, possibly containing
     silverware/
       __init__.py
       silverware.py
+      spoons.py
+      forks.py
     setup.py
     .gitignore
 
 To maintain API compatibility with the applications and modules that were already using ``silverware``, we place the following in ``__init__.py``::
 
     # __init__.py of the silverware package
-    from .silverware import teaspoon, knife, fork
+    from silverware.spoons import teaspoon
+    from silverware.forks import fork
+    from silverware.silverware import knife
 
+This effectively places teaspoon, knife and fork in the `silverware` namespace and allows ``dinnertable.py`` to still use ``from silverware import teaspoon`` even if ``teaspoon`` is defined in the ``silverware.spoons`` module and ``fork`` in the ``silverware.forks`` module.
 
+.. note:: I used absolute imports in this example. You could, conceivably, use relative imports like this::
 
+    # __init__.py of the silverware package
+    from spoons import teaspoon
+    from forks import fork
+    from silverware import knife
 
+  And it would work just fine. But explicit is better than implicit.
 
 .. _cookiecutter:  http://cookiecutter.readthedocs.org
 .. _Reddit thread: https://www.reddit.com/r/Python/comments/1bbbwk/whats_your_opinion_on_what_to_include_in_init_py/

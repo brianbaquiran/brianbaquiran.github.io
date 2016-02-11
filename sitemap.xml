@@ -7,15 +7,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://brianbaquiran.github.io/</loc>
-  <lastmod>2016-01-26T11:23:00Z</lastmod>
+  <lastmod>2016-02-11T02:19:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/2015/</loc>
   <lastmod>2015-11-25T05:04:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.github.io/2016/</loc>
+  <lastmod>2016-02-11T02:19:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.github.io/archive.html</loc>
-  <lastmod>2016-01-20T13:01:00Z</lastmod>
+  <lastmod>2016-02-11T02:19:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/authors/</loc>
@@ -112,6 +116,10 @@
  <url>
   <loc>http://brianbaquiran.github.io/posts/the-art-of-data-science/</loc>
   <lastmod>2015-11-25T12:17:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/posts/the-business-of-big-data-analytics-meetup-3/</loc>
+  <lastmod>2016-02-11T02:19:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/a-study-in-scarlet/</loc>
