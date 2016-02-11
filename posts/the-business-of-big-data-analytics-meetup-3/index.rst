@@ -7,4 +7,4 @@
 .. description:
 .. type: text
 
-.. thumbnail:: ../images/meetup_business_of_big_data_analytics.jpg
+.. thumbnail:: /images/meetup_business_of_big_data_analytics.jpg
