@@ -65,7 +65,7 @@ Now that you have your function and data structure from Task 1, write a function
 
 For a region containing a total of N spaces, the general formula for the Index of Dissimilarity is
 
-    :math:`Index of Dissimilarity = 0.5 \sum_{i=1}^N|\frac{x_i}{X} - \frac{o_i}{O}|`
+    :math:`\text{Index of Dissimilarity} = 0.5 \sum_{i=1}^N|\frac{x_i}{X} - \frac{o_i}{O}|`
 
     Where:
 
@@ -76,7 +76,7 @@ For a region containing a total of N spaces, the general formula for the Index o
 
 For our purposes, it is sufficient to consider :math:`x_i` and :math:`o_i` to be the number of X's and O's in the subregion we're interested in. The formula simplifies to:
 
-    :math:`Index of Dissimilarity = 0.5 |\frac{x_i}{X} - \frac{o_i}{O}|`
+    :math:`\text{Index of Dissimilarity} = 0.5 |\frac{x_i}{X} - \frac{o_i}{O}|`
 
 
 For example, if we take the upper rightmost 4x4 region from the example grid above:
