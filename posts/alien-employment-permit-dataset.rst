@@ -5,7 +5,7 @@
 .. category:
 .. link:
 .. description:
-.. type: micro
+.. type: text
 
 .. thumbnail:: /images/aliens.png
 
