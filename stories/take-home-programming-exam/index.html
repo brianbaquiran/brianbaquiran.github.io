@@ -2,13 +2,15 @@
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
 <head>
 <meta charset="utf-8">
-<base href="http://brianbaquiran.github.io/stories/take-home-programming-exam/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Take Home Programming Exam | Lateral Thunking</title>
-<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
-<meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="http://brianbaquiran.github.io/stories/take-home-programming-exam/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian Baquiran">
@@ -30,10 +32,10 @@ To submit your work, you will need an account on GitLab. We ass">
 
 <!-- Menubar -->
 
-<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation"><div class="container">
 <!-- This keeps the margins nice -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -45,7 +47,7 @@ To submit your work, you will need an account on GitLab. We ass">
             </a>
         </div>
 <!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
 <li>
 <a href="../../archive.html">Archive</a>
@@ -111,16 +113,16 @@ To submit your work, you will need an account on <a class="reference external" h
 <div class="section" id="problem-1-translate-a-block-of-text-into-an-array-structure">
 <h2>Problem 1: Translate a block of text into an array structure</h2>
 <p>Given a text file that looks like this:</p>
-<pre class="code text"><a name="rest_code_3332d105980443418e56bff70f822c58-1"></a>XXOOXOXOXO
-<a name="rest_code_3332d105980443418e56bff70f822c58-2"></a>XOOXOXOXOX
-<a name="rest_code_3332d105980443418e56bff70f822c58-3"></a>OXX XOOXOX
-<a name="rest_code_3332d105980443418e56bff70f822c58-4"></a>OXXXOOX XO
-<a name="rest_code_3332d105980443418e56bff70f822c58-5"></a>XOOXOXOXXO
-<a name="rest_code_3332d105980443418e56bff70f822c58-6"></a>XOX XXO OX
-<a name="rest_code_3332d105980443418e56bff70f822c58-7"></a>XXOOXOXOXO
-<a name="rest_code_3332d105980443418e56bff70f822c58-8"></a>XO OXOOXOO
-<a name="rest_code_3332d105980443418e56bff70f822c58-9"></a>OXXXOO OXO
-<a name="rest_code_3332d105980443418e56bff70f822c58-10"></a>OOOOOOOXOX
+<pre class="code text"><a name="rest_code_5be91d06611d4a0783b44b0199d4e422-1"></a>XXOOXOXOXO
+<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-2"></a>XOOXOXOXOX
+<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-3"></a>OXX XOOXOX
+<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-4"></a>OXXXOOX XO
+<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-5"></a>XOOXOXOXXO
+<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-6"></a>XOX XXO OX
+<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-7"></a>XXOOXOXOXO
+<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-8"></a>XO OXOOXOO
+<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-9"></a>OXXXOO OXO
+<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-10"></a>OOOOOOOXOX
 </pre>
 <p>Each character represents a space in a rectangular grid. The space may be occupied by either an agent, or it may be an empty space. There are two types of agents: X and O.</p>
 <p><strong>Write a function</strong> <tt class="docutils literal">loadgrid</tt> <strong>that reads a text file and returns an object or data structure array representing the grid, populated with the contents of the text file.</strong></p>
@@ -137,7 +139,7 @@ To submit your work, you will need an account on <a class="reference external" h
 <p>Now that you have your function and data structure from Task 1, write a function to compute the <em>Index of Dissimilarity</em> of a rectangular subregion within the array. Simply put, the Index of Dissimilarity is a way of measuring how segregated a set of spaces is. The index has a range of 0 to 1, where 0 indicates no segregation and 1 indicates total segregation.</p>
 <p>For a region containing a total of N spaces, the general formula for the Index of Dissimilarity is</p>
 <blockquote>
-<p><span class="math">\(\text{Index of Dissimilarity} = 0.5 \sum_{i=1}^N|\frac{x_i}{X} - \frac{o_i}{O}|\)</span></p>
+<p><span class="math">\(\text{Index of Dissimilarity} = 0.5 \sum_{i=1}^N\big|\frac{x_i}{X} - \frac{o_i}{O}\big|\)</span></p>
 <p>Where:</p>
 <ul class="simple">
 <li>
@@ -152,17 +154,17 @@ To submit your work, you will need an account on <a class="reference external" h
 </blockquote>
 <p>For our purposes, it is sufficient to consider <span class="math">\(x_i\)</span> and <span class="math">\(o_i\)</span> to be the number of X's and O's in the subregion we're interested in. The formula simplifies to:</p>
 <blockquote>
-<span class="math">\(\text{Index of Dissimilarity} = 0.5 |\frac{x_i}{X} - \frac{o_i}{O}|\)</span>
+<span class="math">\(\text{Index of Dissimilarity} = 0.5 \big|\frac{x_i}{X} - \frac{o_i}{O}\big|\)</span>
 </blockquote>
 <p>For example, if we take the upper rightmost 4x4 region from the example grid above:</p>
-<pre class="code text"><a name="rest_code_50c3e8c641ec42259e2cb1aa1f9ae3c5-1"></a>XOXO
-<a name="rest_code_50c3e8c641ec42259e2cb1aa1f9ae3c5-2"></a>OXOX
-<a name="rest_code_50c3e8c641ec42259e2cb1aa1f9ae3c5-3"></a>OXOX
-<a name="rest_code_50c3e8c641ec42259e2cb1aa1f9ae3c5-4"></a>X XO
+<pre class="code text"><a name="rest_code_c3da3a3a206340248b2cff1c3cb36aa4-1"></a>XOXO
+<a name="rest_code_c3da3a3a206340248b2cff1c3cb36aa4-2"></a>OXOX
+<a name="rest_code_c3da3a3a206340248b2cff1c3cb36aa4-3"></a>OXOX
+<a name="rest_code_c3da3a3a206340248b2cff1c3cb36aa4-4"></a>X XO
 </pre>
 <p>that contains 8 X's and 7 O's, we would compute the Index of Dissimilarity as</p>
 <blockquote>
-<p>Index of Dissimilarity = <span class="math">\(0.5 |\frac{8}{44} - \frac{7}{50}|\)</span> (there are 44 X's and 50 O's in the entire region)</p>
+<p>Index of Dissimilarity = <span class="math">\(0.5 \big|\frac{8}{44} - \frac{7}{50}\big|\)</span> (there are 44 X's and 50 O's in the entire region)</p>
 <p>Index of Dissimilarity = <span class="math">\(0.02090909090909 \approx 0.021\)</span></p>
 </blockquote>
 <p><strong>Write a function</strong> <tt class="docutils literal">dissimilarity</tt> <strong>that computes the index of dissimilarity for a subregion in a grid</strong></p>
@@ -188,9 +190,8 @@ To submit your work, you will need an account on <a class="reference external" h
 </div>
     </div>
     
-            <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
-            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
-            </script></article>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});</script><script src="../../assets/js/mathjax.js"></script></article>
 </div>
         <!--End of body content-->
 
@@ -202,8 +203,8 @@ To submit your work, you will need an account on <a class="reference external" h
 </div>
 
 
-            <script src="../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
-    moment.locale("en");
+            <script src="../../assets/js/jquery.min.js"></script><script src="../../assets/js/bootstrap.min.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><script src="../../assets/js/fancydates.js"></script><script src="../../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("");
     fancydates(0, "YYYY-MM-DD HH:mm");
     </script><!-- end fancy dates --><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

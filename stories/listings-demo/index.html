@@ -2,13 +2,15 @@
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
 <head>
 <meta charset="utf-8">
-<base href="http://brianbaquiran.github.io/stories/listings-demo/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Listings Demo | Lateral Thunking</title>
-<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
-<meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="http://brianbaquiran.github.io/stories/listings-demo/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian Baquiran">
@@ -35,10 +37,10 @@ if __name__ == &quot;__main__&quot;">
 
 <!-- Menubar -->
 
-<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation"><div class="container">
 <!-- This keeps the margins nice -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -50,7 +52,7 @@ if __name__ == &quot;__main__&quot;">
             </a>
         </div>
 <!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
 <li>
 <a href="../../archive.html">Archive</a>
@@ -95,17 +97,17 @@ if __name__ == &quot;__main__&quot;">
     <div>
 <p>Nikola intends to let you show code easily via listings:</p>
 <p><a class="reference external" href="../../listings/hello.py.html">hello.py</a></p>
-<pre class="code python"><a name="rest_code_6f4eccde4d224d2e94a42b78705284fe-1"></a><span class="c">#!/usr/bin/python</span>
-<a name="rest_code_6f4eccde4d224d2e94a42b78705284fe-2"></a>
-<a name="rest_code_6f4eccde4d224d2e94a42b78705284fe-3"></a><span class="kn">import</span> <span class="nn">sys</span>
-<a name="rest_code_6f4eccde4d224d2e94a42b78705284fe-4"></a>
-<a name="rest_code_6f4eccde4d224d2e94a42b78705284fe-5"></a>
-<a name="rest_code_6f4eccde4d224d2e94a42b78705284fe-6"></a><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'world'</span><span class="p">):</span>
-<a name="rest_code_6f4eccde4d224d2e94a42b78705284fe-7"></a>    <span class="n">greeting</span> <span class="o">=</span> <span class="s">"hello "</span> <span class="o">+</span> <span class="n">name</span>
-<a name="rest_code_6f4eccde4d224d2e94a42b78705284fe-8"></a>    <span class="k">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
-<a name="rest_code_6f4eccde4d224d2e94a42b78705284fe-9"></a>
-<a name="rest_code_6f4eccde4d224d2e94a42b78705284fe-10"></a><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
-<a name="rest_code_6f4eccde4d224d2e94a42b78705284fe-11"></a>    <span class="n">hello</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<pre class="code python"><a name="rest_code_99385f3d5bad4f2eaad6483d85bec71f-1"></a><span class="ch">#!/usr/bin/python</span>
+<a name="rest_code_99385f3d5bad4f2eaad6483d85bec71f-2"></a>
+<a name="rest_code_99385f3d5bad4f2eaad6483d85bec71f-3"></a><span class="kn">import</span> <span class="nn">sys</span>
+<a name="rest_code_99385f3d5bad4f2eaad6483d85bec71f-4"></a>
+<a name="rest_code_99385f3d5bad4f2eaad6483d85bec71f-5"></a>
+<a name="rest_code_99385f3d5bad4f2eaad6483d85bec71f-6"></a><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'world'</span><span class="p">):</span>
+<a name="rest_code_99385f3d5bad4f2eaad6483d85bec71f-7"></a>    <span class="n">greeting</span> <span class="o">=</span> <span class="s2">"hello "</span> <span class="o">+</span> <span class="n">name</span>
+<a name="rest_code_99385f3d5bad4f2eaad6483d85bec71f-8"></a>    <span class="k">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+<a name="rest_code_99385f3d5bad4f2eaad6483d85bec71f-9"></a>
+<a name="rest_code_99385f3d5bad4f2eaad6483d85bec71f-10"></a><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+<a name="rest_code_99385f3d5bad4f2eaad6483d85bec71f-11"></a>    <span class="n">hello</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 </pre>
 </div>
     </div>
@@ -123,8 +125,8 @@ if __name__ == &quot;__main__&quot;">
 </div>
 
 
-            <script src="../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
-    moment.locale("en");
+            <script src="../../assets/js/jquery.min.js"></script><script src="../../assets/js/bootstrap.min.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><script src="../../assets/js/fancydates.js"></script><script src="../../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("");
     fancydates(0, "YYYY-MM-DD HH:mm");
     </script><!-- end fancy dates --><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

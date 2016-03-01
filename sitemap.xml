@@ -1,220 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://brianbaquiran.github.io/</loc>
-  <lastmod>2016-02-11T02:36:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/2015/</loc>
-  <lastmod>2015-11-25T05:04:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/2016/</loc>
-  <lastmod>2016-02-11T02:19:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/archive.html</loc>
-  <lastmod>2016-02-11T02:19:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.github.io/authors/</loc>
-  <lastmod>2015-11-25T05:04:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.github.io/authors/brian-baquiran/</loc>
-  <lastmod>2015-11-25T05:04:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.github.io/authors/roberto-alsina/</loc>
-  <lastmod>2015-11-25T05:04:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/</loc>
-  <lastmod>2015-12-20T03:24:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/books/</loc>
-  <lastmod>2015-11-25T13:12:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/coding/</loc>
-  <lastmod>2015-12-20T03:24:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/datascience/</loc>
-  <lastmod>2015-11-25T13:12:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/dplyr/</loc>
-  <lastmod>2015-12-03T01:46:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/ggplot2/</loc>
-  <lastmod>2015-12-03T01:46:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/namedtuple/</loc>
-  <lastmod>2015-12-20T03:24:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/programming/</loc>
-  <lastmod>2015-11-25T10:37:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/pycharm/</loc>
-  <lastmod>2015-12-20T03:24:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/python/</loc>
-  <lastmod>2015-12-20T01:40:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/r-language/</loc>
-  <lastmod>2015-12-03T01:46:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/categories/visualization/</loc>
-  <lastmod>2015-12-03T01:46:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/galleries/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/galleries/demo/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/listings/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.github.io/listings/__pycache__/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/listings/hello.py.html</loc>
-  <lastmod>2016-01-20T13:01:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/posts/alien-employment-permit-dataset/</loc>
-  <lastmod>2015-12-03T01:46:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/posts/hello-world/</loc>
-  <lastmod>2015-11-25T05:04:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/posts/namedtuple-comes-in-handy/</loc>
-  <lastmod>2015-12-20T01:40:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/posts/the-art-of-data-science/</loc>
-  <lastmod>2015-11-25T12:17:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/posts/the-business-of-big-data-analytics-meetup-3/</loc>
-  <lastmod>2016-02-11T02:19:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/a-study-in-scarlet/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/about-nikola/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/bootstrap-demo/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/charts/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/creating-a-theme/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/dr-nikolas-vendetta/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/extending/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/handbook/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/internals/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.github.io/stories/kaggle-titanic/</loc>
-  <lastmod>2015-12-14T16:03:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.github.io/stories/kaggle-titanic/index.src.html</loc>
-  <lastmod>2015-12-07T08:31:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/listings-demo/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/notes-on-developing-python-packages/</loc>
-  <lastmod>2016-02-02T00:44:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/path-handlers/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.github.io/stories/pydata/the-iris-dataset/</loc>
-  <lastmod>2015-11-11T02:08:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/quickref/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/quickstart/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/slides-demo/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/social_buttons/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/take-home-programming-exam/</loc>
-  <lastmod>2015-11-25T07:31:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/theming/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/tidying-alien-work-permit-dataset/</loc>
-  <lastmod>2015-12-03T01:46:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/tidying-alien-work-permit-dataset/index.src.html</loc>
-  <lastmod>2015-12-03T12:06:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.github.io/stories/upgrading-to-v6/</loc>
-  <lastmod>2015-11-10T09:29:00Z</lastmod>
+  <lastmod>2016-03-01</lastmod>
  </url>
 </urlset>
