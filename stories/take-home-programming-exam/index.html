@@ -12,11 +12,11 @@
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="http://brianbaquiran.github.io/stories/take-home-programming-exam/">
+<link rel="canonical" href="http://brianbaquiran.com/stories/take-home-programming-exam/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian Baquiran">
 <meta property="og:site_name" content="Lateral Thunking">
 <meta property="og:title" content="Take Home Programming Exam">
-<meta property="og:url" content="http://brianbaquiran.github.io/stories/take-home-programming-exam/">
+<meta property="og:url" content="http://brianbaquiran.com/stories/take-home-programming-exam/">
 <meta property="og:description" content="Instructions
 You are free to use any programming language for these problems, but you must use the same language for all three problems.
 To submit your work, you will need an account on GitLab. We ass">
@@ -41,7 +41,7 @@ To submit your work, you will need an account on GitLab. We ass">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://brianbaquiran.github.io/">
+            <a class="navbar-brand" href="http://brianbaquiran.com/">
 
                 <span id="blog-title">Lateral Thunking</span>
             </a>
@@ -113,16 +113,16 @@ To submit your work, you will need an account on <a class="reference external" h
 <div class="section" id="problem-1-translate-a-block-of-text-into-an-array-structure">
 <h2>Problem 1: Translate a block of text into an array structure</h2>
 <p>Given a text file that looks like this:</p>
-<pre class="code text"><a name="rest_code_5be91d06611d4a0783b44b0199d4e422-1"></a>XXOOXOXOXO
-<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-2"></a>XOOXOXOXOX
-<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-3"></a>OXX XOOXOX
-<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-4"></a>OXXXOOX XO
-<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-5"></a>XOOXOXOXXO
-<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-6"></a>XOX XXO OX
-<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-7"></a>XXOOXOXOXO
-<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-8"></a>XO OXOOXOO
-<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-9"></a>OXXXOO OXO
-<a name="rest_code_5be91d06611d4a0783b44b0199d4e422-10"></a>OOOOOOOXOX
+<pre class="code text"><a name="rest_code_313e889f1e814f64b7a212931c63a369-1"></a>XXOOXOXOXO
+<a name="rest_code_313e889f1e814f64b7a212931c63a369-2"></a>XOOXOXOXOX
+<a name="rest_code_313e889f1e814f64b7a212931c63a369-3"></a>OXX XOOXOX
+<a name="rest_code_313e889f1e814f64b7a212931c63a369-4"></a>OXXXOOX XO
+<a name="rest_code_313e889f1e814f64b7a212931c63a369-5"></a>XOOXOXOXXO
+<a name="rest_code_313e889f1e814f64b7a212931c63a369-6"></a>XOX XXO OX
+<a name="rest_code_313e889f1e814f64b7a212931c63a369-7"></a>XXOOXOXOXO
+<a name="rest_code_313e889f1e814f64b7a212931c63a369-8"></a>XO OXOOXOO
+<a name="rest_code_313e889f1e814f64b7a212931c63a369-9"></a>OXXXOO OXO
+<a name="rest_code_313e889f1e814f64b7a212931c63a369-10"></a>OOOOOOOXOX
 </pre>
 <p>Each character represents a space in a rectangular grid. The space may be occupied by either an agent, or it may be an empty space. There are two types of agents: X and O.</p>
 <p><strong>Write a function</strong> <tt class="docutils literal">loadgrid</tt> <strong>that reads a text file and returns an object or data structure array representing the grid, populated with the contents of the text file.</strong></p>
@@ -157,10 +157,10 @@ To submit your work, you will need an account on <a class="reference external" h
 <span class="math">\(\text{Index of Dissimilarity} = 0.5 \big|\frac{x_i}{X} - \frac{o_i}{O}\big|\)</span>
 </blockquote>
 <p>For example, if we take the upper rightmost 4x4 region from the example grid above:</p>
-<pre class="code text"><a name="rest_code_c3da3a3a206340248b2cff1c3cb36aa4-1"></a>XOXO
-<a name="rest_code_c3da3a3a206340248b2cff1c3cb36aa4-2"></a>OXOX
-<a name="rest_code_c3da3a3a206340248b2cff1c3cb36aa4-3"></a>OXOX
-<a name="rest_code_c3da3a3a206340248b2cff1c3cb36aa4-4"></a>X XO
+<pre class="code text"><a name="rest_code_d36674a5f7fa462a85c5ec5359c53dea-1"></a>XOXO
+<a name="rest_code_d36674a5f7fa462a85c5ec5359c53dea-2"></a>OXOX
+<a name="rest_code_d36674a5f7fa462a85c5ec5359c53dea-3"></a>OXOX
+<a name="rest_code_d36674a5f7fa462a85c5ec5359c53dea-4"></a>X XO
 </pre>
 <p>that contains 8 X's and 7 O's, we would compute the Index of Dissimilarity as</p>
 <blockquote>

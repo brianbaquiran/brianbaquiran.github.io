@@ -5,63 +5,63 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://brianbaquiran.github.io/categories/books.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/categories/books.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/categories/coding.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/categories/coding.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/categories/datascience.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/categories/datascience.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/categories/dplyr.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/categories/dplyr.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/categories/ggplot2.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/categories/ggplot2.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/categories/namedtuple.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/categories/namedtuple.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/categories/programming.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/categories/programming.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/categories/pycharm.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/categories/pycharm.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/categories/python.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/categories/python.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/categories/r-language.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/categories/r-language.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/categories/visualization.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/categories/visualization.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/galleries/demo/rss.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/galleries/demo/rss.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/galleries/rss.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/galleries/rss.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/rss.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/rss.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brianbaquiran.github.io/sitemap.xml</loc>
-  <lastmod>2016-03-01</lastmod>
+  <loc>http://brianbaquiran.com/sitemap.xml</loc>
+  <lastmod>2016-04-06</lastmod>
  </sitemap>
 </sitemapindex>

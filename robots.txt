@@ -1,2 +1,2 @@
-Sitemap: http://brianbaquiran.github.io/sitemapindex.xml
+Sitemap: http://brianbaquiran.com/sitemapindex.xml
 
