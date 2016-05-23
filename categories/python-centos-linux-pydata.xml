@@ -1,40 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lateral Thunking (python centos linux pydata)</title><link>http://brianbaquiran.com/</link><description></description><atom:link href="http://brianbaquiran.com/categories/python-centos-linux-pydata.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 23 May 2016 11:52:54 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Installing Python 2.7.11 on CentOS 7</title><link>http://brianbaquiran.com/posts/installing-python-2711-on-centos-7/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;CentOS 7 ships with python 2.7.5 by default. We have some software that requires 2.7.11. It's generally a bad idea to clobber your system python, since other system-supplied software may rely on it being a particular version.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lateral Thunking (python centos linux pydata)</title><link>http://brianbaquiran.com/</link><description></description><atom:link href="http://brianbaquiran.com/categories/python-centos-linux-pydata.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 23 May 2016 11:56:10 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Installing Python 2.7.11 on CentOS 7</title><link>http://brianbaquiran.com/posts/installing-python-2711-on-centos-7/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;CentOS 7 ships with python 2.7.5 by default. We have some software that requires 2.7.11. It's generally a bad idea to clobber your system python, since other system-supplied software may rely on it being a particular version.&lt;/p&gt;
 &lt;p&gt;Our strategy for running 2.7.11 alongside the system python is to build it from source, then create virtualenvs that will run our software.&lt;/p&gt;
-&lt;div class="section" id="step-1-update-centos-and-install-development-tools"&gt;
-&lt;h2&gt;Step 1. Update CentOS and install development tools&lt;/h2&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_02c81be8bed94181aba26645b8d45e8b-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# as root&lt;/span&gt;
-&lt;a name="rest_code_02c81be8bed94181aba26645b8d45e8b-2"&gt;&lt;/a&gt;yum upgrade -y
-&lt;a name="rest_code_02c81be8bed94181aba26645b8d45e8b-3"&gt;&lt;/a&gt;yum groupinstall &lt;span class="s1"&gt;'Development Tools'&lt;/span&gt; -y
-&lt;a name="rest_code_02c81be8bed94181aba26645b8d45e8b-4"&gt;&lt;/a&gt;yum install zlib-devel openssl-devel
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="section" id="step-2-download-the-python-source-tarball"&gt;
-&lt;h2&gt;Step 2. Download the Python source tarball&lt;/h2&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_c689cb0ba17d4fb4b39993d2c972687f-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# As a regular user (avoid doing mundane things as root)&lt;/span&gt;
-&lt;a name="rest_code_c689cb0ba17d4fb4b39993d2c972687f-2"&gt;&lt;/a&gt;$ &lt;span class="nb"&gt;cd&lt;/span&gt; /tmp
-&lt;a name="rest_code_c689cb0ba17d4fb4b39993d2c972687f-3"&gt;&lt;/a&gt;$ wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tgz
-&lt;a name="rest_code_c689cb0ba17d4fb4b39993d2c972687f-4"&gt;&lt;/a&gt;$ tar -zxf Python-2.7.11.tgz
-&lt;a name="rest_code_c689cb0ba17d4fb4b39993d2c972687f-5"&gt;&lt;/a&gt;$ &lt;span class="nb"&gt;cd&lt;/span&gt; Python-2.7.11
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="section" id="step-3-configure-build-and-install-into-opt-replace-with-usr-local-if-you-prefer"&gt;
-&lt;h2&gt;Step 3. Configure, build and install into &lt;tt class="docutils literal"&gt;/opt&lt;/tt&gt; (replace with &lt;tt class="docutils literal"&gt;/usr/local/&lt;/tt&gt; if you prefer)&lt;/h2&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_79b9344557cb4c9b9f326bb9b261915d-1"&gt;&lt;/a&gt;$ ./configure --prefix&lt;span class="o"&gt;=&lt;/span&gt;/opt/
-&lt;a name="rest_code_79b9344557cb4c9b9f326bb9b261915d-2"&gt;&lt;/a&gt;$ make
-&lt;a name="rest_code_79b9344557cb4c9b9f326bb9b261915d-3"&gt;&lt;/a&gt;$ make install
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="section" id="step-4-install-pip-and-virtualenv-for-the-system-python"&gt;
-&lt;h2&gt;Step 4. Install pip and virtualenv for the system Python&lt;/h2&gt;
-&lt;p&gt;You have to be root for this.&lt;/p&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_87b315db8efd4aa8913440beb1eb9c57-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py&lt;/span&gt;
-&lt;a name="rest_code_87b315db8efd4aa8913440beb1eb9c57-2"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# python get-pip.py&lt;/span&gt;
-&lt;a name="rest_code_87b315db8efd4aa8913440beb1eb9c57-3"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# pip install virtualenv&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="section" id="step-5-use-the-system-virtualenv-to-create-a-venv-for-your-updated-python"&gt;
-&lt;h2&gt;Step 5. Use the system virtualenv to create a venv for your updated Python&lt;/h2&gt;
-&lt;p&gt;You can now create virtualenvs, just point --python to the 2.7.11 interpreter&lt;/p&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_50eb2b447800432091b54af39dd04c2b-1"&gt;&lt;/a&gt;$ mkdir env
-&lt;a name="rest_code_50eb2b447800432091b54af39dd04c2b-2"&gt;&lt;/a&gt;$ virtualenv --python&lt;span class="o"&gt;=&lt;/span&gt;/opt/bin/python2.7 env/pyenv
-&lt;a name="rest_code_50eb2b447800432091b54af39dd04c2b-3"&gt;&lt;/a&gt;$ &lt;span class="nb"&gt;source&lt;/span&gt; env/pyenv/bin/activate
-&lt;a name="rest_code_50eb2b447800432091b54af39dd04c2b-4"&gt;&lt;/a&gt;$ python --version
-&lt;a name="rest_code_50eb2b447800432091b54af39dd04c2b-5"&gt;&lt;/a&gt;Python 2.7.11
-&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python centos linux pydata</category><guid>http://brianbaquiran.com/posts/installing-python-2711-on-centos-7/</guid><pubDate>Mon, 23 May 2016 11:17:07 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="http://brianbaquiran.com/posts/installing-python-2711-on-centos-7/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>python centos linux pydata</category><guid>http://brianbaquiran.com/posts/installing-python-2711-on-centos-7/</guid><pubDate>Mon, 23 May 2016 11:17:07 GMT</pubDate></item></channel></rss>

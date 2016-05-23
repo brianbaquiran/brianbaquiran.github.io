@@ -11,6 +11,8 @@ CentOS 7 ships with python 2.7.5 by default. We have some software that requires
 
 Our strategy for running 2.7.11 alongside the system python is to build it from source, then create virtualenvs that will run our software.
 
+.. TEASER_END
+
 Step 1. Update CentOS and install development tools
 ---------------------------------------------------
 .. code-block:: bash
