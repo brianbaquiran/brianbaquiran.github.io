@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installing Python 2.7.11 on CentOS 7 | Lateral Thunking</title>
+<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://brianbaquiran.com/stories/installing-python-2711-on-centos-7/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian Baquiran">
+<meta property="og:site_name" content="Lateral Thunking">
+<meta property="og:title" content="Installing Python 2.7.11 on CentOS 7">
+<meta property="og:url" content="http://brianbaquiran.com/stories/installing-python-2711-on-centos-7/">
+<meta property="og:description" content="CentOS 7 ships with python 2.7.5 by default. We have some software that requires 2.7.11. It's generally a bad idea to clobber your system python, since other system-supplied software may rely on it be">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-05-23T19:17:07+08:00">
+<meta property="article:tag" content="python centos linux pydata">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://brianbaquiran.com/">
+
+                <span id="blog-title">Lateral Thunking</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="https://github.com/brianbaquiran">Github</a>
+                </li>
+<li>
+<a href="https://ph.linkedin.com/in/bbaquiran">Linkedin</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.rst" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Installing Python 2.7.11 on CentOS 7</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>CentOS 7 ships with python 2.7.5 by default. We have some software that requires 2.7.11. It's generally a bad idea to clobber your system python, since other system-supplied software may rely on it being a particular version.</p>
+<p>Our strategy for running 2.7.11 alongside the system python is to build it from source, then create virtualenvs that will run our software.</p>
+<div class="section" id="step-1-update-centos-and-install-development-tools">
+<h2>Step 1. Update CentOS and install development tools</h2>
+<pre class="code bash"><a name="rest_code_13595d2b076a48749c01063965286bd3-1"></a><span class="c1"># as root</span>
+<a name="rest_code_13595d2b076a48749c01063965286bd3-2"></a>yum upgrade -y
+<a name="rest_code_13595d2b076a48749c01063965286bd3-3"></a>yum groupinstall <span class="s1">'Development Tools'</span> -y
+<a name="rest_code_13595d2b076a48749c01063965286bd3-4"></a>yum install zlib-devel openssl-devel
+</pre>
+</div>
+<div class="section" id="step-2-download-the-python-source-tarball">
+<h2>Step 2. Download the Python source tarball</h2>
+<pre class="code bash"><a name="rest_code_04ca485ffd9c41648ae2c911794b1b0c-1"></a><span class="c1"># As a regular user (avoid doing mundane things as root)</span>
+<a name="rest_code_04ca485ffd9c41648ae2c911794b1b0c-2"></a>$ <span class="nb">cd</span> /tmp
+<a name="rest_code_04ca485ffd9c41648ae2c911794b1b0c-3"></a>$ wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tgz
+<a name="rest_code_04ca485ffd9c41648ae2c911794b1b0c-4"></a>$ tar -zxf Python-2.7.11.tgz
+<a name="rest_code_04ca485ffd9c41648ae2c911794b1b0c-5"></a>$ <span class="nb">cd</span> Python-2.7.11
+</pre>
+</div>
+<div class="section" id="step-3-configure-build-and-install-into-opt-replace-with-usr-local-if-you-prefer">
+<h2>Step 3. Configure, build and install into <tt class="docutils literal">/opt</tt> (replace with <tt class="docutils literal">/usr/local/</tt> if you prefer)</h2>
+<pre class="code bash"><a name="rest_code_5e8ed7ddb56f4f6bba2c7a7b157d7a79-1"></a>$ ./configure --prefix<span class="o">=</span>/opt/
+<a name="rest_code_5e8ed7ddb56f4f6bba2c7a7b157d7a79-2"></a>$ make
+<a name="rest_code_5e8ed7ddb56f4f6bba2c7a7b157d7a79-3"></a>$ make install
+</pre>
+</div>
+<div class="section" id="step-4-install-pip-and-virtualenv-for-the-system-python">
+<h2>Step 4. Install pip and virtualenv for the system Python</h2>
+<p>You have to be root for this.</p>
+<pre class="code bash"><a name="rest_code_3d1205d8c3874596a1316d643fb0dfaa-1"></a><span class="c1"># curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</span>
+<a name="rest_code_3d1205d8c3874596a1316d643fb0dfaa-2"></a><span class="c1"># python get-pip.py</span>
+<a name="rest_code_3d1205d8c3874596a1316d643fb0dfaa-3"></a><span class="c1"># pip install virtualenv</span>
+</pre>
+</div>
+<div class="section" id="step-5-use-the-system-virtualenv-to-create-a-venv-for-your-updated-python">
+<h2>Step 5. Use the system virtualenv to create a venv for your updated Python</h2>
+<p>You can now create virtualenvs, just point --python to the 2.7.11 interpreter</p>
+<pre class="code bash"><a name="rest_code_17827e10d05f4c008fdf20132e1dd2fc-1"></a>$ mkdir env
+<a name="rest_code_17827e10d05f4c008fdf20132e1dd2fc-2"></a>$ virtualenv --python<span class="o">=</span>/opt/bin/python2.7 env/pyenv
+<a name="rest_code_17827e10d05f4c008fdf20132e1dd2fc-3"></a>$ <span class="nb">source</span> env/pyenv/bin/activate
+<a name="rest_code_17827e10d05f4c008fdf20132e1dd2fc-4"></a>$ python --version
+<a name="rest_code_17827e10d05f4c008fdf20132e1dd2fc-5"></a>Python 2.7.11
+</pre>
+</div>
+</div>
+    </div>
+    
+
+</article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2016
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/jquery.min.js"></script><script src="../../assets/js/bootstrap.min.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><script src="../../assets/js/fancydates.js"></script><script src="../../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-10693543-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

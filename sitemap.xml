@@ -6,7 +6,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://brianbaquiran.com/</loc>
-  <lastmod>2016-04-06</lastmod>
+  <lastmod>2016-05-23</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/2015/</loc>
@@ -135,6 +135,10 @@
  <url>
   <loc>http://brianbaquiran.com/stories/handbook/</loc>
   <lastmod>2016-04-06</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/stories/installing-python-2711-on-centos-7/</loc>
+  <lastmod>2016-05-23</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/stories/internals/</loc>

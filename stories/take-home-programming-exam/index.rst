@@ -101,7 +101,7 @@ that contains 8 X's and 7 O's, we would compute the Index of Dissimilarity as
 
 Problem 3: Simulate Schelling's Segregation Model
 -------------------------------------------------
-Read this summary of `Schelling's Model_of Segregation <http://nifty.stanford.edu/2014/mccown-schelling-model-segregation/>`_. You will implement a *simplified* version of the model, where non-satisfied agents just leave the grid rather than relocate to an unoccupied space.
+Read this summary of `Schelling's Model of Segregation <http://nifty.stanford.edu/2014/mccown-schelling-model-segregation/>`_. You will implement a *simplified* version of the model, where non-satisfied agents just leave the grid rather than relocate to an unoccupied space.
 
 In Schelling's model, a **satisfied** agent is one that is surrounded by at least *t* percent of agents that are like itself. This threshold *t* is one that will apply to all agents in the model, even though in reality everyone might have a different threshold they are satisfied with. Note that the higher the threshold, the higher the likelihood the agents will not be satisfied with their current location.
 

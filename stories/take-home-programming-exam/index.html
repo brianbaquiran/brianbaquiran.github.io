@@ -113,16 +113,16 @@ To submit your work, you will need an account on <a class="reference external" h
 <div class="section" id="problem-1-translate-a-block-of-text-into-an-array-structure">
 <h2>Problem 1: Translate a block of text into an array structure</h2>
 <p>Given a text file that looks like this:</p>
-<pre class="code text"><a name="rest_code_313e889f1e814f64b7a212931c63a369-1"></a>XXOOXOXOXO
-<a name="rest_code_313e889f1e814f64b7a212931c63a369-2"></a>XOOXOXOXOX
-<a name="rest_code_313e889f1e814f64b7a212931c63a369-3"></a>OXX XOOXOX
-<a name="rest_code_313e889f1e814f64b7a212931c63a369-4"></a>OXXXOOX XO
-<a name="rest_code_313e889f1e814f64b7a212931c63a369-5"></a>XOOXOXOXXO
-<a name="rest_code_313e889f1e814f64b7a212931c63a369-6"></a>XOX XXO OX
-<a name="rest_code_313e889f1e814f64b7a212931c63a369-7"></a>XXOOXOXOXO
-<a name="rest_code_313e889f1e814f64b7a212931c63a369-8"></a>XO OXOOXOO
-<a name="rest_code_313e889f1e814f64b7a212931c63a369-9"></a>OXXXOO OXO
-<a name="rest_code_313e889f1e814f64b7a212931c63a369-10"></a>OOOOOOOXOX
+<pre class="code text"><a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-1"></a>XXOOXOXOXO
+<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-2"></a>XOOXOXOXOX
+<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-3"></a>OXX XOOXOX
+<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-4"></a>OXXXOOX XO
+<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-5"></a>XOOXOXOXXO
+<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-6"></a>XOX XXO OX
+<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-7"></a>XXOOXOXOXO
+<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-8"></a>XO OXOOXOO
+<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-9"></a>OXXXOO OXO
+<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-10"></a>OOOOOOOXOX
 </pre>
 <p>Each character represents a space in a rectangular grid. The space may be occupied by either an agent, or it may be an empty space. There are two types of agents: X and O.</p>
 <p><strong>Write a function</strong> <tt class="docutils literal">loadgrid</tt> <strong>that reads a text file and returns an object or data structure array representing the grid, populated with the contents of the text file.</strong></p>
@@ -157,10 +157,10 @@ To submit your work, you will need an account on <a class="reference external" h
 <span class="math">\(\text{Index of Dissimilarity} = 0.5 \big|\frac{x_i}{X} - \frac{o_i}{O}\big|\)</span>
 </blockquote>
 <p>For example, if we take the upper rightmost 4x4 region from the example grid above:</p>
-<pre class="code text"><a name="rest_code_d36674a5f7fa462a85c5ec5359c53dea-1"></a>XOXO
-<a name="rest_code_d36674a5f7fa462a85c5ec5359c53dea-2"></a>OXOX
-<a name="rest_code_d36674a5f7fa462a85c5ec5359c53dea-3"></a>OXOX
-<a name="rest_code_d36674a5f7fa462a85c5ec5359c53dea-4"></a>X XO
+<pre class="code text"><a name="rest_code_3d7ccfb34a0c4ca2a4541c638dd6c62a-1"></a>XOXO
+<a name="rest_code_3d7ccfb34a0c4ca2a4541c638dd6c62a-2"></a>OXOX
+<a name="rest_code_3d7ccfb34a0c4ca2a4541c638dd6c62a-3"></a>OXOX
+<a name="rest_code_3d7ccfb34a0c4ca2a4541c638dd6c62a-4"></a>X XO
 </pre>
 <p>that contains 8 X's and 7 O's, we would compute the Index of Dissimilarity as</p>
 <blockquote>
@@ -176,7 +176,7 @@ To submit your work, you will need an account on <a class="reference external" h
 </div>
 <div class="section" id="problem-3-simulate-schelling-s-segregation-model">
 <h2>Problem 3: Simulate Schelling's Segregation Model</h2>
-<p>Read this summary of <a class="reference external" href="http://nifty.stanford.edu/2014/mccown-schelling-model-segregation/">Schelling's Model_of Segregation</a>. You will implement a <em>simplified</em> version of the model, where non-satisfied agents just leave the grid rather than relocate to an unoccupied space.</p>
+<p>Read this summary of <a class="reference external" href="http://nifty.stanford.edu/2014/mccown-schelling-model-segregation/">Schelling's Model of Segregation</a>. You will implement a <em>simplified</em> version of the model, where non-satisfied agents just leave the grid rather than relocate to an unoccupied space.</p>
 <p>In Schelling's model, a <strong>satisfied</strong> agent is one that is surrounded by at least <em>t</em> percent of agents that are like itself. This threshold <em>t</em> is one that will apply to all agents in the model, even though in reality everyone might have a different threshold they are satisfied with. Note that the higher the threshold, the higher the likelihood the agents will not be satisfied with their current location.</p>
 <p>For example, if t = 0.30, agent X is satisfied if at least 30% of its neighbors are also X. If fewer than 30% are X, then the agent is not satisfied, and it will want to leave its space in the grid.</p>
 <p>All dissatisfied agents leave the grid at the same time, and leave behind an empty space.</p>
