@@ -6,7 +6,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://brianbaquiran.com/</loc>
-  <lastmod>2016-05-23</lastmod>
+  <lastmod>2016-05-24</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/2015/</loc>
@@ -91,6 +91,10 @@
  <url>
   <loc>http://brianbaquiran.com/posts/alien-employment-permit-dataset/</loc>
   <lastmod>2016-04-06</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/gitlab-weirdness/</loc>
+  <lastmod>2016-09-28</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/hello-world/</loc>
