@@ -5,6 +5,10 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/aws.xml</loc>
+  <lastmod>2016-09-29</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/books.xml</loc>
   <lastmod>2016-04-06</lastmod>
  </sitemap>
@@ -23,6 +27,10 @@
  <sitemap>
   <loc>http://brianbaquiran.com/categories/ggplot2.xml</loc>
   <lastmod>2016-04-06</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://brianbaquiran.com/categories/json.xml</loc>
+  <lastmod>2016-09-29</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/namedtuple.xml</loc>
@@ -49,6 +57,10 @@
   <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/tips.xml</loc>
+  <lastmod>2016-09-29</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/visualization.xml</loc>
   <lastmod>2016-04-06</lastmod>
  </sitemap>
@@ -62,10 +74,10 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/rss.xml</loc>
-  <lastmod>2016-09-28</lastmod>
+  <lastmod>2016-09-29</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/sitemap.xml</loc>
-  <lastmod>2016-09-28</lastmod>
+  <lastmod>2016-09-29</lastmod>
  </sitemap>
 </sitemapindex>

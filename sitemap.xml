@@ -6,7 +6,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://brianbaquiran.com/</loc>
-  <lastmod>2016-05-24</lastmod>
+  <lastmod>2016-09-28</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/2015/</loc>
@@ -22,7 +22,11 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
-  <lastmod>2016-05-23</lastmod>
+  <lastmod>2016-09-29</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/aws/</loc>
+  <lastmod>2016-09-29</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/books/</loc>
@@ -43,6 +47,10 @@
  <url>
   <loc>http://brianbaquiran.com/categories/ggplot2/</loc>
   <lastmod>2016-04-06</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/json/</loc>
+  <lastmod>2016-09-29</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/namedtuple/</loc>
@@ -69,6 +77,10 @@
   <lastmod>2016-04-06</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/tips/</loc>
+  <lastmod>2016-09-29</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/visualization/</loc>
   <lastmod>2016-04-06</lastmod>
  </url>
@@ -91,6 +103,10 @@
  <url>
   <loc>http://brianbaquiran.com/posts/alien-employment-permit-dataset/</loc>
   <lastmod>2016-04-06</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/creating-ec2-keypairs-with-aws-cli/</loc>
+  <lastmod>2016-09-29</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/gitlab-weirdness/</loc>

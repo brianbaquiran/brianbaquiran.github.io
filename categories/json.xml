@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lateral Thunking (JSON)</title><link>http://brianbaquiran.com/</link><description></description><atom:link href="http://brianbaquiran.com/categories/json.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Thu, 29 Sep 2016 11:12:03 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating EC2 keypairs with AWS CLI</title><link>http://brianbaquiran.com/posts/creating-ec2-keypairs-with-aws-cli/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;It is easy to create EC2 keypairs with the AWS CLI:&lt;/p&gt;
+&lt;pre class="code shell"&gt;&lt;a name="rest_code_1d93267ebde04361ada59505d46bfe22-1"&gt;&lt;/a&gt;$ aws ec2 create-key-pair --key-name mynewkeypair &amp;gt; keystuff.json
+&lt;/pre&gt;&lt;p&gt;After creating the keypair it should appear in your EC2 key pairs listing. The
+&lt;tt class="docutils literal"&gt;keystuff.json&lt;/tt&gt; file will contain the RSA private key you will need to use
+to connect to any instances you create with the keypair, as well as the name of
+the key and its fingerprint.&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_aa7447f449a2421db6a111579dda9222-1"&gt;&lt;/a&gt;{
+&lt;a name="rest_code_aa7447f449a2421db6a111579dda9222-2"&gt;&lt;/a&gt;    "KeyMaterial": "-----BEGIN RSA PRIVATE KEY-----\n&amp;lt;your private key&amp;gt;==\n-----END RSA PRIVATE KEY-----",
+&lt;a name="rest_code_aa7447f449a2421db6a111579dda9222-3"&gt;&lt;/a&gt;    "KeyName": "mynewkeypair",
+&lt;a name="rest_code_aa7447f449a2421db6a111579dda9222-4"&gt;&lt;/a&gt;    "KeyFingerprint": "53:47:ee:01:3a:35:9b:52:1c:4f:99:6f:87:b0:0f:8b:ed:83:55:3b"
+&lt;a name="rest_code_aa7447f449a2421db6a111579dda9222-5"&gt;&lt;/a&gt;}
+&lt;/pre&gt;&lt;p&gt;To extract the private key into a separate file, use the
+&lt;a class="reference external" href="https://stedolan.github.io/jq/"&gt;jq JSON filter&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class="code shell"&gt;&lt;a name="rest_code_4c346c17a4aa4c4ca9da5d2c78c57cb9-1"&gt;&lt;/a&gt;$ jq &lt;span class="s1"&gt;'.KeyMaterial'&lt;/span&gt; keystuff.json --raw &amp;gt; mynewkey.pem
+&lt;/pre&gt;&lt;/div&gt;</description><category>AWS</category><category>JSON</category><category>tips</category><guid>http://brianbaquiran.com/posts/creating-ec2-keypairs-with-aws-cli/</guid><pubDate>Thu, 29 Sep 2016 10:48:37 GMT</pubDate></item></channel></rss>
