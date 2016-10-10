@@ -22,7 +22,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
-  <lastmod>2016-09-29</lastmod>
+  <lastmod>2016-10-10</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/aws/</loc>
@@ -47,6 +47,10 @@
  <url>
   <loc>http://brianbaquiran.com/categories/ggplot2/</loc>
   <lastmod>2016-04-06</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/jobs/</loc>
+  <lastmod>2016-10-10</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/json/</loc>
@@ -115,6 +119,10 @@
  <url>
   <loc>http://brianbaquiran.com/posts/hello-world/</loc>
   <lastmod>2016-04-06</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/hiring-junior-and-full-stack-web-developers/</loc>
+  <lastmod>2016-10-10</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/installing-python-2711-on-centos-7/</loc>

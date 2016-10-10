@@ -29,6 +29,10 @@
   <lastmod>2016-04-06</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/jobs.xml</loc>
+  <lastmod>2016-10-10</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/json.xml</loc>
   <lastmod>2016-09-29</lastmod>
  </sitemap>
@@ -58,7 +62,7 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/tips.xml</loc>
-  <lastmod>2016-09-29</lastmod>
+  <lastmod>2016-10-03</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/visualization.xml</loc>
@@ -74,10 +78,10 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/rss.xml</loc>
-  <lastmod>2016-09-29</lastmod>
+  <lastmod>2016-10-10</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/sitemap.xml</loc>
-  <lastmod>2016-09-29</lastmod>
+  <lastmod>2016-10-10</lastmod>
  </sitemap>
 </sitemapindex>
