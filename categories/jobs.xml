@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lateral Thunking (jobs)</title><link>http://brianbaquiran.com/</link><description></description><atom:link href="http://brianbaquiran.com/categories/jobs.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 10 Oct 2016 08:22:12 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Hiring Junior and Senior Full-Stack Web Developers</title><link>http://brianbaquiran.com/posts/hiring-junior-and-full-stack-web-developers/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;div class="section" id="job-description"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lateral Thunking (jobs)</title><link>http://brianbaquiran.com/</link><description></description><atom:link href="http://brianbaquiran.com/categories/jobs.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 15 Oct 2016 04:05:40 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Hiring Junior and Senior Full-Stack Web Developers</title><link>http://brianbaquiran.com/posts/hiring-junior-and-full-stack-web-developers/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;div class="section" id="job-description"&gt;
 &lt;h2&gt;Job Description&lt;/h2&gt;
 &lt;p&gt;We are looking for experienced full-stack web developers who want to make the country better. Our companies are committed to bringing growth opportunities to farming and provincial communities around the country.&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -34,7 +34,8 @@ testing, QA and documentation&lt;/li&gt;
 &lt;li&gt;Experience with SQL (PostgreSQL, MySQL) and NoSQL (Redis, MongoDB) datastores&lt;/li&gt;
 &lt;li&gt;Familiar with integrating with Facebook, Twitter REST APIs&lt;/li&gt;
 &lt;li&gt;Familiarity with Linux as software development and deployment environment&lt;/li&gt;
-&lt;li&gt;Familiar with version control using Git and remote repository (GitHub, GitLab, * Bitbucket etc.)&lt;/li&gt;
+&lt;li&gt;Familiar with version control using Git and remote repository (GitHub, GitLab,
+Bitbucket etc.)&lt;/li&gt;
 &lt;li&gt;Familiarity with static site generators e.g. Jekyll, Hugo a HUGE plus&lt;/li&gt;
 &lt;li&gt;Preferably with experience deploying services on AWS, Google Cloud or Heroku&lt;/li&gt;
 &lt;/ul&gt;

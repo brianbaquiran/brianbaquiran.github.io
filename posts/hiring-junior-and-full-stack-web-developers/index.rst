@@ -41,7 +41,8 @@ Qualifications
 * Experience with SQL (PostgreSQL, MySQL) and NoSQL (Redis, MongoDB) datastores
 * Familiar with integrating with Facebook, Twitter REST APIs
 * Familiarity with Linux as software development and deployment environment
-* Familiar with version control using Git and remote repository (GitHub, GitLab, * Bitbucket etc.)
+* Familiar with version control using Git and remote repository (GitHub, GitLab,
+  Bitbucket etc.)
 * Familiarity with static site generators e.g. Jekyll, Hugo a HUGE plus
 * Preferably with experience deploying services on AWS, Google Cloud or Heroku
 
