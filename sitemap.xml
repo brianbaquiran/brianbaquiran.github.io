@@ -22,7 +22,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
-  <lastmod>2016-10-10</lastmod>
+  <lastmod>2016-10-19</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/aws/</loc>
@@ -41,6 +41,10 @@
   <lastmod>2016-04-06</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/devops/</loc>
+  <lastmod>2016-10-19</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/dplyr/</loc>
   <lastmod>2016-04-06</lastmod>
  </url>
@@ -49,12 +53,20 @@
   <lastmod>2016-04-06</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/jobs-webdev/</loc>
+  <lastmod>2016-10-19</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/jobs/</loc>
   <lastmod>2016-10-10</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/json/</loc>
   <lastmod>2016-09-29</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/linux/</loc>
+  <lastmod>2016-10-19</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/namedtuple/</loc>
@@ -81,12 +93,20 @@
   <lastmod>2016-04-06</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/sysadmin/</loc>
+  <lastmod>2016-10-19</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/tips/</loc>
   <lastmod>2016-09-29</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/visualization/</loc>
   <lastmod>2016-04-06</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/webdev/</loc>
+  <lastmod>2016-10-19</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/galleries/</loc>
@@ -123,6 +143,10 @@
  <url>
   <loc>http://brianbaquiran.com/posts/hiring-junior-and-full-stack-web-developers/</loc>
   <lastmod>2016-10-10</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/hiring-linux-system-administrators/</loc>
+  <lastmod>2016-10-19</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/installing-python-2711-on-centos-7/</loc>

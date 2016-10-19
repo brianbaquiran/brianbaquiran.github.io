@@ -1,7 +1,7 @@
 .. title: Hiring Junior and Senior Full-Stack Web Developers
 .. slug: hiring-junior-and-full-stack-web-developers
 .. date: 2016-10-10 16:06:20 UTC+08:00
-.. tags: jobs
+.. tags: jobs, webdev
 .. category:
 .. link:
 .. description:

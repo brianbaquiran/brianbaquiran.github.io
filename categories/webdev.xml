@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lateral Thunking (webdev)</title><link>http://brianbaquiran.com/</link><description></description><atom:link href="http://brianbaquiran.com/categories/webdev.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 19 Oct 2016 07:12:44 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Hiring Junior and Senior Full-Stack Web Developers</title><link>http://brianbaquiran.com/posts/hiring-junior-and-full-stack-web-developers/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;div class="section" id="job-description"&gt;
+&lt;h2&gt;Job Description&lt;/h2&gt;
+&lt;p&gt;We are looking for experienced full-stack web developers who want to make the country better. Our companies are committed to bringing growth opportunities to farming and provincial communities around the country.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Hotjobs provides job seekers outside Metro Manila with opportunities with
+employers in their area.&lt;/li&gt;
+&lt;li&gt;Agrigrocer enables individual farmers, co-ops, and farming communities to bring
+their products direct to consumers rather than through multiple middle-men.
+Consumers benefit from lower prices, and farmers have higher profit margins.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="role-and-responsibilities"&gt;
+&lt;h2&gt;Role and Responsibilities&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Work with customers and other team members to prototype, implement and deploy
+the web applications and platforms&lt;/li&gt;
+&lt;li&gt;Design of overall architecture of the web applications&lt;/li&gt;
+&lt;li&gt;Implementing a robust set of services and APIs&lt;/li&gt;
+&lt;li&gt;Translation of UI/UX elements into HTML, CSS, Javascript&lt;/li&gt;
+&lt;li&gt;Integration of front-end and back-end components&lt;/li&gt;
+&lt;li&gt;Conform to established processes such as source control, issue tracking, unit
+testing, QA and documentation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="qualifications"&gt;
+&lt;h2&gt;Qualifications&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Experience in full-stack web application development using:&lt;ul&gt;
+&lt;li&gt;Angular.js, React.js or other Javascript framework for front-end interaction&lt;/li&gt;
+&lt;li&gt;REST API using Python (Django or Flask) or PHP (Laravel)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Experience with SQL (PostgreSQL, MySQL) and NoSQL (Redis, MongoDB) datastores&lt;/li&gt;
+&lt;li&gt;Familiar with integrating with Facebook, Twitter REST APIs&lt;/li&gt;
+&lt;li&gt;Familiarity with Linux as software development and deployment environment&lt;/li&gt;
+&lt;li&gt;Familiar with version control using Git and remote repository (GitHub, GitLab,
+Bitbucket etc.)&lt;/li&gt;
+&lt;li&gt;Familiarity with static site generators e.g. Jekyll, Hugo a HUGE plus&lt;/li&gt;
+&lt;li&gt;Preferably with experience deploying services on AWS, Google Cloud or Heroku&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Send your CV to &lt;a class="reference external" href="mailto:genevieve.b@88db.com.ph"&gt;genevieve.b@88db.com.ph&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>jobs</category><category>webdev</category><guid>http://brianbaquiran.com/posts/hiring-junior-and-full-stack-web-developers/</guid><pubDate>Mon, 10 Oct 2016 08:06:20 GMT</pubDate></item></channel></rss>
