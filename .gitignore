@@ -6,3 +6,4 @@ output/
 .RData
 .Rhistory
 *.Rproj
+*.DS_Store
