@@ -99,7 +99,7 @@ To submit your work, you will need an account on <a class="reference external" h
 <li>Create a new project repository in GitLab with the name <strong>rtprogexam-&lt;firstname&gt;-&lt;lastname&gt;</strong> (using your own first/last name, of course).</li>
 <li>Set the visibility level to <strong>Private (Project access must be granted explicitly for each user)</strong>
 </li>
-<li>Add Brian Baquiran (brian_risingtide) to the project members, with <strong>Reporter</strong> access permissions.</li>
+<li>Add Wilson Santos (wilsonsantos) to the project members, with <strong>Reporter</strong> access permissions.</li>
 </ol>
 <p>You can begin working on the problems locally.</p>
 <ul class="simple">
@@ -113,16 +113,16 @@ To submit your work, you will need an account on <a class="reference external" h
 <div class="section" id="problem-1-translate-a-block-of-text-into-an-array-structure">
 <h2>Problem 1: Translate a block of text into an array structure</h2>
 <p>Given a text file that looks like this:</p>
-<pre class="code text"><a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-1"></a>XXOOXOXOXO
-<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-2"></a>XOOXOXOXOX
-<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-3"></a>OXX XOOXOX
-<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-4"></a>OXXXOOX XO
-<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-5"></a>XOOXOXOXXO
-<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-6"></a>XOX XXO OX
-<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-7"></a>XXOOXOXOXO
-<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-8"></a>XO OXOOXOO
-<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-9"></a>OXXXOO OXO
-<a name="rest_code_913ad4f74b664f30b43e4d29e88e9992-10"></a>OOOOOOOXOX
+<pre class="code text"><a name="rest_code_de3741d8b76a4cc8b4da3e671eefce0c-1"></a>XXOOXOXOXO
+<a name="rest_code_de3741d8b76a4cc8b4da3e671eefce0c-2"></a>XOOXOXOXOX
+<a name="rest_code_de3741d8b76a4cc8b4da3e671eefce0c-3"></a>OXX XOOXOX
+<a name="rest_code_de3741d8b76a4cc8b4da3e671eefce0c-4"></a>OXXXOOX XO
+<a name="rest_code_de3741d8b76a4cc8b4da3e671eefce0c-5"></a>XOOXOXOXXO
+<a name="rest_code_de3741d8b76a4cc8b4da3e671eefce0c-6"></a>XOX XXO OX
+<a name="rest_code_de3741d8b76a4cc8b4da3e671eefce0c-7"></a>XXOOXOXOXO
+<a name="rest_code_de3741d8b76a4cc8b4da3e671eefce0c-8"></a>XO OXOOXOO
+<a name="rest_code_de3741d8b76a4cc8b4da3e671eefce0c-9"></a>OXXXOO OXO
+<a name="rest_code_de3741d8b76a4cc8b4da3e671eefce0c-10"></a>OOOOOOOXOX
 </pre>
 <p>Each character represents a space in a rectangular grid. The space may be occupied by either an agent, or it may be an empty space. There are two types of agents: X and O.</p>
 <p><strong>Write a function</strong> <tt class="docutils literal">loadgrid</tt> <strong>that reads a text file and returns an object or data structure array representing the grid, populated with the contents of the text file.</strong></p>
@@ -157,10 +157,10 @@ To submit your work, you will need an account on <a class="reference external" h
 <span class="math">\(\text{Index of Dissimilarity} = 0.5 \big|\frac{x_i}{X} - \frac{o_i}{O}\big|\)</span>
 </blockquote>
 <p>For example, if we take the upper rightmost 4x4 region from the example grid above:</p>
-<pre class="code text"><a name="rest_code_3d7ccfb34a0c4ca2a4541c638dd6c62a-1"></a>XOXO
-<a name="rest_code_3d7ccfb34a0c4ca2a4541c638dd6c62a-2"></a>OXOX
-<a name="rest_code_3d7ccfb34a0c4ca2a4541c638dd6c62a-3"></a>OXOX
-<a name="rest_code_3d7ccfb34a0c4ca2a4541c638dd6c62a-4"></a>X XO
+<pre class="code text"><a name="rest_code_9af74e45723847edbc5de97dfa5d7da5-1"></a>XOXO
+<a name="rest_code_9af74e45723847edbc5de97dfa5d7da5-2"></a>OXOX
+<a name="rest_code_9af74e45723847edbc5de97dfa5d7da5-3"></a>OXOX
+<a name="rest_code_9af74e45723847edbc5de97dfa5d7da5-4"></a>X XO
 </pre>
 <p>that contains 8 X's and 7 O's, we would compute the Index of Dissimilarity as</p>
 <blockquote>
