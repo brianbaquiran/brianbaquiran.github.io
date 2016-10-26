@@ -19,7 +19,7 @@ You should follow the following steps before beginning work on the problems.
 
 #. Create a new project repository in GitLab with the name **rtprogexam-<firstname>-<lastname>** (using your own first/last name, of course).
 #. Set the visibility level to **Private (Project access must be granted explicitly for each user)**
-#. Add Brian Baquiran (brian_risingtide) to the project members, with **Reporter** access permissions.
+#. Add Wilson Santos (wilsonsantos) to the project members, with **Reporter** access permissions.
 
 You can begin working on the problems locally.
 
@@ -114,7 +114,3 @@ All dissatisfied agents leave the grid at the same time, and leave behind an emp
 - The function should take two parameters, the grid data structure or object returned by ``loadgrid``, and the threshold ``t``.
 - The threshold ``t`` should be a numeric value between 0 and 1. Check for invalid values.
 - The function should return a grid data structure, the input grid with dissatisfied agents replaced by an empty space.
-
-
-
-
