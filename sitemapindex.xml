@@ -7,11 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>http://brianbaquiran.com/authors/brian-baquiran.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2016-12-07T06:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/authors/roberto-alsina.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2016-12-07T06:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/aws.xml</loc>
@@ -103,10 +103,10 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/rss.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2016-12-07T06:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/sitemap.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2016-12-07T06:29:00Z</lastmod>
  </sitemap>
 </sitemapindex>
