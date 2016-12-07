@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lateral Thunking (programming)</title><link>http://brianbaquiran.com/</link><description></description><atom:link href="http://brianbaquiran.com/categories/programming.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 06 Apr 2016 02:02:52 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Hello, World!</title><link>http://brianbaquiran.com/posts/hello-world/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;pre class="code c"&gt;&lt;a name="rest_code_61d8112fcc944b588fbc1744040b1596-1"&gt;&lt;/a&gt;&lt;span class="cm"&gt;/* Hello World program */&lt;/span&gt;
-&lt;a name="rest_code_61d8112fcc944b588fbc1744040b1596-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_61d8112fcc944b588fbc1744040b1596-3"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_61d8112fcc944b588fbc1744040b1596-4"&gt;&lt;/a&gt;
-&lt;a name="rest_code_61d8112fcc944b588fbc1744040b1596-5"&gt;&lt;/a&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;a name="rest_code_61d8112fcc944b588fbc1744040b1596-6"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_61d8112fcc944b588fbc1744040b1596-7"&gt;&lt;/a&gt;    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello World"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_61d8112fcc944b588fbc1744040b1596-8"&gt;&lt;/a&gt;
-&lt;a name="rest_code_61d8112fcc944b588fbc1744040b1596-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lateral Thunking (programming)</title><link>http://brianbaquiran.com/</link><description></description><atom:link href="http://brianbaquiran.com/categories/programming.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 07 Dec 2016 06:25:28 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Hello, World!</title><link>http://brianbaquiran.com/posts/hello-world/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;pre class="code c"&gt;&lt;a name="rest_code_3194c10234b8470b8df8a2caac8449f8-1"&gt;&lt;/a&gt;&lt;span class="cm"&gt;/* Hello World program */&lt;/span&gt;
+&lt;a name="rest_code_3194c10234b8470b8df8a2caac8449f8-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3194c10234b8470b8df8a2caac8449f8-3"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_3194c10234b8470b8df8a2caac8449f8-4"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3194c10234b8470b8df8a2caac8449f8-5"&gt;&lt;/a&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_3194c10234b8470b8df8a2caac8449f8-6"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_3194c10234b8470b8df8a2caac8449f8-7"&gt;&lt;/a&gt;    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello World"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_3194c10234b8470b8df8a2caac8449f8-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3194c10234b8470b8df8a2caac8449f8-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;</description><category>programming</category><guid>http://brianbaquiran.com/posts/hello-world/</guid><pubDate>Sun, 25 Oct 2015 05:02:45 GMT</pubDate></item></channel></rss>

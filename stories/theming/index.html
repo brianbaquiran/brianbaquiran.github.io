@@ -11,6 +11,7 @@
 <link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="http://brianbaquiran.com/stories/theming/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="The Nikola Team">
@@ -38,10 +39,10 @@ Identifying and customizing diffe">
 
 <!-- Menubar -->
 
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation"><div class="container">
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
 <!-- This keeps the margins nice -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -53,7 +54,7 @@ Identifying and customizing diffe">
             </a>
         </div>
 <!-- /.navbar-header -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
 <a href="../../archive.html">Archive</a>
@@ -90,7 +91,7 @@ Identifying and customizing diffe">
         <div class="row">
             
             
-<article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Theming Nikola</a></h1>
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Theming Nikola</a></h1>
 
         
 
@@ -113,18 +114,18 @@ Identifying and customizing diffe">
 <div class="contents alert alert-info pull-right topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href=".#the-structure" id="id1">The Structure</a></li>
-<li><a class="reference internal" href=".#templates" id="id2">Templates</a></li>
-<li><a class="reference internal" href=".#customizing-themes-to-user-color-preference-and-section-colors" id="id3">Customizing themes to user color preference and section colors</a></li>
-<li><a class="reference internal" href=".#identifying-and-customizing-different-kinds-of-pages-with-a-shared-template" id="id4">Identifying and customizing different kinds of pages with a shared template</a></li>
-<li><a class="reference internal" href=".#messages-and-translations" id="id5">Messages and Translations</a></li>
-<li><a class="reference internal" href=".#less-and-sass" id="id6">LESS and Sass</a></li>
+<li><a class="reference internal" href="#the-structure" id="id1">The Structure</a></li>
+<li><a class="reference internal" href="#templates" id="id2">Templates</a></li>
+<li><a class="reference internal" href="#customizing-themes-to-user-color-preference-and-section-colors" id="id3">Customizing themes to user color preference and section colors</a></li>
+<li><a class="reference internal" href="#identifying-and-customizing-different-kinds-of-pages-with-a-shared-template" id="id4">Identifying and customizing different kinds of pages with a shared template</a></li>
+<li><a class="reference internal" href="#messages-and-translations" id="id5">Messages and Translations</a></li>
+<li><a class="reference internal" href="#less-and-sass" id="id6">LESS and Sass</a></li>
 </ul>
 </div>
 <p class="lead">This document is a reference about themes. If you want a tutorial, please read
 <a class="reference external" href="creating-a-theme.html">Creating a Theme</a></p>
 <div class="section" id="the-structure">
-<h2><a class="toc-backref" href=".#id1">The Structure</a></h2>
+<h2><a class="toc-backref" href="#id1">The Structure</a></h2>
 <p>Themes are located in the <tt class="docutils literal">themes</tt> folder where Nikola is installed, and in the <tt class="docutils literal">themes</tt> folder
 of your site, one folder per theme. The folder name is the theme name.</p>
 <p>A Nikola theme consists of the following folders (they are <em>all</em> optional):</p>
@@ -197,7 +198,7 @@ variable, which in turn is set by the <tt class="docutils literal">USE_BUNDLES</
 </dl>
 </div>
 <div class="section" id="templates">
-<h2><a class="toc-backref" href=".#id2">Templates</a></h2>
+<h2><a class="toc-backref" href="#id2">Templates</a></h2>
 <p>In templates there is a number of files whose name ends in <tt class="docutils literal">.tmpl</tt>. Those are the
 theme's page templates. They are done using the <a class="reference external" href="http://makotemplates.org">Mako</a>
 or <a class="reference external" href="http://jinja.pocoo.org">Jinja2</a> template languages. If you want to do a theme, you
@@ -297,7 +298,7 @@ require whatever data you want.</p>
 and custom templates can be added in the <tt class="docutils literal">templates/</tt> folder of your site.</p>
 </div>
 <div class="section" id="customizing-themes-to-user-color-preference-and-section-colors">
-<h2><a class="toc-backref" href=".#id3">Customizing themes to user color preference and section colors</a></h2>
+<h2><a class="toc-backref" href="#id3">Customizing themes to user color preference and section colors</a></h2>
 <p>The user’s preference for theme color is exposed in templates as
 <tt class="docutils literal">theme_color</tt> set in the <tt class="docutils literal">THEME_COLOR</tt> option.</p>
 <p>Each section has an assigned color that is either set by the user or auto
@@ -311,11 +312,11 @@ altered in the HSL colorspace through the function
 <tt class="docutils literal">color_hsl_adjust_hex(hex_string, adjust_h, adjust_s, adjust_l)</tt>.
 Adjustments are given in values between 1.0 and -1.0. For example, the theme
 color can be made lighter using:</p>
-<pre class="code html+mako"><a name="rest_code_c9b48a424ff74c95b8125bd3fa01ca24-1"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">"color:</span><span class="cp">${</span><span class="n">color_hsl_adjust_hex</span><span class="p">(</span><span class="n">theme_color</span><span class="p">,</span> <span class="n">adjust_l</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="p">&gt;</span>
+<pre class="code html+mako"><a name="rest_code_84d513c11ce84322a593d0eeb9c845a8-1"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">"color:</span><span class="cp">${</span><span class="n">color_hsl_adjust_hex</span><span class="p">(</span><span class="n">theme_color</span><span class="p">,</span> <span class="n">adjust_l</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span><span class="cp">}</span><span class="s">"</span><span class="p">&gt;</span>
 </pre>
 </div>
 <div class="section" id="identifying-and-customizing-different-kinds-of-pages-with-a-shared-template">
-<h2><a class="toc-backref" href=".#id4">Identifying and customizing different kinds of pages with a shared template</a></h2>
+<h2><a class="toc-backref" href="#id4">Identifying and customizing different kinds of pages with a shared template</a></h2>
 <p>Nikola provides a <cite>pagekind</cite> in each template contexts that can be used to
 modify shared templates based on the context it’s being used. For example,
 the <tt class="docutils literal">base_helper.tmpl</tt> is used in all pages, <tt class="docutils literal">indexes.tmpl</tt> is used in
@@ -324,34 +325,34 @@ these contexts.</p>
 <p>Example of conditionally loading different resources on all index pages
 (archives, author pages, and tag pages), and others again o the front page
 and in every post pages:</p>
-<pre class="code html+mako"><a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-1"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-2"></a>    …
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-3"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="s1">'index'</span> <span class="ow">in</span> <span class="n">pagekind</span><span class="p">:</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-4"></a>        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"/assets/css/multicolumn.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-5"></a>    <span class="cp">%</span><span class="k"> endif</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-6"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="s1">'front_page'</span> <span class="ow">in</span> <span class="n">pagekind</span><span class="p">:</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-7"></a>        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"/assets/css/fancy_homepage.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-8"></a>        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/post_carousel.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-9"></a>    <span class="cp">%</span><span class="k"> endif</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-10"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="s1">'post_page'</span> <span class="ow">in</span> <span class="n">pagekind</span><span class="p">:</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-11"></a>        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"/assets/css/article.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-12"></a>        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/comment_system.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-13"></a>    <span class="cp">%</span><span class="k"> endif</span>
-<a name="rest_code_ed254dcdc8a641fdba12a07084d93cb3-14"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<pre class="code html+mako"><a name="rest_code_e151589a51a544aebe18a7022e601d92-1"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-2"></a>    …
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-3"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="s1">'index'</span> <span class="ow">in</span> <span class="n">pagekind</span><span class="p">:</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-4"></a>        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"/assets/css/multicolumn.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-5"></a>    <span class="cp">%</span><span class="k"> endif</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-6"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="s1">'front_page'</span> <span class="ow">in</span> <span class="n">pagekind</span><span class="p">:</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-7"></a>        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"/assets/css/fancy_homepage.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-8"></a>        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/post_carousel.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-9"></a>    <span class="cp">%</span><span class="k"> endif</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-10"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="s1">'post_page'</span> <span class="ow">in</span> <span class="n">pagekind</span><span class="p">:</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-11"></a>        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"/assets/css/article.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-12"></a>        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/comment_system.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-13"></a>    <span class="cp">%</span><span class="k"> endif</span>
+<a name="rest_code_e151589a51a544aebe18a7022e601d92-14"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 </pre>
 <p>Promoting visits to the front page when visiting other filtered
 <tt class="docutils literal">index.tmpl</tt> page variants such as author pages and tag pages. This
 could have been included in <tt class="docutils literal">index.tmpl</tt> or maybe in <tt class="docutils literal">base.tmpl</tt>
 depending on what you want to achieve.</p>
-<pre class="code html+mako"><a name="rest_code_045ec27a9d404e08a9bf39a3f09089e8-1"></a><span class="cp">%</span> <span class="k">if</span> <span class="s1">'index'</span> <span class="ow">in</span> <span class="n">pagekind</span><span class="p">:</span>
-<a name="rest_code_045ec27a9d404e08a9bf39a3f09089e8-2"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="s1">'author_page'</span> <span class="ow">in</span> <span class="n">postkind</span><span class="p">:</span>
-<a name="rest_code_045ec27a9d404e08a9bf39a3f09089e8-3"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>These posts were written by <span class="cp">${</span><span class="n">author</span><span class="cp">}</span>. See posts by all
-<a name="rest_code_045ec27a9d404e08a9bf39a3f09089e8-4"></a>           authors on the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"/"</span><span class="p">&gt;</span>front page<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a name="rest_code_045ec27a9d404e08a9bf39a3f09089e8-5"></a>    <span class="cp">%</span> <span class="k">elif</span> <span class="s1">'tag_page'</span> <span class="ow">in</span> <span class="n">postkind</span><span class="p">:</span>
-<a name="rest_code_045ec27a9d404e08a9bf39a3f09089e8-6"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is a filtered selection of posts tagged “<span class="cp">${</span><span class="n">tag</span><span class="cp">}</span>”, visit
-<a name="rest_code_045ec27a9d404e08a9bf39a3f09089e8-7"></a>           the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"/"</span><span class="p">&gt;</span>front page<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> to see all posts.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a name="rest_code_045ec27a9d404e08a9bf39a3f09089e8-8"></a>    <span class="cp">%</span><span class="k"> endif</span>
-<a name="rest_code_045ec27a9d404e08a9bf39a3f09089e8-9"></a><span class="cp">%</span><span class="k"> endif</span>
+<pre class="code html+mako"><a name="rest_code_42c9deeea2fd4b27a0b3bc9d7bc7e147-1"></a><span class="cp">%</span> <span class="k">if</span> <span class="s1">'index'</span> <span class="ow">in</span> <span class="n">pagekind</span><span class="p">:</span>
+<a name="rest_code_42c9deeea2fd4b27a0b3bc9d7bc7e147-2"></a>    <span class="cp">%</span> <span class="k">if</span> <span class="s1">'author_page'</span> <span class="ow">in</span> <span class="n">postkind</span><span class="p">:</span>
+<a name="rest_code_42c9deeea2fd4b27a0b3bc9d7bc7e147-3"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>These posts were written by <span class="cp">${</span><span class="n">author</span><span class="cp">}</span>. See posts by all
+<a name="rest_code_42c9deeea2fd4b27a0b3bc9d7bc7e147-4"></a>           authors on the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"/"</span><span class="p">&gt;</span>front page<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a name="rest_code_42c9deeea2fd4b27a0b3bc9d7bc7e147-5"></a>    <span class="cp">%</span> <span class="k">elif</span> <span class="s1">'tag_page'</span> <span class="ow">in</span> <span class="n">postkind</span><span class="p">:</span>
+<a name="rest_code_42c9deeea2fd4b27a0b3bc9d7bc7e147-6"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is a filtered selection of posts tagged “<span class="cp">${</span><span class="n">tag</span><span class="cp">}</span>”, visit
+<a name="rest_code_42c9deeea2fd4b27a0b3bc9d7bc7e147-7"></a>           the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"/"</span><span class="p">&gt;</span>front page<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> to see all posts.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a name="rest_code_42c9deeea2fd4b27a0b3bc9d7bc7e147-8"></a>    <span class="cp">%</span><span class="k"> endif</span>
+<a name="rest_code_42c9deeea2fd4b27a0b3bc9d7bc7e147-9"></a><span class="cp">%</span><span class="k"> endif</span>
 </pre>
 <p>List of page kinds provided by default plugins:</p>
 <ul class="simple">
@@ -377,7 +378,7 @@ depending on what you want to achieve.</p>
 </ul>
 </div>
 <div class="section" id="messages-and-translations">
-<h2><a class="toc-backref" href=".#id5">Messages and Translations</a></h2>
+<h2><a class="toc-backref" href="#id5">Messages and Translations</a></h2>
 <p>The included themes are translated into a variety of languages. You can add your own translation
 at <a class="reference external" href="https://www.transifex.com/projects/p/nikola/">https://www.transifex.com/projects/p/nikola/</a></p>
 <p>If you want to create a theme that has new strings, and you want those strings to be translatable,
@@ -427,7 +428,7 @@ this happens)</p>
 
 
             <script src="../../assets/js/jquery.min.js"></script><script src="../../assets/js/bootstrap.min.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><script src="../../assets/js/fancydates.js"></script><script src="../../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
-    moment.locale("");
+    moment.locale("en");
     fancydates(0, "YYYY-MM-DD HH:mm");
     </script><!-- end fancy dates --><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
