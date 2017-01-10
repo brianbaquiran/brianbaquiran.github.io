@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://brianbaquiran.com/</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-01-10T09:04:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/2015/</loc>
@@ -18,24 +18,32 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/2017/</loc>
+  <lastmod>2017-01-10T09:04:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/archive.html</loc>
-  <lastmod>2017-01-10T08:57:00Z</lastmod>
+  <lastmod>2017-01-10T09:12:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/authors/</loc>
-  <lastmod>2017-01-10T08:55:00Z</lastmod>
+  <lastmod>2017-01-10T09:05:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/authors/brian-baquiran/</loc>
-  <lastmod>2017-01-10T08:55:00Z</lastmod>
+  <lastmod>2017-01-10T09:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/authors/brian/</loc>
+  <lastmod>2017-01-10T09:05:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/authors/roberto-alsina/</loc>
-  <lastmod>2017-01-10T08:55:00Z</lastmod>
+  <lastmod>2017-01-10T09:04:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
-  <lastmod>2017-01-10T08:55:00Z</lastmod>
+  <lastmod>2017-01-10T08:58:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/asus/</loc>
@@ -58,10 +66,6 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/devops/</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
- </url>
- <url>
   <loc>http://brianbaquiran.com/categories/dplyr/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
@@ -72,10 +76,6 @@
  <url>
   <loc>http://brianbaquiran.com/categories/git/</loc>
   <lastmod>2017-01-10T08:55:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.com/categories/jobs/</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/json/</loc>
@@ -110,19 +110,11 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/sysadmin/</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
- </url>
- <url>
   <loc>http://brianbaquiran.com/categories/tips/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/visualization/</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.com/categories/webdev/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
@@ -134,16 +126,12 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/index-1.html</loc>
-  <lastmod>2016-12-07T06:31:00Z</lastmod>
- </url>
- <url>
   <loc>http://brianbaquiran.com/listings/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/hello.py.html</loc>
-  <lastmod>2017-01-10T08:55:00Z</lastmod>
+  <lastmod>2017-01-10T09:05:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/alien-employment-permit-dataset/</loc>
@@ -163,14 +151,6 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/hello-world/</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.com/posts/hiring-junior-and-full-stack-web-developers/</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.com/posts/hiring-linux-system-administrators/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
