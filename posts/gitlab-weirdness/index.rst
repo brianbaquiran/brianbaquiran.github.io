@@ -1,7 +1,7 @@
 .. title: GitLab Weirdness
 .. slug: gitlab-weirdness
 .. date: 2016-09-28 15:35:40 UTC+08:00
-.. tags: tips
+.. tags: tips, git
 .. category:
 .. link:
 .. description:

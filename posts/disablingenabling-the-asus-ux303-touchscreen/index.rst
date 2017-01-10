@@ -1,7 +1,7 @@
 .. title: Disabling/Enabling the Asus UX303 Touchscreen in Ubuntu 16.04
 .. slug: disablingenabling-the-asus-ux303-touchscreen
 .. date: 2016-12-07 14:20:23 UTC+08:00
-.. tags:
+.. tags: linux, asus
 .. category:
 .. link:
 .. description:
