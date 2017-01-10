@@ -133,7 +133,7 @@ NAVIGATION_LINKS = {
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
         ("https://github.com/brianbaquiran", "Github"),
-        ("https://ph.linkedin.com/in/bbaquiran", "Linkedin"),
+        # ("https://ph.linkedin.com/in/bbaquiran", "Linkedin"),
     ),
 }
 
