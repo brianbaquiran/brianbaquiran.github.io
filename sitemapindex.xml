@@ -6,16 +6,12 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://brianbaquiran.com/authors/brian-baquiran.xml</loc>
-  <lastmod>2017-01-10T09:04:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>http://brianbaquiran.com/authors/brian.xml</loc>
-  <lastmod>2017-01-10T09:12:00Z</lastmod>
+  <lastmod>2017-04-13T13:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/authors/roberto-alsina.xml</loc>
-  <lastmod>2017-01-10T09:04:00Z</lastmod>
+  <lastmod>2017-04-13T13:27:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/asus.xml</loc>
@@ -48,6 +44,10 @@
  <sitemap>
   <loc>http://brianbaquiran.com/categories/git.xml</loc>
   <lastmod>2017-01-10T08:55:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://brianbaquiran.com/categories/graphs.xml</loc>
+  <lastmod>2017-04-13T13:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/json.xml</loc>
@@ -86,6 +86,10 @@
   <lastmod>2017-01-10T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/twitter.xml</loc>
+  <lastmod>2017-04-13T13:41:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/visualization.xml</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </sitemap>
@@ -99,10 +103,10 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/rss.xml</loc>
-  <lastmod>2017-01-10T09:12:00Z</lastmod>
+  <lastmod>2017-04-13T13:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/sitemap.xml</loc>
-  <lastmod>2017-01-10T09:12:00Z</lastmod>
+  <lastmod>2017-04-13T13:41:00Z</lastmod>
  </sitemap>
 </sitemapindex>
