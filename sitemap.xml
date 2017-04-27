@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://brianbaquiran.com/</loc>
-  <lastmod>2017-01-10T09:04:00Z</lastmod>
+  <lastmod>2017-04-27T09:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/2015/</loc>
@@ -23,23 +23,31 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/archive.html</loc>
-  <lastmod>2017-04-13T13:27:00Z</lastmod>
+  <lastmod>2017-04-27T10:07:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/authors/</loc>
-  <lastmod>2017-04-13T13:27:00Z</lastmod>
+  <lastmod>2017-04-27T09:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/authors/brian/</loc>
-  <lastmod>2017-04-13T13:27:00Z</lastmod>
+  <lastmod>2017-04-27T09:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/authors/roberto-alsina/</loc>
-  <lastmod>2017-04-13T13:27:00Z</lastmod>
+  <lastmod>2017-04-27T09:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
-  <lastmod>2017-04-13T13:41:00Z</lastmod>
+  <lastmod>2017-04-27T10:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/ai/</loc>
+  <lastmod>2017-04-27T09:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/api/</loc>
+  <lastmod>2017-04-27T10:07:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/asus/</loc>
@@ -52,6 +60,14 @@
  <url>
   <loc>http://brianbaquiran.com/categories/books/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/cat_events/</loc>
+  <lastmod>2017-04-27T10:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/centos/</loc>
+  <lastmod>2017-04-27T09:56:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/coding/</loc>
@@ -74,6 +90,10 @@
   <lastmod>2017-01-10T08:55:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/google/</loc>
+  <lastmod>2017-04-27T10:07:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/graphs/</loc>
   <lastmod>2017-04-13T13:41:00Z</lastmod>
  </url>
@@ -90,12 +110,20 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/nlp/</loc>
+  <lastmod>2017-04-27T10:07:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/programming/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/pycharm/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/pydata/</loc>
+  <lastmod>2017-04-27T09:56:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/python-centos-linux-pydata/</loc>
@@ -130,12 +158,20 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/index-1.html</loc>
+  <lastmod>2017-04-27T10:07:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/listings/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/hello.py.html</loc>
   <lastmod>2017-01-10T09:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/ai-ph-mixer/</loc>
+  <lastmod>2017-04-27T09:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/alien-employment-permit-dataset/</loc>
@@ -152,6 +188,10 @@
  <url>
   <loc>http://brianbaquiran.com/posts/gitlab-weirdness/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/google-cloud-natural-language-api/</loc>
+  <lastmod>2017-04-27T10:08:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/hello-world/</loc>

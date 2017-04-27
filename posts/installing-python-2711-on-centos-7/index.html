@@ -19,7 +19,10 @@
 <meta property="og:description" content="CentOS 7 ships with python 2.7.5 by default. We have some software that requires 2.7.11. It's generally a bad idea to clobber your system python, since other system-supplied software may rely on it be">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2016-05-23T19:17:07+08:00">
-<meta property="article:tag" content="python centos linux pydata">
+<meta property="article:tag" content="centos">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="pydata">
+<meta property="article:tag" content="python">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -101,50 +104,53 @@
 <!-- TEASER_END -->
 <div class="section" id="step-1-update-centos-and-install-development-tools">
 <h2>Step 1. Update CentOS and install development tools</h2>
-<pre class="code bash"><a name="rest_code_27d444730c904aaf8ad308e0c9905f68-1"></a><span class="c1"># as root</span>
-<a name="rest_code_27d444730c904aaf8ad308e0c9905f68-2"></a>yum upgrade -y
-<a name="rest_code_27d444730c904aaf8ad308e0c9905f68-3"></a>yum groupinstall <span class="s1">'Development Tools'</span> -y
-<a name="rest_code_27d444730c904aaf8ad308e0c9905f68-4"></a>yum install zlib-devel openssl-devel
+<pre class="code bash"><a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-1"></a><span class="c1"># as root</span>
+<a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-2"></a>yum upgrade -y
+<a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-3"></a>yum groupinstall <span class="s1">'Development Tools'</span> -y
+<a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-4"></a>yum install zlib-devel openssl-devel
 </pre>
 </div>
 <div class="section" id="step-2-download-the-python-source-tarball">
 <h2>Step 2. Download the Python source tarball</h2>
-<pre class="code bash"><a name="rest_code_10d1a1fc5e4048d59a444930f71b845c-1"></a><span class="c1"># As a regular user (avoid doing mundane things as root)</span>
-<a name="rest_code_10d1a1fc5e4048d59a444930f71b845c-2"></a>$ <span class="nb">cd</span> /tmp
-<a name="rest_code_10d1a1fc5e4048d59a444930f71b845c-3"></a>$ wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tgz
-<a name="rest_code_10d1a1fc5e4048d59a444930f71b845c-4"></a>$ tar -zxf Python-2.7.11.tgz
-<a name="rest_code_10d1a1fc5e4048d59a444930f71b845c-5"></a>$ <span class="nb">cd</span> Python-2.7.11
+<pre class="code bash"><a name="rest_code_df9232c534894b478d31b95ded93db7a-1"></a><span class="c1"># As a regular user (avoid doing mundane things as root)</span>
+<a name="rest_code_df9232c534894b478d31b95ded93db7a-2"></a>$ <span class="nb">cd</span> /tmp
+<a name="rest_code_df9232c534894b478d31b95ded93db7a-3"></a>$ wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tgz
+<a name="rest_code_df9232c534894b478d31b95ded93db7a-4"></a>$ tar -zxf Python-2.7.11.tgz
+<a name="rest_code_df9232c534894b478d31b95ded93db7a-5"></a>$ <span class="nb">cd</span> Python-2.7.11
 </pre>
 </div>
 <div class="section" id="step-3-configure-build-and-install-into-opt-replace-with-usr-local-if-you-prefer">
 <h2>Step 3. Configure, build and install into <tt class="docutils literal">/opt</tt> (replace with <tt class="docutils literal">/usr/local/</tt> if you prefer)</h2>
-<pre class="code bash"><a name="rest_code_9d4cd2e47dc2464caba953b2298c4256-1"></a>$ ./configure --prefix<span class="o">=</span>/opt/
-<a name="rest_code_9d4cd2e47dc2464caba953b2298c4256-2"></a>$ make
-<a name="rest_code_9d4cd2e47dc2464caba953b2298c4256-3"></a>$ make install
+<pre class="code bash"><a name="rest_code_a554f23d55b947faa2f87441845e357f-1"></a>$ ./configure --prefix<span class="o">=</span>/opt/
+<a name="rest_code_a554f23d55b947faa2f87441845e357f-2"></a>$ make
+<a name="rest_code_a554f23d55b947faa2f87441845e357f-3"></a>$ make install
 </pre>
 </div>
 <div class="section" id="step-4-install-pip-and-virtualenv-for-the-system-python">
 <h2>Step 4. Install pip and virtualenv for the system Python</h2>
 <p>You have to be root for this.</p>
-<pre class="code bash"><a name="rest_code_e03bbe3eb89a4992afd71462752076c6-1"></a><span class="c1"># curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</span>
-<a name="rest_code_e03bbe3eb89a4992afd71462752076c6-2"></a><span class="c1"># python get-pip.py</span>
-<a name="rest_code_e03bbe3eb89a4992afd71462752076c6-3"></a><span class="c1"># pip install virtualenv</span>
+<pre class="code bash"><a name="rest_code_d491131a7bb243ebb294cfedc14a6ca1-1"></a><span class="c1"># curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</span>
+<a name="rest_code_d491131a7bb243ebb294cfedc14a6ca1-2"></a><span class="c1"># python get-pip.py</span>
+<a name="rest_code_d491131a7bb243ebb294cfedc14a6ca1-3"></a><span class="c1"># pip install virtualenv</span>
 </pre>
 </div>
 <div class="section" id="step-5-use-the-system-virtualenv-to-create-a-venv-for-your-updated-python">
 <h2>Step 5. Use the system virtualenv to create a venv for your updated Python</h2>
 <p>You can now create virtualenvs, just point --python to the 2.7.11 interpreter</p>
-<pre class="code bash"><a name="rest_code_49bd081418b042e5bfae7d75b6afcbcb-1"></a>$ mkdir env
-<a name="rest_code_49bd081418b042e5bfae7d75b6afcbcb-2"></a>$ virtualenv --python<span class="o">=</span>/opt/bin/python2.7 env/pyenv
-<a name="rest_code_49bd081418b042e5bfae7d75b6afcbcb-3"></a>$ <span class="nb">source</span> env/pyenv/bin/activate
-<a name="rest_code_49bd081418b042e5bfae7d75b6afcbcb-4"></a>$ python --version
-<a name="rest_code_49bd081418b042e5bfae7d75b6afcbcb-5"></a>Python 2.7.11
+<pre class="code bash"><a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-1"></a>$ mkdir env
+<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-2"></a>$ virtualenv --python<span class="o">=</span>/opt/bin/python2.7 env/pyenv
+<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-3"></a>$ <span class="nb">source</span> env/pyenv/bin/activate
+<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-4"></a>$ python --version
+<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-5"></a>Python 2.7.11
 </pre>
 </div>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/python-centos-linux-pydata/" rel="tag">python centos linux pydata</a></li>
+<li><a class="tag p-category" href="../../categories/centos/" rel="tag">centos</a></li>
+            <li><a class="tag p-category" href="../../categories/linux/" rel="tag">linux</a></li>
+            <li><a class="tag p-category" href="../../categories/pydata/" rel="tag">pydata</a></li>
+            <li><a class="tag p-category" href="../../categories/python/" rel="tag">python</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
