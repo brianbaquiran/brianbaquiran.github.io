@@ -1,7 +1,7 @@
 .. title: Installing Python 2.7.11 on CentOS 7
 .. slug: installing-python-2711-on-centos-7
 .. date: 2016-05-23 19:17:07 UTC+08:00
-.. tags: python centos linux pydata
+.. tags: python, centos, linux, pydata
 .. category: 
 .. link: 
 .. description: 
