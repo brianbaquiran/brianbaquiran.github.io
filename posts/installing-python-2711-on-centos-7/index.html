@@ -7,7 +7,8 @@
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
-<meta content="#5670d4" name="theme-color">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="http://brianbaquiran.com/posts/installing-python-2711-on-centos-7/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian">
@@ -81,8 +82,8 @@
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Installing Python 2.7.11 on CentOS 7</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                    <a href="../../authors/brian/">Brian</a>
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Brian
             </span></p>
             <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2016-05-23T19:17:07+08:00" itemprop="datePublished" title="2016-05-23 19:17">2016-05-23 19:17</time></a></p>
                 <p class="commentline">
@@ -104,44 +105,44 @@
 <!-- TEASER_END -->
 <div class="section" id="step-1-update-centos-and-install-development-tools">
 <h2>Step 1. Update CentOS and install development tools</h2>
-<pre class="code bash"><a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-1"></a><span class="c1"># as root</span>
-<a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-2"></a>yum upgrade -y
-<a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-3"></a>yum groupinstall <span class="s1">'Development Tools'</span> -y
-<a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-4"></a>yum install zlib-devel openssl-devel
+<pre class="code bash"><a name="rest_code_43aab1b5d662437fb9ec96f3beafcc3c-1"></a><span class="c1"># as root</span>
+<a name="rest_code_43aab1b5d662437fb9ec96f3beafcc3c-2"></a>yum upgrade -y
+<a name="rest_code_43aab1b5d662437fb9ec96f3beafcc3c-3"></a>yum groupinstall <span class="s1">'Development Tools'</span> -y
+<a name="rest_code_43aab1b5d662437fb9ec96f3beafcc3c-4"></a>yum install zlib-devel openssl-devel
 </pre>
 </div>
 <div class="section" id="step-2-download-the-python-source-tarball">
 <h2>Step 2. Download the Python source tarball</h2>
-<pre class="code bash"><a name="rest_code_df9232c534894b478d31b95ded93db7a-1"></a><span class="c1"># As a regular user (avoid doing mundane things as root)</span>
-<a name="rest_code_df9232c534894b478d31b95ded93db7a-2"></a>$ <span class="nb">cd</span> /tmp
-<a name="rest_code_df9232c534894b478d31b95ded93db7a-3"></a>$ wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tgz
-<a name="rest_code_df9232c534894b478d31b95ded93db7a-4"></a>$ tar -zxf Python-2.7.11.tgz
-<a name="rest_code_df9232c534894b478d31b95ded93db7a-5"></a>$ <span class="nb">cd</span> Python-2.7.11
+<pre class="code bash"><a name="rest_code_bebb87bc0d93442c8ccddb949e53b80d-1"></a><span class="c1"># As a regular user (avoid doing mundane things as root)</span>
+<a name="rest_code_bebb87bc0d93442c8ccddb949e53b80d-2"></a>$ <span class="nb">cd</span> /tmp
+<a name="rest_code_bebb87bc0d93442c8ccddb949e53b80d-3"></a>$ wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tgz
+<a name="rest_code_bebb87bc0d93442c8ccddb949e53b80d-4"></a>$ tar -zxf Python-2.7.11.tgz
+<a name="rest_code_bebb87bc0d93442c8ccddb949e53b80d-5"></a>$ <span class="nb">cd</span> Python-2.7.11
 </pre>
 </div>
 <div class="section" id="step-3-configure-build-and-install-into-opt-replace-with-usr-local-if-you-prefer">
 <h2>Step 3. Configure, build and install into <tt class="docutils literal">/opt</tt> (replace with <tt class="docutils literal">/usr/local/</tt> if you prefer)</h2>
-<pre class="code bash"><a name="rest_code_a554f23d55b947faa2f87441845e357f-1"></a>$ ./configure --prefix<span class="o">=</span>/opt/
-<a name="rest_code_a554f23d55b947faa2f87441845e357f-2"></a>$ make
-<a name="rest_code_a554f23d55b947faa2f87441845e357f-3"></a>$ make install
+<pre class="code bash"><a name="rest_code_78ef6abbb5444cc6bcd0a8c891608eca-1"></a>$ ./configure --prefix<span class="o">=</span>/opt/
+<a name="rest_code_78ef6abbb5444cc6bcd0a8c891608eca-2"></a>$ make
+<a name="rest_code_78ef6abbb5444cc6bcd0a8c891608eca-3"></a>$ make install
 </pre>
 </div>
 <div class="section" id="step-4-install-pip-and-virtualenv-for-the-system-python">
 <h2>Step 4. Install pip and virtualenv for the system Python</h2>
 <p>You have to be root for this.</p>
-<pre class="code bash"><a name="rest_code_d491131a7bb243ebb294cfedc14a6ca1-1"></a><span class="c1"># curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</span>
-<a name="rest_code_d491131a7bb243ebb294cfedc14a6ca1-2"></a><span class="c1"># python get-pip.py</span>
-<a name="rest_code_d491131a7bb243ebb294cfedc14a6ca1-3"></a><span class="c1"># pip install virtualenv</span>
+<pre class="code bash"><a name="rest_code_8b602fadb3674cd5bde91ec6bfb32e26-1"></a><span class="c1"># curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</span>
+<a name="rest_code_8b602fadb3674cd5bde91ec6bfb32e26-2"></a><span class="c1"># python get-pip.py</span>
+<a name="rest_code_8b602fadb3674cd5bde91ec6bfb32e26-3"></a><span class="c1"># pip install virtualenv</span>
 </pre>
 </div>
 <div class="section" id="step-5-use-the-system-virtualenv-to-create-a-venv-for-your-updated-python">
 <h2>Step 5. Use the system virtualenv to create a venv for your updated Python</h2>
 <p>You can now create virtualenvs, just point --python to the 2.7.11 interpreter</p>
-<pre class="code bash"><a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-1"></a>$ mkdir env
-<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-2"></a>$ virtualenv --python<span class="o">=</span>/opt/bin/python2.7 env/pyenv
-<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-3"></a>$ <span class="nb">source</span> env/pyenv/bin/activate
-<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-4"></a>$ python --version
-<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-5"></a>Python 2.7.11
+<pre class="code bash"><a name="rest_code_47cfeb3e8f964e0f858d01ad4a98e055-1"></a>$ mkdir env
+<a name="rest_code_47cfeb3e8f964e0f858d01ad4a98e055-2"></a>$ virtualenv --python<span class="o">=</span>/opt/bin/python2.7 env/pyenv
+<a name="rest_code_47cfeb3e8f964e0f858d01ad4a98e055-3"></a>$ <span class="nb">source</span> env/pyenv/bin/activate
+<a name="rest_code_47cfeb3e8f964e0f858d01ad4a98e055-4"></a>$ python --version
+<a name="rest_code_47cfeb3e8f964e0f858d01ad4a98e055-5"></a>Python <span class="m">2</span>.7.11
 </pre>
 </div>
 </div>

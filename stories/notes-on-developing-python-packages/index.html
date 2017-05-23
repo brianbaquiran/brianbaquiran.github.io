@@ -7,7 +7,8 @@
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
-<meta content="#5670d4" name="theme-color">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="http://brianbaquiran.com/stories/notes-on-developing-python-packages/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian">
@@ -113,7 +114,7 @@ teacup/
 <h2>What to place in __init__.py</h2>
 <p>Read <a class="reference external" href="http://mikegrouchy.com/blog/2012/05/be-pythonic-__init__py.html">Be Pythonic: __init__.py</a> for an overview of how it works.
 Read this <a class="reference external" href="https://www.reddit.com/r/Python/comments/1bbbwk/whats_your_opinion_on_what_to_include_in_init_py/">Reddit thread</a> on how it's actually used in practice.</p>
-<div class="tip">
+<div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p class="last">Quiz yourself:
 What are the three different ways __init__.py is commonly used? Which one do you prefer?</p>
@@ -161,7 +162,7 @@ from silverware.forks import fork
 from silverware.silverware import knife
 </pre>
 <p>This effectively places teaspoon, knife and fork in the <cite>silverware</cite> namespace and allows <tt class="docutils literal">dinnertable.py</tt> to still use <tt class="docutils literal">from silverware import teaspoon</tt> even if <tt class="docutils literal">teaspoon</tt> is defined in the <tt class="docutils literal">silverware.spoons</tt> module and <tt class="docutils literal">fork</tt> in the <tt class="docutils literal">silverware.forks</tt> module.</p>
-<div class="note">
+<div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>I used absolute imports in this example. You could, conceivably, use relative imports like this:</p>
 <pre class="literal-block">

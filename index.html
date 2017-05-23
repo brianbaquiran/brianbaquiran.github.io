@@ -8,11 +8,12 @@
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
-<meta content="#5670d4" name="theme-color">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://brianbaquiran.com/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/google-cloud-natural-language-api/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/philippine-startups-wordcloud/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -65,10 +66,253 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/google-cloud-natural-language-api/" class="u-url">Google Cloud Natural Language API</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/philippine-startups-wordcloud/" class="u-url">Philippine Startups Wordcloud</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                <a href="authors/brian/">Brian</a>
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian
+            </span></p>
+            <p class="dateline"><a href="posts/philippine-startups-wordcloud/" rel="bookmark"><time class="published dt-published" datetime="2017-05-23T10:58:28+08:00" title="2017-05-23 10:58">2017-05-23 10:58</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/philippine-startups-wordcloud/#disqus_thread" data-disqus-identifier="cache/posts/Philippine Startup Wordcloud.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/sfsvwordcloud.png?raw=true" alt=""></p>
+<p>Source: <a href="https://www.reddit.com/r/dataisbeautiful/comments/6cnbil/san_francisco_startup_descriptions_vs_silicon/">San Francisco startup descriptions vs. Silicon Valley startup descriptions using Crunchbase data</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="k">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="k">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">string</span> <span class="k">import</span> <span class="n">punctuation</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I went to the <a href="http://www.kickstart.ph/">Kickstart</a> and <a href="http://www.ideaspacefoundation.org">Ideaspace</a> websites and scraped the descriptions of the startups they funded.</p>
+<p>And by <em>scraped</em>, I mean I cut-and-paste stuff into a Google Sheets document.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../files/Philippine Startups - Sheet1.csv"</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">descriptions</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="s1">'Long Description'</span><span class="p">]</span>
+<span class="n">descriptions</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    Arthrologic designs and develops a TKA (Total ...
+1    ​BluLemons Gaming Studio is an all-Filipino th...
+2    Croo enables people to swiftly send informatio...
+3    The Company has the opportunity to create the ...
+4    Despite current transponder technologies avail...
+Name: Long Description, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_words</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="s2">" "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">descriptions</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">'english'</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">punctuation</span><span class="p">))</span>
+
+<span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">raw_words</span> <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">w</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['arthrologic',
+ 'designs',
+ 'develops',
+ 'total',
+ 'knee',
+ 'arthroplasty',
+ 'system',
+ 'simple',
+ 'evidence-based',
+ 'utilizing',
+ 'successful',
+ 'clinical',
+ 'data',
+ 'improve',
+ 'surgical',
+ 'skills',
+ 'easy-to-use',
+ 'surgeon-friendly',
+ 'instrumentation',
+ 'assure']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">word_str</span> <span class="o">=</span> <span class="s2">" "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="n">word_str</span><span class="p">[:</span><span class="mi">1000</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>'arthrologic designs develops total knee arthroplasty system simple evidence-based utilizing successful clinical data improve surgical skills easy-to-use surgeon-friendly instrumentation assure successful predictable results offer competitive cost provide greater majority patients access technology improve living \u200bthe product asian-fit 2-component total knee arthroplasty system definitive surgical treatment severe end-stage osteoarthritic knees \u200bblulemons gaming studio all-filipino theme mobile gaming studio develop games based filipino culture \u200bthey believe creating mobile games great avenue showcase philippines offer globally vision create games impact filipino youth across cultures croo enables people swiftly send information loved ones need arises without typing anything calling anyone button accessory clicked sent predetermined emergency contacts smartphone application text message contains important information person’s current location nearby landmarks person’s contacts equipped '</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../files/phstartupwords.txt"</span><span class="p">,</span><span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">word_str</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Lazy-Wordcloud-Visualization">Lazy Wordcloud Visualization<a class="anchor-link" href="posts/philippine-startups-wordcloud/#Lazy-Wordcloud-Visualization">¶</a>
+</h3>
+<p>Enter the contents of the <a href="posts/phstartupwords.txt">file</a> generated into <a href="http://www.wordclouds.com/">http://www.wordclouds.com/</a>, and manually remove the words that occur less than 3 times:
+<img src="images/wordcloud.png?raw=true" alt=""></p>
+
+</div>
+</div>
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/google-cloud-natural-language-api/" class="u-url">Google Cloud Natural Language API</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian
             </span></p>
             <p class="dateline"><a href="posts/google-cloud-natural-language-api/" rel="bookmark"><time class="published dt-published" datetime="2017-04-27T18:05:21+08:00" title="2017-04-27 18:05">2017-04-27 18:05</time></a></p>
                 <p class="commentline">
@@ -83,8 +327,8 @@
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/life-satisfaction-two-cohorts/" class="u-url">Life Satisfaction, Two Cohorts</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                <a href="authors/brian/">Brian</a>
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian
             </span></p>
             <p class="dateline"><a href="posts/life-satisfaction-two-cohorts/" rel="bookmark"><time class="published dt-published" datetime="2017-04-13T21:27:09+08:00" title="2017-04-13 21:27">2017-04-13 21:27</time></a></p>
                 <p class="commentline">
@@ -104,8 +348,8 @@
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/ai-ph-mixer/" class="u-url">AI PH Mixer</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                <a href="authors/brian/">Brian</a>
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian
             </span></p>
             <p class="dateline"><a href="posts/ai-ph-mixer/" rel="bookmark"><time class="published dt-published" datetime="2017-03-14T17:49:02+08:00" title="2017-03-14 17:49">2017-03-14 17:49</time></a></p>
                 <p class="commentline">
@@ -120,8 +364,8 @@
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/disablingenabling-the-asus-ux303-touchscreen/" class="u-url">Disabling/Enabling the Asus UX303 Touchscreen in Ubuntu 16.04</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                <a href="authors/brian/">Brian</a>
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian
             </span></p>
             <p class="dateline"><a href="posts/disablingenabling-the-asus-ux303-touchscreen/" rel="bookmark"><time class="published dt-published" datetime="2016-12-07T14:20:23+08:00" title="2016-12-07 14:20">2016-12-07 14:20</time></a></p>
                 <p class="commentline">
@@ -162,8 +406,8 @@ $ xinput enable Atmel
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/creating-ec2-keypairs-with-aws-cli/" class="u-url">Creating EC2 keypairs with AWS CLI</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                <a href="authors/brian/">Brian</a>
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian
             </span></p>
             <p class="dateline"><a href="posts/creating-ec2-keypairs-with-aws-cli/" rel="bookmark"><time class="published dt-published" datetime="2016-09-29T18:48:37+08:00" title="2016-09-29 18:48">2016-09-29 18:48</time></a></p>
                 <p class="commentline">
@@ -176,28 +420,28 @@ $ xinput enable Atmel
     </header><div class="e-content entry-content">
     <div>
 <p>It is easy to create EC2 keypairs with the AWS CLI:</p>
-<pre class="code shell"><a name="rest_code_c614b1d2edc8424aa33d139a1c07fc4b-1"></a>$ aws ec2 create-key-pair --key-name mynewkeypair &gt; keystuff.json
+<pre class="code shell"><a name="rest_code_8bdd66d2cd6a4dc9b5d2ce44653e6a70-1"></a>$ aws ec2 create-key-pair --key-name mynewkeypair &gt; keystuff.json
 </pre>
 <p>After creating the keypair it should appear in your EC2 key pairs listing. The
 <tt class="docutils literal">keystuff.json</tt> file will contain the RSA private key you will need to use
 to connect to any instances you create with the keypair, as well as the name of
 the key and its fingerprint.</p>
-<pre class="code text"><a name="rest_code_90a280b24e524714b42cdf533d84d18a-1"></a>{
-<a name="rest_code_90a280b24e524714b42cdf533d84d18a-2"></a>    "KeyMaterial": "-----BEGIN RSA PRIVATE KEY-----\n&lt;your private key&gt;==\n-----END RSA PRIVATE KEY-----",
-<a name="rest_code_90a280b24e524714b42cdf533d84d18a-3"></a>    "KeyName": "mynewkeypair",
-<a name="rest_code_90a280b24e524714b42cdf533d84d18a-4"></a>    "KeyFingerprint": "53:47:ee:01:3a:35:9b:52:1c:4f:99:6f:87:b0:0f:8b:ed:83:55:3b"
-<a name="rest_code_90a280b24e524714b42cdf533d84d18a-5"></a>}
+<pre class="code text"><a name="rest_code_3ce97ce9b4c548338052710aaf64d530-1"></a>{
+<a name="rest_code_3ce97ce9b4c548338052710aaf64d530-2"></a>    "KeyMaterial": "-----BEGIN RSA PRIVATE KEY-----\n&lt;your private key&gt;==\n-----END RSA PRIVATE KEY-----",
+<a name="rest_code_3ce97ce9b4c548338052710aaf64d530-3"></a>    "KeyName": "mynewkeypair",
+<a name="rest_code_3ce97ce9b4c548338052710aaf64d530-4"></a>    "KeyFingerprint": "53:47:ee:01:3a:35:9b:52:1c:4f:99:6f:87:b0:0f:8b:ed:83:55:3b"
+<a name="rest_code_3ce97ce9b4c548338052710aaf64d530-5"></a>}
 </pre>
 <p>To extract the private key into a separate file, use the
 <a class="reference external" href="https://stedolan.github.io/jq/">jq JSON filter</a>.</p>
-<pre class="code shell"><a name="rest_code_e56394c463014b66a850afca9e8a2efc-1"></a>$ jq <span class="s1">'.KeyMaterial'</span> keystuff.json --raw &gt; mynewkey.pem
+<pre class="code shell"><a name="rest_code_753d28660e64448182d9aaa4113edf3f-1"></a>$ jq <span class="s1">'.KeyMaterial'</span> keystuff.json --raw &gt; mynewkey.pem
 </pre>
 </div>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/gitlab-weirdness/" class="u-url">GitLab Weirdness</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                <a href="authors/brian/">Brian</a>
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian
             </span></p>
             <p class="dateline"><a href="posts/gitlab-weirdness/" rel="bookmark"><time class="published dt-published" datetime="2016-09-28T15:35:40+08:00" title="2016-09-28 15:35">2016-09-28 15:35</time></a></p>
                 <p class="commentline">
@@ -228,8 +472,8 @@ pushing your code up again.</p>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/installing-python-2711-on-centos-7/" class="u-url">Installing Python 2.7.11 on CentOS 7</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                <a href="authors/brian/">Brian</a>
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian
             </span></p>
             <p class="dateline"><a href="posts/installing-python-2711-on-centos-7/" rel="bookmark"><time class="published dt-published" datetime="2016-05-23T19:17:07+08:00" title="2016-05-23 19:17">2016-05-23 19:17</time></a></p>
                 <p class="commentline">
@@ -246,52 +490,52 @@ pushing your code up again.</p>
 <!-- TEASER_END -->
 <div class="section" id="step-1-update-centos-and-install-development-tools">
 <h2>Step 1. Update CentOS and install development tools</h2>
-<pre class="code bash"><a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-1"></a><span class="c1"># as root</span>
-<a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-2"></a>yum upgrade -y
-<a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-3"></a>yum groupinstall <span class="s1">'Development Tools'</span> -y
-<a name="rest_code_3aca6ed2f0674e24811675b1b25f11e2-4"></a>yum install zlib-devel openssl-devel
+<pre class="code bash"><a name="rest_code_43aab1b5d662437fb9ec96f3beafcc3c-1"></a><span class="c1"># as root</span>
+<a name="rest_code_43aab1b5d662437fb9ec96f3beafcc3c-2"></a>yum upgrade -y
+<a name="rest_code_43aab1b5d662437fb9ec96f3beafcc3c-3"></a>yum groupinstall <span class="s1">'Development Tools'</span> -y
+<a name="rest_code_43aab1b5d662437fb9ec96f3beafcc3c-4"></a>yum install zlib-devel openssl-devel
 </pre>
 </div>
 <div class="section" id="step-2-download-the-python-source-tarball">
 <h2>Step 2. Download the Python source tarball</h2>
-<pre class="code bash"><a name="rest_code_df9232c534894b478d31b95ded93db7a-1"></a><span class="c1"># As a regular user (avoid doing mundane things as root)</span>
-<a name="rest_code_df9232c534894b478d31b95ded93db7a-2"></a>$ <span class="nb">cd</span> /tmp
-<a name="rest_code_df9232c534894b478d31b95ded93db7a-3"></a>$ wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tgz
-<a name="rest_code_df9232c534894b478d31b95ded93db7a-4"></a>$ tar -zxf Python-2.7.11.tgz
-<a name="rest_code_df9232c534894b478d31b95ded93db7a-5"></a>$ <span class="nb">cd</span> Python-2.7.11
+<pre class="code bash"><a name="rest_code_bebb87bc0d93442c8ccddb949e53b80d-1"></a><span class="c1"># As a regular user (avoid doing mundane things as root)</span>
+<a name="rest_code_bebb87bc0d93442c8ccddb949e53b80d-2"></a>$ <span class="nb">cd</span> /tmp
+<a name="rest_code_bebb87bc0d93442c8ccddb949e53b80d-3"></a>$ wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tgz
+<a name="rest_code_bebb87bc0d93442c8ccddb949e53b80d-4"></a>$ tar -zxf Python-2.7.11.tgz
+<a name="rest_code_bebb87bc0d93442c8ccddb949e53b80d-5"></a>$ <span class="nb">cd</span> Python-2.7.11
 </pre>
 </div>
 <div class="section" id="step-3-configure-build-and-install-into-opt-replace-with-usr-local-if-you-prefer">
 <h2>Step 3. Configure, build and install into <tt class="docutils literal">/opt</tt> (replace with <tt class="docutils literal">/usr/local/</tt> if you prefer)</h2>
-<pre class="code bash"><a name="rest_code_a554f23d55b947faa2f87441845e357f-1"></a>$ ./configure --prefix<span class="o">=</span>/opt/
-<a name="rest_code_a554f23d55b947faa2f87441845e357f-2"></a>$ make
-<a name="rest_code_a554f23d55b947faa2f87441845e357f-3"></a>$ make install
+<pre class="code bash"><a name="rest_code_78ef6abbb5444cc6bcd0a8c891608eca-1"></a>$ ./configure --prefix<span class="o">=</span>/opt/
+<a name="rest_code_78ef6abbb5444cc6bcd0a8c891608eca-2"></a>$ make
+<a name="rest_code_78ef6abbb5444cc6bcd0a8c891608eca-3"></a>$ make install
 </pre>
 </div>
 <div class="section" id="step-4-install-pip-and-virtualenv-for-the-system-python">
 <h2>Step 4. Install pip and virtualenv for the system Python</h2>
 <p>You have to be root for this.</p>
-<pre class="code bash"><a name="rest_code_d491131a7bb243ebb294cfedc14a6ca1-1"></a><span class="c1"># curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</span>
-<a name="rest_code_d491131a7bb243ebb294cfedc14a6ca1-2"></a><span class="c1"># python get-pip.py</span>
-<a name="rest_code_d491131a7bb243ebb294cfedc14a6ca1-3"></a><span class="c1"># pip install virtualenv</span>
+<pre class="code bash"><a name="rest_code_8b602fadb3674cd5bde91ec6bfb32e26-1"></a><span class="c1"># curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</span>
+<a name="rest_code_8b602fadb3674cd5bde91ec6bfb32e26-2"></a><span class="c1"># python get-pip.py</span>
+<a name="rest_code_8b602fadb3674cd5bde91ec6bfb32e26-3"></a><span class="c1"># pip install virtualenv</span>
 </pre>
 </div>
 <div class="section" id="step-5-use-the-system-virtualenv-to-create-a-venv-for-your-updated-python">
 <h2>Step 5. Use the system virtualenv to create a venv for your updated Python</h2>
 <p>You can now create virtualenvs, just point --python to the 2.7.11 interpreter</p>
-<pre class="code bash"><a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-1"></a>$ mkdir env
-<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-2"></a>$ virtualenv --python<span class="o">=</span>/opt/bin/python2.7 env/pyenv
-<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-3"></a>$ <span class="nb">source</span> env/pyenv/bin/activate
-<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-4"></a>$ python --version
-<a name="rest_code_a3356887a9a0459fa69a9cfa3a7237b6-5"></a>Python 2.7.11
+<pre class="code bash"><a name="rest_code_47cfeb3e8f964e0f858d01ad4a98e055-1"></a>$ mkdir env
+<a name="rest_code_47cfeb3e8f964e0f858d01ad4a98e055-2"></a>$ virtualenv --python<span class="o">=</span>/opt/bin/python2.7 env/pyenv
+<a name="rest_code_47cfeb3e8f964e0f858d01ad4a98e055-3"></a>$ <span class="nb">source</span> env/pyenv/bin/activate
+<a name="rest_code_47cfeb3e8f964e0f858d01ad4a98e055-4"></a>$ python --version
+<a name="rest_code_47cfeb3e8f964e0f858d01ad4a98e055-5"></a>Python <span class="m">2</span>.7.11
 </pre>
 </div>
 </div>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/the-business-of-big-data-analytics-meetup-3/" class="u-url">The Business of Big Data Analytics Meetup #3</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                <a href="authors/brian/">Brian</a>
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian
             </span></p>
             <p class="dateline"><a href="posts/the-business-of-big-data-analytics-meetup-3/" rel="bookmark"><time class="published dt-published" datetime="2016-02-11T10:14:39+08:00" title="2016-02-11 10:14">2016-02-11 10:14</time></a></p>
                 <p class="commentline">
@@ -306,8 +550,8 @@ pushing your code up again.</p>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/namedtuple-comes-in-handy/" class="u-url">namedtuple Comes in Handy</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                <a href="authors/brian/">Brian</a>
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian
             </span></p>
             <p class="dateline"><a href="posts/namedtuple-comes-in-handy/" rel="bookmark"><time class="published dt-published" datetime="2015-12-20T08:58:42+08:00" title="2015-12-20 08:58">2015-12-20 08:58</time></a></p>
                 <p class="commentline">
@@ -320,121 +564,102 @@ pushing your code up again.</p>
     </header><div class="e-content entry-content">
     <div>
 <p>I've been writing a lot of Python code recently. Oftentimes I struggle with what a method should return when I have to relay more than one value back to the caller. For example:</p>
-<pre class="code python"><a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-1"></a><span class="k">def</span> <span class="nf">PaymentGateway</span><span class="p">:</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-2"></a>    <span class="k">def</span> <span class="nf">do_transaction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-3"></a>        <span class="sd">"""</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-4"></a><span class="sd">        Perform some transaction against the API.</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-5"></a>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-6"></a><span class="sd">        :return: whether the transaction was successful or not</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-7"></a><span class="sd">        :rtype: bool</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-8"></a><span class="sd">        """</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-9"></a>        <span class="c1"># stuff happens here</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-10"></a>        <span class="k">try</span><span class="p">:</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-11"></a>            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amount_transaction</span><span class="p">(</span><span class="n">tx_details</span><span class="p">)</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-12"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Success: CODE=</span><span class="si">%s</span><span class="s2"> Details=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">code</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">detail</span><span class="p">))</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-13"></a>            <span class="k">return</span> <span class="bp">True</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-14"></a>        <span class="k">except</span> <span class="n">GatewayException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-15"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">"Transaction failed: ERROR=</span><span class="si">%s</span><span class="s2"> reason=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">err_code</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">))</span>
-<a name="rest_code_dc2e9df3661f487ab8a937799cf450cc-16"></a>            <span class="k">return</span> <span class="bp">False</span>
+<pre class="code python"><a name="rest_code_61b4def6f1a4416796fcebc5067a905c-1"></a><span class="k">def</span> <span class="nf">PaymentGateway</span><span class="p">:</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-2"></a>    <span class="k">def</span> <span class="nf">do_transaction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-3"></a>        <span class="sd">"""</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-4"></a><span class="sd">        Perform some transaction against the API.</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-5"></a>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-6"></a><span class="sd">        :return: whether the transaction was successful or not</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-7"></a><span class="sd">        :rtype: bool</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-8"></a><span class="sd">        """</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-9"></a>        <span class="c1"># stuff happens here</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-10"></a>        <span class="k">try</span><span class="p">:</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-11"></a>            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amount_transaction</span><span class="p">(</span><span class="n">tx_details</span><span class="p">)</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-12"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Success: CODE=</span><span class="si">%s</span><span class="s2"> Details=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">code</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">detail</span><span class="p">))</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-13"></a>            <span class="k">return</span> <span class="bp">True</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-14"></a>        <span class="k">except</span> <span class="n">GatewayException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-15"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">"Transaction failed: ERROR=</span><span class="si">%s</span><span class="s2"> reason=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">err_code</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">))</span>
+<a name="rest_code_61b4def6f1a4416796fcebc5067a905c-16"></a>            <span class="k">return</span> <span class="bp">False</span>
 </pre>
 <p>The code that calls <code>do_transaction</code> might look like this:</p>
-<pre class="code python"><a name="rest_code_e0f035243d044eb2adf69d8004b3a621-1"></a><span class="k">if</span> <span class="n">payment_gw</span><span class="o">.</span><span class="n">do_transaction</span><span class="p">(</span><span class="n">subid</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="n">service_id</span><span class="p">,</span> <span class="n">ref_code</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
-<a name="rest_code_e0f035243d044eb2adf69d8004b3a621-2"></a>    <span class="c1"># Hooray! Succe$$!</span>
-<a name="rest_code_e0f035243d044eb2adf69d8004b3a621-3"></a>    <span class="n">report_success</span><span class="p">(</span><span class="s2">"Transaction for </span><span class="si">%s</span><span class="s2"> was successful. Check logs for status code."</span> <span class="o">%</span> <span class="n">subid</span><span class="p">)</span>
-<a name="rest_code_e0f035243d044eb2adf69d8004b3a621-4"></a><span class="k">else</span><span class="p">:</span>
-<a name="rest_code_e0f035243d044eb2adf69d8004b3a621-5"></a>    <span class="c1"># Boo</span>
-<a name="rest_code_e0f035243d044eb2adf69d8004b3a621-6"></a>    <span class="n">report_failure</span><span class="p">(</span><span class="s2">"Transaction failed. I don't know why..."</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_6910c04e3753491a888944a158e09477-1"></a><span class="k">if</span> <span class="n">payment_gw</span><span class="o">.</span><span class="n">do_transaction</span><span class="p">(</span><span class="n">subid</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="n">service_id</span><span class="p">,</span> <span class="n">ref_code</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+<a name="rest_code_6910c04e3753491a888944a158e09477-2"></a>    <span class="c1"># Hooray! Succe$$!</span>
+<a name="rest_code_6910c04e3753491a888944a158e09477-3"></a>    <span class="n">report_success</span><span class="p">(</span><span class="s2">"Transaction for </span><span class="si">%s</span><span class="s2"> was successful. Check logs for status code."</span> <span class="o">%</span> <span class="n">subid</span><span class="p">)</span>
+<a name="rest_code_6910c04e3753491a888944a158e09477-4"></a><span class="k">else</span><span class="p">:</span>
+<a name="rest_code_6910c04e3753491a888944a158e09477-5"></a>    <span class="c1"># Boo</span>
+<a name="rest_code_6910c04e3753491a888944a158e09477-6"></a>    <span class="n">report_failure</span><span class="p">(</span><span class="s2">"Transaction failed. I don't know why..."</span><span class="p">)</span>
 </pre>
 <p>Many times this is fine, but what if the caller needs the details from the <code>amount_transaction</code> result or the <code>GatewayException</code>? A quick solution is to return a <code>dict</code> :</p>
-<pre class="code python"><a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-1"></a><span class="k">def</span> <span class="nf">PaymentGateway</span><span class="p">:</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-2"></a>    <span class="k">def</span> <span class="nf">do_transaction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-3"></a>        <span class="sd">"""</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-4"></a><span class="sd">        Perform some transaction against the API.</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-5"></a>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-6"></a><span class="sd">        :return: a dict that contains keys 'success', 'code', and 'detail'</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-7"></a><span class="sd">        :rtype: dict</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-8"></a><span class="sd">        """</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-9"></a>        <span class="c1"># stuff happens here</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-10"></a>        <span class="k">try</span><span class="p">:</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-11"></a>            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amount_transaction</span><span class="p">(</span><span class="n">tx_details</span><span class="p">)</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-12"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Success: CODE=</span><span class="si">%s</span><span class="s2"> Details=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">code</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">detail</span><span class="p">))</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-13"></a>            <span class="n">success_dict</span> <span class="o">=</span> <span class="p">{</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-14"></a>                <span class="s1">'success'</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-15"></a>                <span class="s1">'code'</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">code</span><span class="p">,</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-16"></a>                <span class="s1">'detail'</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">detail</span><span class="p">,</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-17"></a>            <span class="p">}</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-18"></a>            <span class="k">return</span> <span class="n">success_dict</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-19"></a>        <span class="k">except</span> <span class="n">GatewayException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-20"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">"Transaction failed: ERROR=</span><span class="si">%s</span><span class="s2"> reason=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">err_code</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">))</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-21"></a>            <span class="n">error_dict</span> <span class="o">=</span> <span class="p">{</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-22"></a>                <span class="s1">'success'</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-23"></a>                <span class="s1">'code'</span><span class="p">:</span> <span class="n">ex</span><span class="o">.</span><span class="n">err_code</span><span class="p">,</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-24"></a>                <span class="s1">'detail'</span><span class="p">:</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">,</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-25"></a>            <span class="p">}</span>
-<a name="rest_code_0280e0b3bd1648f2b22e580747e6a0ac-26"></a>            <span class="k">return</span> <span class="n">error_dict</span>
+<pre class="code python"><a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-1"></a><span class="k">def</span> <span class="nf">PaymentGateway</span><span class="p">:</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-2"></a>    <span class="k">def</span> <span class="nf">do_transaction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-3"></a>        <span class="sd">"""</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-4"></a><span class="sd">        Perform some transaction against the API.</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-5"></a>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-6"></a><span class="sd">        :return: a dict that contains keys 'success', 'code', and 'detail'</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-7"></a><span class="sd">        :rtype: dict</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-8"></a><span class="sd">        """</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-9"></a>        <span class="c1"># stuff happens here</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-10"></a>        <span class="k">try</span><span class="p">:</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-11"></a>            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amount_transaction</span><span class="p">(</span><span class="n">tx_details</span><span class="p">)</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-12"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Success: CODE=</span><span class="si">%s</span><span class="s2"> Details=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">code</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">detail</span><span class="p">))</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-13"></a>            <span class="n">success_dict</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-14"></a>                <span class="s1">'success'</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-15"></a>                <span class="s1">'code'</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">code</span><span class="p">,</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-16"></a>                <span class="s1">'detail'</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">detail</span><span class="p">,</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-17"></a>            <span class="p">}</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-18"></a>            <span class="k">return</span> <span class="n">success_dict</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-19"></a>        <span class="k">except</span> <span class="n">GatewayException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-20"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">"Transaction failed: ERROR=</span><span class="si">%s</span><span class="s2"> reason=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">err_code</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">))</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-21"></a>            <span class="n">error_dict</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-22"></a>                <span class="s1">'success'</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-23"></a>                <span class="s1">'code'</span><span class="p">:</span> <span class="n">ex</span><span class="o">.</span><span class="n">err_code</span><span class="p">,</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-24"></a>                <span class="s1">'detail'</span><span class="p">:</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">,</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-25"></a>            <span class="p">}</span>
+<a name="rest_code_a3cd1ce01d4b40fa958e71b22cf66418-26"></a>            <span class="k">return</span> <span class="n">error_dict</span>
 </pre>
 <p>It works but it's pretty ad-hoc. The structure of whatever <code>do_transaction</code> returns won't be obvious unless you dig into the code. The caller will end up like:</p>
-<pre class="code python"><a name="rest_code_8b0f053ab4d24a74868cc5ea12213abb-1"></a><span class="n">payment_status</span> <span class="o">=</span> <span class="n">payment_gw</span><span class="o">.</span><span class="n">do_transaction</span><span class="p">(</span><span class="n">subid</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="n">service_id</span><span class="p">,</span> <span class="n">ref_code</span><span class="p">)</span>
-<a name="rest_code_8b0f053ab4d24a74868cc5ea12213abb-2"></a><span class="k">if</span> <span class="n">payment_status</span><span class="p">[</span><span class="s1">'success'</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
-<a name="rest_code_8b0f053ab4d24a74868cc5ea12213abb-3"></a>    <span class="c1"># Hooray! Succe$$!</span>
-<a name="rest_code_8b0f053ab4d24a74868cc5ea12213abb-4"></a>    <span class="n">report_success</span><span class="p">(</span><span class="s2">"Transaction for </span><span class="si">%s</span><span class="s2"> was successful, status code </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">subid</span><span class="p">,</span> <span class="n">payment_status</span><span class="p">[</span><span class="s1">'code'</span><span class="p">]))</span>
-<a name="rest_code_8b0f053ab4d24a74868cc5ea12213abb-5"></a><span class="k">else</span><span class="p">:</span>
-<a name="rest_code_8b0f053ab4d24a74868cc5ea12213abb-6"></a>    <span class="c1"># Boo</span>
-<a name="rest_code_8b0f053ab4d24a74868cc5ea12213abb-7"></a>    <span class="n">report_failure</span><span class="p">(</span><span class="s2">"Transaction failed, because: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">payment_status</span><span class="p">[</span><span class="s1">'detail'</span><span class="p">])</span>
+<pre class="code python"><a name="rest_code_57f6ebc3d6bf4581843ded099dc6a91a-1"></a><span class="n">payment_status</span> <span class="o">=</span> <span class="n">payment_gw</span><span class="o">.</span><span class="n">do_transaction</span><span class="p">(</span><span class="n">subid</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="n">service_id</span><span class="p">,</span> <span class="n">ref_code</span><span class="p">)</span>
+<a name="rest_code_57f6ebc3d6bf4581843ded099dc6a91a-2"></a><span class="k">if</span> <span class="n">payment_status</span><span class="p">[</span><span class="s1">'success'</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+<a name="rest_code_57f6ebc3d6bf4581843ded099dc6a91a-3"></a>    <span class="c1"># Hooray! Succe$$!</span>
+<a name="rest_code_57f6ebc3d6bf4581843ded099dc6a91a-4"></a>    <span class="n">report_success</span><span class="p">(</span><span class="s2">"Transaction for </span><span class="si">%s</span><span class="s2"> was successful, status code </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">subid</span><span class="p">,</span> <span class="n">payment_status</span><span class="p">[</span><span class="s1">'code'</span><span class="p">]))</span>
+<a name="rest_code_57f6ebc3d6bf4581843ded099dc6a91a-5"></a><span class="k">else</span><span class="p">:</span>
+<a name="rest_code_57f6ebc3d6bf4581843ded099dc6a91a-6"></a>    <span class="c1"># Boo</span>
+<a name="rest_code_57f6ebc3d6bf4581843ded099dc6a91a-7"></a>    <span class="n">report_failure</span><span class="p">(</span><span class="s2">"Transaction failed, because: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">payment_status</span><span class="p">[</span><span class="s1">'detail'</span><span class="p">])</span>
 </pre>
 <p>Now the caller is poluted with literal strings like <code>'success'</code>, <code>'code'</code> and <code>'status'</code>. These can be hell to debug, specially if you happen to misspell one of them in your code. Even if you're using an awesome IDE like <a class="reference external" href="http://www.jetbrains.com/pycharm/">PyCharm</a>.</p>
 <p>An altenative to defining these ad-hoc dict structures is to use <a class="reference external" href="https://docs.python.org/2/library/collections.html#collections.namedtuple">namedtuple</a> from the collections package.</p>
-<pre class="code python"><a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-1"></a><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-2"></a>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-3"></a><span class="n">PaymentStatus</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'PaymentStatus'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'success'</span><span class="p">,</span> <span class="s1">'code'</span><span class="p">,</span> <span class="s1">'detail'</span><span class="p">])</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-4"></a>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-5"></a><span class="k">def</span> <span class="nf">PaymentGateway</span><span class="p">:</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-6"></a>    <span class="k">def</span> <span class="nf">do_transaction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-7"></a>        <span class="sd">"""</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-8"></a><span class="sd">        Perform some transaction against the API.</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-9"></a>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-10"></a><span class="sd">        :return: whether the transaction was successful or not</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-11"></a><span class="sd">        :rtype: PaymentStatus</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-12"></a><span class="sd">        """</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-13"></a>        <span class="c1"># stuff happens here</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-14"></a>        <span class="k">try</span><span class="p">:</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-15"></a>            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amount_transaction</span><span class="p">(</span><span class="n">tx_details</span><span class="p">)</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-16"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Success: CODE=</span><span class="si">%s</span><span class="s2"> Details=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">code</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">detail</span><span class="p">))</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-17"></a>            <span class="k">return</span> <span class="n">PaymentStatus</span><span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">code</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">detail</span><span class="p">)</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-18"></a>        <span class="k">except</span> <span class="n">GatewayException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-19"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">"Transaction failed: ERROR=</span><span class="si">%s</span><span class="s2"> reason=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">err_code</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">))</span>
-<a name="rest_code_dd2f1e7dd5024bcebdfd4d292c7a063a-20"></a>            <span class="k">return</span> <span class="n">PaymentStatus</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">err_code</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_86b6d22358304b22b075f006228c6d14-1"></a><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-2"></a>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-3"></a><span class="n">PaymentStatus</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'PaymentStatus'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'success'</span><span class="p">,</span> <span class="s1">'code'</span><span class="p">,</span> <span class="s1">'detail'</span><span class="p">])</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-4"></a>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-5"></a><span class="k">def</span> <span class="nf">PaymentGateway</span><span class="p">:</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-6"></a>    <span class="k">def</span> <span class="nf">do_transaction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-7"></a>        <span class="sd">"""</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-8"></a><span class="sd">        Perform some transaction against the API.</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-9"></a>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-10"></a><span class="sd">        :return: whether the transaction was successful or not</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-11"></a><span class="sd">        :rtype: PaymentStatus</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-12"></a><span class="sd">        """</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-13"></a>        <span class="c1"># stuff happens here</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-14"></a>        <span class="k">try</span><span class="p">:</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-15"></a>            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amount_transaction</span><span class="p">(</span><span class="n">tx_details</span><span class="p">)</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-16"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Success: CODE=</span><span class="si">%s</span><span class="s2"> Details=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">code</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">detail</span><span class="p">))</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-17"></a>            <span class="k">return</span> <span class="n">PaymentStatus</span><span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">code</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">detail</span><span class="p">)</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-18"></a>        <span class="k">except</span> <span class="n">GatewayException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-19"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">"Transaction failed: ERROR=</span><span class="si">%s</span><span class="s2"> reason=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">err_code</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">))</span>
+<a name="rest_code_86b6d22358304b22b075f006228c6d14-20"></a>            <span class="k">return</span> <span class="n">PaymentStatus</span><span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">err_code</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
 </pre>
 <p><code>namedtuple</code> forces us to be explicit about what <code>do_transaction</code> returns. And <a class="reference external" href="http://www.thezenofpython.com/">explicit is better than implicit</a>. For the caller, this looks like:</p>
-<pre class="code python"><a name="rest_code_1c519f7623fc4b67ae3c25fa71150227-1"></a><span class="n">payment_status</span> <span class="o">=</span> <span class="n">payment_gw</span><span class="o">.</span><span class="n">do_transaction</span><span class="p">(</span><span class="n">subid</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="n">service_id</span><span class="p">,</span> <span class="n">ref_code</span><span class="p">)</span>
-<a name="rest_code_1c519f7623fc4b67ae3c25fa71150227-2"></a><span class="k">if</span> <span class="n">payment_status</span><span class="o">.</span><span class="n">success</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
-<a name="rest_code_1c519f7623fc4b67ae3c25fa71150227-3"></a>    <span class="c1"># Hooray! Succe$$!</span>
-<a name="rest_code_1c519f7623fc4b67ae3c25fa71150227-4"></a>    <span class="n">report_success</span><span class="p">(</span><span class="s2">"Transaction for </span><span class="si">%s</span><span class="s2"> was successful, status code </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">subid</span><span class="p">,</span> <span class="n">payment_status</span><span class="o">.</span><span class="n">code</span><span class="p">))</span>
-<a name="rest_code_1c519f7623fc4b67ae3c25fa71150227-5"></a><span class="k">else</span><span class="p">:</span>
-<a name="rest_code_1c519f7623fc4b67ae3c25fa71150227-6"></a>    <span class="c1"># Boo</span>
-<a name="rest_code_1c519f7623fc4b67ae3c25fa71150227-7"></a>    <span class="n">report_failure</span><span class="p">(</span><span class="s2">"Transaction failed, because: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">payment_status</span><span class="o">.</span><span class="n">detail</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_4b804cb1919449cdb717b99297ab1556-1"></a><span class="n">payment_status</span> <span class="o">=</span> <span class="n">payment_gw</span><span class="o">.</span><span class="n">do_transaction</span><span class="p">(</span><span class="n">subid</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">bill_code</span><span class="p">,</span> <span class="n">service_id</span><span class="p">,</span> <span class="n">ref_code</span><span class="p">)</span>
+<a name="rest_code_4b804cb1919449cdb717b99297ab1556-2"></a><span class="k">if</span> <span class="n">payment_status</span><span class="o">.</span><span class="n">success</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+<a name="rest_code_4b804cb1919449cdb717b99297ab1556-3"></a>    <span class="c1"># Hooray! Succe$$!</span>
+<a name="rest_code_4b804cb1919449cdb717b99297ab1556-4"></a>    <span class="n">report_success</span><span class="p">(</span><span class="s2">"Transaction for </span><span class="si">%s</span><span class="s2"> was successful, status code </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">subid</span><span class="p">,</span> <span class="n">payment_status</span><span class="o">.</span><span class="n">code</span><span class="p">))</span>
+<a name="rest_code_4b804cb1919449cdb717b99297ab1556-5"></a><span class="k">else</span><span class="p">:</span>
+<a name="rest_code_4b804cb1919449cdb717b99297ab1556-6"></a>    <span class="c1"># Boo</span>
+<a name="rest_code_4b804cb1919449cdb717b99297ab1556-7"></a>    <span class="n">report_failure</span><span class="p">(</span><span class="s2">"Transaction failed, because: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">payment_status</span><span class="o">.</span><span class="n">detail</span><span class="p">)</span>
 </pre>
 <p>This is almost as simple as our first example, and is free of string literals. And if you're using PyCharm, you can take advantage of the code completion which will know about the attributes of your new <code>namedtuple</code> class:</p>
 <img alt="/images/pycharm_namedtuple.png" src="images/pycharm_namedtuple.png"><p>So if your code is littered with string literals as keys for return values from methods that return <code>dict</code>, consider having them return a <code>namedtuple</code> instead.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/alien-employment-permit-dataset/" class="u-url">Tidy Aliens</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                <a href="authors/brian/">Brian</a>
-            </span></p>
-            <p class="dateline"><a href="posts/alien-employment-permit-dataset/" rel="bookmark"><time class="published dt-published" datetime="2015-11-29T09:40:54+08:00" title="2015-11-29 09:40">2015-11-29 09:40</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/alien-employment-permit-dataset/#disqus_thread" data-disqus-identifier="cache/posts/alien-employment-permit-dataset.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<a class="reference external image-reference" href="images/aliens.png"><img alt="/images/aliens.thumbnail.png" src="images/aliens.thumbnail.png"></a>
-<p>The <a class="reference external" href="http://www.ble.dole.gov.ph/">Bureau of Local Employment</a> issues working permits to foreign nationals that want to work in the Philippines. Ever wondered which nationalities obtain the most permits? I used public data from the BLE in a <a class="reference external" href="stories/tidying-alien-work-permit-dataset/">data cleanup and visualization exercise</a> using R’s reshape, dplyr and ggplot2.</p>
 </div>
     </div>
     </article>
@@ -444,7 +669,9 @@ pushing your code up again.</p>
 <li class="next">
                 <a href="index-1.html" rel="next">Older posts</a>
             </li>
-        </ul></nav><script>var disqus_shortname="lateralthunking";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+        </ul></nav><script>var disqus_shortname="lateralthunking";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-yYfngbEKv4RENfGDvNUqJTqGFcKf31NJEe9OTnnMH3Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script>
 </div>
         <!--End of body content-->
 

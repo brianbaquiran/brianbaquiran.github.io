@@ -6,135 +6,123 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://brianbaquiran.com/authors/brian.xml</loc>
-  <lastmod>2017-04-27T10:08:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>http://brianbaquiran.com/authors/roberto-alsina.xml</loc>
-  <lastmod>2017-04-27T09:50:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>http://brianbaquiran.com/categories/ai.xml</loc>
-  <lastmod>2017-04-27T10:08:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/api.xml</loc>
-  <lastmod>2017-04-27T10:08:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/asus.xml</loc>
-  <lastmod>2017-01-10T08:55:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/aws.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/books.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/cat_events.xml</loc>
-  <lastmod>2017-04-27T10:08:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/centos.xml</loc>
-  <lastmod>2017-04-27T09:56:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/coding.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/datascience.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/dplyr.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/ggplot2.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/git.xml</loc>
-  <lastmod>2017-01-10T08:55:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/google.xml</loc>
-  <lastmod>2017-04-27T10:08:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/graphs.xml</loc>
-  <lastmod>2017-04-13T13:41:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/json.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/linux.xml</loc>
-  <lastmod>2017-04-27T09:56:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/namedtuple.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/nlp.xml</loc>
-  <lastmod>2017-04-27T10:08:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/programming.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/pycharm.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/pydata.xml</loc>
-  <lastmod>2017-04-27T09:56:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>http://brianbaquiran.com/categories/python-centos-linux-pydata.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/python.xml</loc>
-  <lastmod>2017-04-27T09:56:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/r-language.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/tips.xml</loc>
-  <lastmod>2017-01-10T08:55:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/twitter.xml</loc>
-  <lastmod>2017-04-13T13:41:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/visualization.xml</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
+  <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/galleries/demo/rss.xml</loc>
-  <lastmod>2017-01-10T09:05:00Z</lastmod>
+  <lastmod>2017-05-23T03:26:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/galleries/rss.xml</loc>
-  <lastmod>2017-01-10T09:05:00Z</lastmod>
+  <lastmod>2017-05-23T03:26:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/rss.xml</loc>
-  <lastmod>2017-04-27T10:08:00Z</lastmod>
+  <lastmod>2017-05-23T03:23:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/sitemap.xml</loc>
-  <lastmod>2017-04-27T10:08:00Z</lastmod>
+  <lastmod>2017-05-23T03:26:00Z</lastmod>
  </sitemap>
 </sitemapindex>

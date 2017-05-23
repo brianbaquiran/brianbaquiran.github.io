@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://brianbaquiran.com/</loc>
-  <lastmod>2017-04-27T09:50:00Z</lastmod>
+  <lastmod>2017-05-23T03:23:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/2015/</loc>
@@ -23,23 +23,11 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/archive.html</loc>
-  <lastmod>2017-04-27T10:07:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.com/authors/</loc>
-  <lastmod>2017-04-27T09:50:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.com/authors/brian/</loc>
-  <lastmod>2017-04-27T09:50:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.com/authors/roberto-alsina/</loc>
-  <lastmod>2017-04-27T09:50:00Z</lastmod>
+  <lastmod>2017-05-23T03:26:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
-  <lastmod>2017-04-27T10:07:00Z</lastmod>
+  <lastmod>2017-04-27T10:17:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/ai/</loc>
@@ -126,10 +114,6 @@
   <lastmod>2017-04-27T09:56:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/python-centos-linux-pydata/</loc>
-  <lastmod>2016-12-07T06:25:00Z</lastmod>
- </url>
- <url>
   <loc>http://brianbaquiran.com/categories/python/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
@@ -159,7 +143,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/index-1.html</loc>
-  <lastmod>2017-04-27T10:07:00Z</lastmod>
+  <lastmod>2017-05-23T03:26:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/</loc>
@@ -167,7 +151,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/hello.py.html</loc>
-  <lastmod>2017-01-10T09:05:00Z</lastmod>
+  <lastmod>2017-05-23T03:26:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/ai-ph-mixer/</loc>
@@ -208,6 +192,14 @@
  <url>
   <loc>http://brianbaquiran.com/posts/namedtuple-comes-in-handy/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/philippine-startup-wordcloud/</loc>
+  <lastmod>2017-05-23T02:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/philippine-startups-wordcloud/</loc>
+  <lastmod>2017-05-23T03:01:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/the-art-of-data-science/</loc>
