@@ -23,11 +23,11 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/archive.html</loc>
-  <lastmod>2017-05-23T03:26:00Z</lastmod>
+  <lastmod>2017-06-10T01:29:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
-  <lastmod>2017-04-27T10:17:00Z</lastmod>
+  <lastmod>2017-06-10T00:53:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/ai/</loc>
@@ -94,6 +94,10 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/machine-learning/</loc>
+  <lastmod>2017-06-10T00:53:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/namedtuple/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
@@ -143,7 +147,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/index-1.html</loc>
-  <lastmod>2017-05-23T03:26:00Z</lastmod>
+  <lastmod>2017-06-10T01:29:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/</loc>
@@ -151,7 +155,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/hello.py.html</loc>
-  <lastmod>2017-05-23T03:26:00Z</lastmod>
+  <lastmod>2017-06-10T01:29:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/ai-ph-mixer/</loc>
@@ -182,8 +186,16 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/posts/installing-kerasr/</loc>
+  <lastmod>2017-06-10T03:11:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/posts/installing-python-2711-on-centos-7/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/keras-from-r-with-kerasr/</loc>
+  <lastmod>2017-06-10T00:53:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/life-satisfaction-two-cohorts/</loc>
@@ -192,10 +204,6 @@
  <url>
   <loc>http://brianbaquiran.com/posts/namedtuple-comes-in-handy/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.com/posts/philippine-startup-wordcloud/</loc>
-  <lastmod>2017-05-23T02:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/philippine-startups-wordcloud/</loc>

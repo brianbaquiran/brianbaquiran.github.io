@@ -70,6 +70,10 @@
   <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/machine-learning.xml</loc>
+  <lastmod>2017-06-10T03:11:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/namedtuple.xml</loc>
   <lastmod>2017-05-01T08:55:00Z</lastmod>
  </sitemap>
@@ -111,18 +115,18 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/galleries/demo/rss.xml</loc>
-  <lastmod>2017-05-23T03:26:00Z</lastmod>
+  <lastmod>2017-06-10T01:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/galleries/rss.xml</loc>
-  <lastmod>2017-05-23T03:26:00Z</lastmod>
+  <lastmod>2017-06-10T01:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/rss.xml</loc>
-  <lastmod>2017-05-23T03:23:00Z</lastmod>
+  <lastmod>2017-06-10T03:11:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/sitemap.xml</loc>
-  <lastmod>2017-05-23T03:26:00Z</lastmod>
+  <lastmod>2017-06-10T03:11:00Z</lastmod>
  </sitemap>
 </sitemapindex>
