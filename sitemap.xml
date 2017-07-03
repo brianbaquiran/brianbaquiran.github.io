@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/archive.html</loc>
-  <lastmod>2017-06-28T00:28:00Z</lastmod>
+  <lastmod>2017-07-03T00:20:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
@@ -147,7 +147,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/index-1.html</loc>
-  <lastmod>2017-06-28T00:28:00Z</lastmod>
+  <lastmod>2017-07-03T00:20:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/</loc>
@@ -184,6 +184,10 @@
  <url>
   <loc>http://brianbaquiran.com/posts/google-cloud-natural-language-api/</loc>
   <lastmod>2017-04-27T10:08:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/google-io-extended-2017/</loc>
+  <lastmod>2017-07-03T00:20:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/hello-world/</loc>
