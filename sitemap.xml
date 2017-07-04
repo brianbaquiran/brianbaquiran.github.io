@@ -23,11 +23,11 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/archive.html</loc>
-  <lastmod>2017-07-03T00:20:00Z</lastmod>
+  <lastmod>2017-07-04T23:12:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
-  <lastmod>2017-06-10T00:53:00Z</lastmod>
+  <lastmod>2017-07-04T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/ai/</loc>
@@ -50,6 +50,10 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/career/</loc>
+  <lastmod>2017-07-04T23:40:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/cat_events/</loc>
   <lastmod>2017-04-27T10:07:00Z</lastmod>
  </url>
@@ -68,6 +72,10 @@
  <url>
   <loc>http://brianbaquiran.com/categories/dplyr/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/economics/</loc>
+  <lastmod>2017-07-04T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/ggplot2/</loc>
@@ -126,6 +134,10 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/salaries/</loc>
+  <lastmod>2017-07-04T23:40:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/tips/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
@@ -147,7 +159,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/index-1.html</loc>
-  <lastmod>2017-07-03T00:20:00Z</lastmod>
+  <lastmod>2017-07-04T23:12:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/</loc>
@@ -155,7 +167,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/hello.py.html</loc>
-  <lastmod>2017-06-28T00:28:00Z</lastmod>
+  <lastmod>2017-07-04T23:12:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/ai-and-machine-learning-for-software-engineers-at-dev-festival/</loc>
@@ -212,6 +224,10 @@
  <url>
   <loc>http://brianbaquiran.com/posts/philippine-startups-wordcloud/</loc>
   <lastmod>2017-05-23T03:01:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/programmers-dont-understand-economics/</loc>
+  <lastmod>2017-07-04T23:12:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/the-art-of-data-science/</loc>

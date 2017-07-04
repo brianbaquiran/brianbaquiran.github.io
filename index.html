@@ -13,7 +13,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://brianbaquiran.com/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/google-io-extended-2017/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/programmers-dont-understand-economics/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -66,7 +66,32 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/google-io-extended-2017/" class="u-url">Google IO Extended 2017</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/programmers-dont-understand-economics/" class="u-url">Programmers don't understand Economics</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian
+            </span></p>
+            <p class="dateline"><a href="posts/programmers-dont-understand-economics/" rel="bookmark"><time class="published dt-published" datetime="2017-07-05T07:06:41+08:00" title="2017-07-05 07:06">2017-07-05 07:06</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/programmers-dont-understand-economics/#disqus_thread" data-disqus-identifier="cache/posts/programmers-dont-understand-economics.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>On the <a class="reference external" href="https://phackers.slack.com/">phackers slack</a> #careeradvice channel, a recurring theme seems to be the higher salaries that developers overseas are paid.</p>
+<p>It always starts out with a developer -- usually a novice but not always -- discovering that developers in some other country with the same skillset as him are getting paid 5x (or whatever multiple) he is getting here. Other developers will then helpfully remind him of the greater cost-of-living, higher taxes, etc. in those countries. Invariably someone will say that Pinoy developers are worth more than what they're getting now.</p>
+<p>Well, here's an important concept that I have had to explain multiple times:</p>
+<blockquote>
+You're worth whatever the market determines you're worth.</blockquote>
+<p>People often forget or ignore the fact that it's not just them and the employer that are negotiating. It's other employers, AND other workers. If you're negotiating with company, do you honestly think you're the only candidate they're considering? Other candidates or applicants may have the same skillset as you, but offer to work for a lower salary (for whatever reason). Other workers competing for the same jobs determine what you'll end up getting as well.</p>
+<p>The real way to command a higher rate, regardless of whether it's local employment or remote, is to be as @mparaz and @radeinla put it, the special snowflake. If you're a commodity programmer, you get the commodity programmer rate because there are so many other candidates with the same or similar skillset.</p>
+<p>If you have, or can <a class="reference external" href="https://en.wikipedia.org/wiki/Signalling_(economics)">signal</a> that you have <cite>a special set of skills</cite> and there is a demand for those skills, then congrats, special snowflake, you can command a higher rate. The more difficult to obtain those skills (or signals) are, and the greater the demand, the better able you will be to demand a higher rate whether here or abroad.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/google-io-extended-2017/" class="u-url">Google IO Extended 2017</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Brian
@@ -598,38 +623,6 @@ the key and its fingerprint.</p>
 <a class="reference external" href="https://stedolan.github.io/jq/">jq JSON filter</a>.</p>
 <pre class="code shell"><a name="rest_code_753d28660e64448182d9aaa4113edf3f-1"></a>$ jq <span class="s1">'.KeyMaterial'</span> keystuff.json --raw &gt; mynewkey.pem
 </pre>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/gitlab-weirdness/" class="u-url">GitLab Weirdness</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Brian
-            </span></p>
-            <p class="dateline"><a href="posts/gitlab-weirdness/" rel="bookmark"><time class="published dt-published" datetime="2016-09-28T15:35:40+08:00" title="2016-09-28 15:35">2016-09-28 15:35</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/gitlab-weirdness/#disqus_thread" data-disqus-identifier="cache/posts/gitlab-weirdness.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>If you're using GitLab.com for hosting your repositories, you may have encountered
-a strange problem wherein your newly-created repository's dashboard doesn't update.</p>
-<a class="reference external image-reference" href="images/gitlab-weirdness.png"><img alt="/images/gitlab-weirdness.thumbnail.png" src="images/gitlab-weirdness.thumbnail.png"></a>
-<p>That is, when you <cite>git push</cite> your changes to the repository, the interface still
-looks like a newly-created repository, and neither your files nor your commits
-are visible in the web UI. This is weird because the remote repository works in
-all other respects. You can push code up to it, clone it, etc. You just can't see
-it on the GitLab website.</p>
-<p>I've seen this happen a couple of times, and so far I've found that the quick fix is to
-run Housekeeping on the repository from the Edit Project page.</p>
-<a class="reference external image-reference" href="images/gitlab-housekeeping.png"><img alt="/images/gitlab-housekeeping.thumbnail.png" src="images/gitlab-housekeeping.thumbnail.png"></a>
-<p>Housekeeping can take a couple of minutes but most of the time it works and you
-can see your repository's files and commit history after running it. If it
-doesn't work, you have to delete the repository in GitLab and re-create it,
-pushing your code up again.</p>
 </div>
     </div>
     </article>
