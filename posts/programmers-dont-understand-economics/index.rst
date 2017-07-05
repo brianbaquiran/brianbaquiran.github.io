@@ -19,9 +19,16 @@ Well, here's an important concept that I have had to explain multiple times:
 
 People often forget or ignore the fact that it's not just them and the employer that are negotiating. It's other employers, AND other workers. If you're negotiating with company, do you honestly think you're the only candidate they're considering? Other candidates or applicants may have the same skillset as you, but offer to work for a lower salary (for whatever reason). Other workers competing for the same jobs determine what you'll end up getting as well.
 
-The real way to command a higher rate, regardless of whether it's local employment or remote, is to be as @mparaz and @radeinla put it, the special snowflake. If you're a commodity programmer, you get the commodity programmer rate because there are so many other candidates with the same or similar skillset.
+The real way to command a higher rate, regardless of whether it's local employment or remote, is to be as ``@mparaz`` and ``@radeinla`` put it, the special snowflake. If you're a commodity programmer, you get the commodity programmer rate because there are so many other candidates with the same or similar skillset.
 
-If you have, or can signal_ that you have `a special set of skills` and there is a demand for those skills, then congrats, special snowflake, you can command a higher rate. The more difficult to obtain those skills (or signals) are, and the greater the demand, the better able you will be to demand a higher rate whether here or abroad.
+
+.. image:: /images/liam_neeson_skills.jpg
+  :align: center
+  :alt: He's been out of the job market for a while.
+
+
+If you have, or can signal_ that you have `a particular set of skills` and there is a demand for those skills, then congrats, special snowflake, you can command a higher rate. The more difficult to obtain those skills (or signals) are, and the greater the demand, the better able you will be to demand a higher rate whether here or abroad.
 
 .. _signal: https://en.wikipedia.org/wiki/Signalling_(economics)
+
 
