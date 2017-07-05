@@ -28,7 +28,7 @@ The real way to command a higher rate, regardless of whether it's local employme
   :alt: He's been out of the job market for a while.
 
 
-If you have, or can signal_ that you have `a particular set of skills` and there is a demand for those skills, then congrats, special snowflake, you can command a higher rate. The more difficult to obtain those skills (or signals) are, and the greater the demand, the better able you will be to demand a higher rate whether here or abroad.
+If you have, or can signal_ that you have `a particular set of skills` and there is a demand for those skills, then congrats, special snowflake, you can command a higher rate. The more difficult to obtain those skills (or signals) are, and the greater the demand, the better able you will be to command a higher rate whether here or abroad.
 
 .. _signal: https://en.wikipedia.org/wiki/Signalling_(economics)
 
