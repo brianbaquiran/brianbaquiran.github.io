@@ -5,6 +5,7 @@
 .. category: 
 .. link: 
 .. description: You're worth whatever the market determines you're worth.
+.. previewimage: /images/liam_neeson_skills.jpg
 .. type: text
 
 On the `phackers slack`_ #careeradvice channel, a recurring theme seems to be the higher salaries that developers overseas are paid.   
