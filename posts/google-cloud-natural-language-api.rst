@@ -10,5 +10,5 @@
 
 .. slides:: 
 
-  /images/gdgph_nlapi.png
   /images/gdgph_nlapi_cloudnext.jpg
+  /images/gdgph_nlapi.png
