@@ -8,4 +8,7 @@
 .. type: text
 
 
-.. thumbnail:: /images/gdgph_nlapi.png
+.. slides:: 
+
+  /images/gdgph_nlapi.png
+  /images/gdgph_nlapi_cloudnext.jpg
