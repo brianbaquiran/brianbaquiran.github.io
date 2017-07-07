@@ -9,3 +9,5 @@
 
 
 .. thumbnail:: /images/ai_ph.jpg
+
+.. thumbnail:: /images/AI_PH_Panel.jpg
