@@ -7,11 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>http://brianbaquiran.com/categories/ai.xml</loc>
-  <lastmod>2017-05-01T08:55:00Z</lastmod>
+  <lastmod>2017-07-07T07:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/api.xml</loc>
-  <lastmod>2017-05-01T08:55:00Z</lastmod>
+  <lastmod>2017-07-07T13:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/asus.xml</loc>
@@ -27,11 +27,11 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/career.xml</loc>
-  <lastmod>2017-07-04T23:40:00Z</lastmod>
+  <lastmod>2017-07-05T01:32:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/cat_events.xml</loc>
-  <lastmod>2017-05-01T08:55:00Z</lastmod>
+  <lastmod>2017-07-07T13:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/centos.xml</loc>
@@ -51,7 +51,7 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/economics.xml</loc>
-  <lastmod>2017-07-04T23:40:00Z</lastmod>
+  <lastmod>2017-07-05T01:32:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/ggplot2.xml</loc>
@@ -63,7 +63,7 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/google.xml</loc>
-  <lastmod>2017-05-01T08:55:00Z</lastmod>
+  <lastmod>2017-07-07T13:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/graphs.xml</loc>
@@ -87,7 +87,7 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/nlp.xml</loc>
-  <lastmod>2017-05-01T08:55:00Z</lastmod>
+  <lastmod>2017-07-07T13:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/programming.xml</loc>
@@ -111,7 +111,7 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/salaries.xml</loc>
-  <lastmod>2017-07-04T23:40:00Z</lastmod>
+  <lastmod>2017-07-05T01:32:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/tips.xml</loc>
@@ -127,18 +127,18 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/galleries/demo/rss.xml</loc>
-  <lastmod>2017-07-04T23:12:00Z</lastmod>
+  <lastmod>2017-07-17T00:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/galleries/rss.xml</loc>
-  <lastmod>2017-07-04T23:12:00Z</lastmod>
+  <lastmod>2017-07-17T00:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/rss.xml</loc>
-  <lastmod>2017-07-04T23:40:00Z</lastmod>
+  <lastmod>2017-07-07T13:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/sitemap.xml</loc>
-  <lastmod>2017-07-04T23:40:00Z</lastmod>
+  <lastmod>2017-07-17T00:59:00Z</lastmod>
  </sitemap>
 </sitemapindex>
