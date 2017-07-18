@@ -1,0 +1,11 @@
+.. title: Xiaomi 4X - lesson learned
+.. slug: xiaomi-4x-lesson-learned
+.. date: 2017-07-18 08:02:28 UTC+08:00
+.. tags: gadgets, android
+.. category:
+.. link:
+.. description:
+.. type: text
+
+I bought a brand new Xiaomi 4X off Lazada and the different apps keep crashing during the initial setup process.
+I will never, ever buy a Xiaomi smartphone or tablet again. The hardware specs are great, but I cannot tolerate a product that crashes within the first 5 minutes of turning it on for the first time.
