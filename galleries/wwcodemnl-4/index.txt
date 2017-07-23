@@ -1,0 +1,9 @@
+.. title: Women Who Code Manila AI and ML Study Group
+.. slug: wwcodemnl
+.. tags: machine learning, artificial intelligence
+.. category:
+.. link:
+.. description: 
+.. type: text
+
+
