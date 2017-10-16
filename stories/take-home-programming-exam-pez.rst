@@ -1,5 +1,5 @@
 .. title: Take Home Programming Exam
-.. slug: take-home-programming-exam
+.. slug: take-home-programming-exam-pez
 .. date: 2015-11-25 14:06:08 UTC+08:00
 .. tags: mathjax, programming, pez, work
 .. category:
@@ -12,7 +12,7 @@ Instructions
 You are free to use any programming language for these problems, but you must use the same language for all three problems.
 To submit your work, you will need an account on `BitBucket`_. We assume you already know how to use git_.
 
-.. _`GitLab`: https://bitbucket.org
+.. _`BitBucket`: https://bitbucket.org
 .. _git: http://www.git-scm.com/
 
 You should follow the following steps before beginning work on the problems.
