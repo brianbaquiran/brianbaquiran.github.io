@@ -66,7 +66,49 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/creating-ec2-keypairs-with-aws-cli/" class="u-url">Creating EC2 keypairs with AWS CLI</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/disablingenabling-the-asus-ux303-touchscreen/" class="u-url">Disabling/Enabling the Asus UX303 Touchscreen in Ubuntu 16.04</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian Baquiran
+            </span></p>
+            <p class="dateline"><a href="posts/disablingenabling-the-asus-ux303-touchscreen/" rel="bookmark"><time class="published dt-published" datetime="2016-12-07T14:20:23+08:00" title="2016-12-07 14:20">2016-12-07 14:20</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/disablingenabling-the-asus-ux303-touchscreen/#disqus_thread" data-disqus-identifier="cache/posts/disablingenabling-the-asus-ux303-touchscreen.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Find the Atmel touchscreen device:</p>
+<pre class="literal-block">
+$ xinput --list
+⎡ Virtual core pointer                        id=2    [master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer                      id=4    [slave  pointer  (2)]
+⎜   ↳ FocalTechPS/2 FocalTech FocalTech Touchpad      id=17   [slave  pointer  (2)]
+⎜   ↳ Logitech USB Optical Mouse                      id=20   [slave  pointer  (2)]
+⎜   ↳ Atmel                                           id=10   [slave  pointer  (2)]
+⎣ Virtual core keyboard                       id=3    [master keyboard (2)]
+    ↳ Virtual core XTEST keyboard                     id=5    [slave  keyboard (3)]
+    ↳ Power Button                                    id=6    [slave  keyboard (3)]
+    ↳ Sleep Button                                    id=9    [slave  keyboard (3)]
+    ↳ USB2.0 UVC HD Webcam                            id=13   [slave  keyboard (3)]
+    ↳ Video Bus                                       id=7    [slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard                    id=16   [slave  keyboard (3)]
+    ↳ Video Bus                                       id=8    [slave  keyboard (3)]
+    ↳ Asus WMI hotkeys                                id=15   [slave  keyboard (3)]
+</pre>
+<p>The <tt class="docutils literal">Atmel</tt> device is our touchscreen.</p>
+<p>Use the <tt class="docutils literal">xinput disable</tt> and <tt class="docutils literal">enable</tt> commands to turn the touchscreen off or on again.:</p>
+<pre class="literal-block">
+$ xinput disable Atmel
+$ xinput enable Atmel
+</pre>
+<p>Both commands are silent, unless you specify a device that doesn't exist.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/creating-ec2-keypairs-with-aws-cli/" class="u-url">Creating EC2 keypairs with AWS CLI</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Brian Baquiran

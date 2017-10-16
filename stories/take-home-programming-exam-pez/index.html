@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Take Home Programming Exam | Lateral Thunking</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://brianbaquiran.com/stories/take-home-programming-exam-pez/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian Baquiran">
+<meta property="og:site_name" content="Lateral Thunking">
+<meta property="og:title" content="Take Home Programming Exam">
+<meta property="og:url" content="http://brianbaquiran.com/stories/take-home-programming-exam-pez/">
+<meta property="og:description" content="Instructions
+You are free to use any programming language for these problems, but you must use the same language for all three problems.
+To submit your work, you will need an account on `BitBucket`_. ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-11-25T14:06:08+08:00">
+<meta property="article:tag" content="mathjax">
+<meta property="article:tag" content="pez">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="work">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://brianbaquiran.com/">
+
+                <span id="blog-title">Lateral Thunking</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="https://github.com/brianbaquiran">Github</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.rst" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Take Home Programming Exam</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="section" id="instructions">
+<h2>Instructions</h2>
+<p>You are free to use any programming language for these problems, but you must use the same language for all three problems.
+To submit your work, you will need an account on <a href="#id1"><span class="problematic" id="id2">`BitBucket`_</span></a>. We assume you already know how to use <a class="reference external" href="http://www.git-scm.com/">git</a>.</p>
+<p>You should follow the following steps before beginning work on the problems.</p>
+<ol class="arabic simple">
+<li>Create a new project repository in BitBucket with the name <strong>pezprogram-&lt;firstname&gt;-&lt;lastname&gt;</strong> (using your own first/last name, of course).</li>
+<li>Set the visibility Access level to <strong>Private</strong>
+</li>
+<li>Give user Brian Baquiran (brianb_pez) access to the project, with <strong>Admin</strong> access permissions.</li>
+</ol>
+<p>You can begin working on the problems locally.</p>
+<ul class="simple">
+<li>
+<tt class="docutils literal">git clone</tt> the project to your local machine.</li>
+<li>Be sure to commit and push often.</li>
+<li>You are strongly encouraged to provide unit tests and documentation for your work.</li>
+<li>You are given 48 hours to complete all three problems. Most applicants finish within 12 hours.</li>
+</ul>
+</div>
+<div class="section" id="problem-1-translate-a-block-of-text-into-an-array-structure">
+<h2>Problem 1: Translate a block of text into an array structure</h2>
+<p>Given a text file that looks like this:</p>
+<pre class="code text"><a name="rest_code_ab1f3bd63db1407aace0d75257d23ea3-1"></a>XXOOXOXOXO
+<a name="rest_code_ab1f3bd63db1407aace0d75257d23ea3-2"></a>XOOXOXOXOX
+<a name="rest_code_ab1f3bd63db1407aace0d75257d23ea3-3"></a>OXX XOOXOX
+<a name="rest_code_ab1f3bd63db1407aace0d75257d23ea3-4"></a>OXXXOOX XO
+<a name="rest_code_ab1f3bd63db1407aace0d75257d23ea3-5"></a>XOOXOXOXXO
+<a name="rest_code_ab1f3bd63db1407aace0d75257d23ea3-6"></a>XOX XXO OX
+<a name="rest_code_ab1f3bd63db1407aace0d75257d23ea3-7"></a>XXOOXOXOXO
+<a name="rest_code_ab1f3bd63db1407aace0d75257d23ea3-8"></a>XO OXOOXOO
+<a name="rest_code_ab1f3bd63db1407aace0d75257d23ea3-9"></a>OXXXOO OXO
+<a name="rest_code_ab1f3bd63db1407aace0d75257d23ea3-10"></a>OOOOOOOXOX
+</pre>
+<p>Each character represents a space in a rectangular grid. The space may be occupied by either an agent, or it may be an empty space. There are two types of agents: X and O.</p>
+<p><strong>Write a function</strong> <tt class="docutils literal">loadgrid</tt> <strong>that reads a text file and returns an object or data structure array representing the grid, populated with the contents of the text file.</strong></p>
+<ul class="simple">
+<li>The function should take a single parameter, the filename, and return a single object or data structure.</li>
+<li>You may implement the data structure using existing types, define a new class for the data structure, or use a library that makes handling 2-d arrays convenient, e.g. numpy arrays.</li>
+<li>The function should not make any assumptions regarding the dimensions of the input grid, but should determine them from the contents of the file.</li>
+<li>You may assume the text file exists and will be clean. No characters other than X, O and whitespace (space or CRLF) will be in the file.</li>
+<li>You can use the example data, available <a class="reference external" href="https://raw.githubusercontent.com/brianbaquiran/brianbaquiran.github.io/source/files/schelling10x10.txt">here</a>. Feel free to generate your own input files for testing.</li>
+</ul>
+</div>
+<div class="section" id="problem-2-compute-the-index-of-dissimilarity-for-a-subregion">
+<h2>Problem 2: Compute the Index of Dissimilarity for a subregion</h2>
+<p>Now that you have your function and data structure from Task 1, write a function to compute the <em>Index of Dissimilarity</em> of a rectangular subregion within the array. Simply put, the Index of Dissimilarity is a way of measuring how segregated a set of spaces is. The index has a range of 0 to 1, where 0 indicates no segregation and 1 indicates total segregation.</p>
+<p>For a region containing a total of N spaces, the general formula for the Index of Dissimilarity is</p>
+<blockquote>
+<p><span class="math">\(\text{Index of Dissimilarity} = 0.5 \sum_{i=1}^N\big|\frac{x_i}{X} - \frac{o_i}{O}\big|\)</span></p>
+<p>Where:</p>
+<ul class="simple">
+<li>
+<span class="math">\(x_i\)</span> = number of X's in the subregion</li>
+<li>
+<span class="math">\(X\)</span> = number of X's in the entire region</li>
+<li>
+<span class="math">\(o_i\)</span> = number of O's in the subregion</li>
+<li>
+<span class="math">\(O\)</span> = number of O's in the entire region</li>
+</ul>
+</blockquote>
+<p>For our purposes, it is sufficient to consider <span class="math">\(x_i\)</span> and <span class="math">\(o_i\)</span> to be the number of X's and O's in the subregion we're interested in. The formula simplifies to:</p>
+<blockquote>
+<span class="math">\(\text{Index of Dissimilarity} = 0.5 \big|\frac{x_i}{X} - \frac{o_i}{O}\big|\)</span>
+</blockquote>
+<p>For example, if we take the upper rightmost 4x4 region from the example grid above:</p>
+<pre class="code text"><a name="rest_code_2fcb73b868ea43dd97ea90fdc529b15c-1"></a>XOXO
+<a name="rest_code_2fcb73b868ea43dd97ea90fdc529b15c-2"></a>OXOX
+<a name="rest_code_2fcb73b868ea43dd97ea90fdc529b15c-3"></a>OXOX
+<a name="rest_code_2fcb73b868ea43dd97ea90fdc529b15c-4"></a>X XO
+</pre>
+<p>that contains 8 X's and 7 O's, we would compute the Index of Dissimilarity as</p>
+<blockquote>
+<p>Index of Dissimilarity = <span class="math">\(0.5 \big|\frac{8}{44} - \frac{7}{50}\big|\)</span> (there are 44 X's and 50 O's in the entire region)</p>
+<p>Index of Dissimilarity = <span class="math">\(0.02090909090909 \approx 0.021\)</span></p>
+</blockquote>
+<p><strong>Write a function</strong> <tt class="docutils literal">dissimilarity</tt> <strong>that computes the index of dissimilarity for a subregion in a grid</strong></p>
+<ul class="simple">
+<li>The function should take five parameters: the grid data structure or object returned by <tt class="docutils literal">loadgrid</tt>, the row and column indexes of one corner of the subregion, the row and column indexes of the diagonally opposite corner of the subregion, e.g. <tt class="docutils literal">dissimilarity(grid, row1, col1, row2, col2)</tt>
+</li>
+<li>The function should return a numeric value, the index of dissimilarity</li>
+</ul>
+</div>
+<div class="section" id="problem-3-simulate-schelling-s-segregation-model">
+<h2>Problem 3: Simulate Schelling's Segregation Model</h2>
+<p>Read this summary of <a class="reference external" href="http://nifty.stanford.edu/2014/mccown-schelling-model-segregation/">Schelling's Model of Segregation</a>. You will implement a <em>simplified</em> version of the model, where non-satisfied agents just leave the grid rather than relocate to an unoccupied space.</p>
+<p>In Schelling's model, a <strong>satisfied</strong> agent is one that is surrounded by at least <em>t</em> percent of agents that are like itself. This threshold <em>t</em> is one that will apply to all agents in the model, even though in reality everyone might have a different threshold they are satisfied with. Note that the higher the threshold, the higher the likelihood the agents will not be satisfied with their current location.</p>
+<p>For example, if t = 0.30, agent X is satisfied if at least 30% of its neighbors are also X. If fewer than 30% are X, then the agent is not satisfied, and it will want to leave its space in the grid.</p>
+<p>All dissatisfied agents leave the grid at the same time, and leave behind an empty space.</p>
+<p><strong>Write a function</strong> <tt class="docutils literal">schelling</tt> <strong>that removes dissatisfied agents from the grid.</strong></p>
+<ul class="simple">
+<li>The function should take two parameters, the grid data structure or object returned by <tt class="docutils literal">loadgrid</tt>, and the threshold <tt class="docutils literal">t</tt>.</li>
+<li>The threshold <tt class="docutils literal">t</tt> should be a numeric value between 0 and 1. Check for invalid values.</li>
+<li>The function should return a grid data structure, the input grid with dissatisfied agents replaced by an empty space.</li>
+</ul>
+</div>
+<div class="system-messages section">
+<h2>Docutils System Messages</h2>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 3); <em><a href="#id2">backlink</a></em></p>
+Unknown target name: "bitbucket".</div>
+</div>
+</div>
+    </div>
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-yYfngbEKv4RENfGDvNUqJTqGFcKf31NJEe9OTnnMH3Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017        Brian Baquiran
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><a href="https://twitter.com/brianbaquiran" class="twitter-follow-button" data-show-count="false">Follow @brianbaquiran</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-10693543-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
