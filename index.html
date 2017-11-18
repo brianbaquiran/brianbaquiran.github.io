@@ -13,7 +13,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://brianbaquiran.com/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/ineffective-coding-habits/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/progress-bars-with-tqdm/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -66,7 +66,41 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/ineffective-coding-habits/" class="u-url">Ineffective Coding Habits</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/progress-bars-with-tqdm/" class="u-url">Progress bars with tqdm</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian Baquiran
+            </span></p>
+            <p class="dateline"><a href="posts/progress-bars-with-tqdm/" rel="bookmark"><time class="published dt-published" datetime="2017-11-19T07:27:26+08:00" title="2017-11-19 07:27">2017-11-19 07:27</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/progress-bars-with-tqdm/#disqus_thread" data-disqus-identifier="cache/posts/progress-bars-with-tqdm.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>At your shell:</p>
+<pre class="literal-block">
+$ pip install tqdm
+</pre>
+<p>Whenever you iterate over something, wrap it in a <tt class="docutils literal">tqdm</tt> like so:</p>
+<pre class="literal-block">
+In [1]: from tqdm import tqdm
+
+In [2]: from time import sleep
+
+In [3]: for i in tqdm(range(1000)):
+   ...:     sleep(0.01)
+   ...:
+      100%|█████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:10&lt;00:00, 98.49it/s]
+
+In [4]:
+</pre>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/ineffective-coding-habits/" class="u-url">Ineffective Coding Habits</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Brian Baquiran
@@ -579,23 +613,6 @@ Name: Long Description, dtype: object</pre>
 </blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/ai-ph-mixer/" class="u-url">AI PH Mixer</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Brian Baquiran
-            </span></p>
-            <p class="dateline"><a href="posts/ai-ph-mixer/" rel="bookmark"><time class="published dt-published" datetime="2017-03-14T17:49:02+08:00" title="2017-03-14 17:49">2017-03-14 17:49</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/ai-ph-mixer/#disqus_thread" data-disqus-identifier="cache/posts/ai-ph-mixer.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <span><a class="reference external image-reference" href="images/ai_ph.jpg"><img alt="/images/ai_ph.thumbnail.jpg" src="images/ai_ph.thumbnail.jpg"></a>
-<a class="reference external image-reference" href="images/AI_PH_Panel.jpg"><img alt="/images/AI_PH_Panel.thumbnail.jpg" src="images/AI_PH_Panel.thumbnail.jpg"></a></span>
     </div>
     </article>
 </div>
