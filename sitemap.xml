@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://brianbaquiran.com/</loc>
-  <lastmod>2017-12-29T05:02:00Z</lastmod>
+  <lastmod>2017-12-29T05:09:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/2015/</loc>
@@ -170,10 +170,6 @@
   <lastmod>2017-12-29T05:05:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/index-2.html</loc>
-  <lastmod>2017-12-25T04:09:00Z</lastmod>
- </url>
- <url>
   <loc>http://brianbaquiran.com/listings/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
@@ -324,6 +320,14 @@
  <url>
   <loc>http://brianbaquiran.com/stories/quickstart/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/stories/salary-survey-2017/</loc>
+  <lastmod>2017-12-29T05:15:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/stories/salary-survey-2017/index.src.html</loc>
+  <lastmod>2017-12-29T05:15:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/stories/slides-demo/</loc>
