@@ -54,6 +54,10 @@
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/execution.xml</loc>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/ggplot2.xml</loc>
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
@@ -90,6 +94,10 @@
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/planning.xml</loc>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/programming.xml</loc>
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
@@ -114,12 +122,16 @@
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/strategy.xml</loc>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/tips.xml</loc>
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/twitter.xml</loc>
-  <lastmod>2017-12-29T06:06:00Z</lastmod>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/visualization.xml</loc>
@@ -143,10 +155,10 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/rss.xml</loc>
-  <lastmod>2017-12-29T06:06:00Z</lastmod>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/sitemap.xml</loc>
-  <lastmod>2018-01-01T18:08:00Z</lastmod>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
  </sitemap>
 </sitemapindex>

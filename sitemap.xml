@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://brianbaquiran.com/</loc>
-  <lastmod>2017-12-29T05:19:00Z</lastmod>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/2015/</loc>
@@ -22,12 +22,16 @@
   <lastmod>2017-04-13T13:27:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/2018/</loc>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/archive.html</loc>
-  <lastmod>2018-01-01T01:12:00Z</lastmod>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
-  <lastmod>2017-07-04T23:40:00Z</lastmod>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/ai/</loc>
@@ -78,6 +82,10 @@
   <lastmod>2017-07-04T23:40:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/execution/</loc>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/ggplot2/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
@@ -114,6 +122,10 @@
   <lastmod>2017-04-27T10:07:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/planning/</loc>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/programming/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
@@ -136,6 +148,10 @@
  <url>
   <loc>http://brianbaquiran.com/categories/salaries/</loc>
   <lastmod>2017-07-04T23:40:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/strategy/</loc>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/tips/</loc>
@@ -167,7 +183,11 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/index-1.html</loc>
-  <lastmod>2018-01-01T01:12:00Z</lastmod>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/index-2.html</loc>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/</loc>
@@ -196,6 +216,10 @@
  <url>
   <loc>http://brianbaquiran.com/posts/disablingenabling-the-asus-ux303-touchscreen/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/dream-in-years-ship-daily/</loc>
+  <lastmod>2018-01-03T03:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/gitlab-weirdness/</loc>
