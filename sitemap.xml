@@ -27,7 +27,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/archive.html</loc>
-  <lastmod>2018-01-03T03:31:00Z</lastmod>
+  <lastmod>2018-01-14T07:45:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
@@ -187,7 +187,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/index-2.html</loc>
-  <lastmod>2018-01-03T03:31:00Z</lastmod>
+  <lastmod>2018-01-14T07:45:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/</loc>
@@ -208,6 +208,10 @@
  <url>
   <loc>http://brianbaquiran.com/posts/alien-employment-permit-dataset/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/apprentice-journeyman-master/</loc>
+  <lastmod>2018-01-14T07:45:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/creating-ec2-keypairs-with-aws-cli/</loc>
