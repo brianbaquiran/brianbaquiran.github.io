@@ -13,4 +13,6 @@ In the hard sciences you're expected to take your masters while assisting more e
 
 It's understandable that a lot of students that take up CS have to cut their education short by skipping the last two steps of the masters, doctorate process because the opportunity cost (4-6 years of wages) is just too great. Education ain't cheap, unless you're on a scholarship, and they might have families to feed. So they have to learn on the job, and hopefully find one with colleagues or a process that would give them a chance to learn the skills they might have gotten through formal education.
 
-Rather than bemoan the inadequate experience or skills of a freshly minted CS bachelor's degree holder, it would be more productive for the more experienced developers to guide and train them, impress on them the value of continuous learning while at the same time showing compassion and patience as they get their first taste of real-world software development. Nobody got to be an master before first being an apprentice.
+Rather than bemoan the inadequate experience or skills of a freshly minted CS bachelor's degree holder, it would be more productive for the more experienced developers to guide and train them, impress on them the value of continuous learning while at the same time showing compassion and patience as they get their first taste of real-world software development. 
+
+Nobody gets to be an master before first being an apprentice.
