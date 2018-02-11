@@ -13,5 +13,5 @@ It's in the interests of the entrenched  ``(hotel|taxi)`` franchisees to have th
 
 This, of course, stifles competition and decreases innovation. It gets ridiculous when even plumbers, manicurists, and barbers need certification and licensing.
 
-*It's always in the interests of entrenched players to increase regulation. Whenever you see regulations, certification and licensing required, it's usually indicates a stagnant industry ripe for disruption.*
+*It's always in the interests of entrenched players to increase regulation. Whenever you see regulations, certification and licensing required, it usually indicates a stagnant industry ripe for disruption.*
 
