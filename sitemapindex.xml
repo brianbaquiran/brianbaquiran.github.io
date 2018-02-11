@@ -27,7 +27,7 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/career.xml</loc>
-  <lastmod>2018-01-14T07:45:00Z</lastmod>
+  <lastmod>2018-01-14T14:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/cat_events.xml</loc>
@@ -51,7 +51,7 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/economics.xml</loc>
-  <lastmod>2017-12-29T06:06:00Z</lastmod>
+  <lastmod>2018-02-11T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/execution.xml</loc>
@@ -122,6 +122,10 @@
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/startups.xml</loc>
+  <lastmod>2018-02-11T15:10:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/strategy.xml</loc>
   <lastmod>2018-01-03T03:36:00Z</lastmod>
  </sitemap>
@@ -155,10 +159,10 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/rss.xml</loc>
-  <lastmod>2018-01-14T07:45:00Z</lastmod>
+  <lastmod>2018-02-11T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/sitemap.xml</loc>
-  <lastmod>2018-01-14T07:45:00Z</lastmod>
+  <lastmod>2018-02-11T15:10:00Z</lastmod>
  </sitemap>
 </sitemapindex>
