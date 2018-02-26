@@ -15,4 +15,8 @@ Here's how I set up Jupyter notebook for presentations::
   pip install rise
   jupyter-nbextension install rise -py --sys-prefix
 
+I use Damian Avila's `RISE extension`_, which saves me from having to write any HTML or JS, allowing me to focus on the
+code and figures. 
+
+.. _Rise extension: https://damianavila.github.io/RISE/
 
