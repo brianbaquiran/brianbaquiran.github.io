@@ -27,11 +27,11 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/archive.html</loc>
-  <lastmod>2018-02-11T15:10:00Z</lastmod>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/</loc>
-  <lastmod>2018-02-11T15:10:00Z</lastmod>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/ai/</loc>
@@ -106,6 +106,10 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/jupyter/</loc>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/linux/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
@@ -130,6 +134,10 @@
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
  <url>
+  <loc>http://brianbaquiran.com/categories/public-speaking/</loc>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://brianbaquiran.com/categories/pycharm/</loc>
   <lastmod>2016-12-07T06:25:00Z</lastmod>
  </url>
@@ -148,6 +156,10 @@
  <url>
   <loc>http://brianbaquiran.com/categories/salaries/</loc>
   <lastmod>2017-07-04T23:40:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/categories/slides/</loc>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/categories/startups/</loc>
@@ -191,7 +203,7 @@
  </url>
  <url>
   <loc>http://brianbaquiran.com/index-2.html</loc>
-  <lastmod>2018-02-11T15:10:00Z</lastmod>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/listings/</loc>
@@ -260,6 +272,10 @@
  <url>
   <loc>http://brianbaquiran.com/posts/life-satisfaction-two-cohorts/</loc>
   <lastmod>2017-04-13T13:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.com/posts/my-jupyter-notebook-slides-setup/</loc>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://brianbaquiran.com/posts/namedtuple-comes-in-handy/</loc>

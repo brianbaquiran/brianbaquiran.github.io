@@ -13,7 +13,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://brianbaquiran.com/">
 <link rel="next" href="index-2.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/why-governments-block-startups/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/my-jupyter-notebook-slides-setup/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -69,7 +69,32 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-micro"><header><h1 class="p-name entry-title"><a href="posts/why-governments-block-startups/" class="u-url">Why Governments Block Startups</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/my-jupyter-notebook-slides-setup/" class="u-url">My Jupyter Notebook Slides Setup</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Brian Baquiran
+            </span></p>
+            <p class="dateline"><a href="posts/my-jupyter-notebook-slides-setup/" rel="bookmark"><time class="published dt-published" datetime="2018-02-26T16:46:37+08:00" title="2018-02-26 16:46">2018-02-26 16:46</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/my-jupyter-notebook-slides-setup/#disqus_thread" data-disqus-identifier="cache/posts/my-jupyter-notebook-slides-setup.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Here's how I set up Jupyter notebook for presentations:</p>
+<pre class="literal-block">
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --sys-prefix
+jupyter nbextension enable splitcell/splitcell
+pip install rise
+jupyter-nbextension install rise -py --sys-prefix
+</pre>
+</div>
+    </div>
+    </article><article class="h-entry post-micro"><header><h1 class="p-name entry-title"><a href="posts/why-governments-block-startups/" class="u-url">Why Governments Block Startups</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Brian Baquiran
@@ -313,94 +338,6 @@ You're worth whatever the market determines you're worth.</blockquote>
 <p>Yesterday morning at Microsoft Philippines, I gave a short talk introducing AI and machine learning to software engineers.
 Instead of walking through my usual R or Python code, I did a demo using Microsoft's own ML Studio, which was helpful for visualizing the machine learning process.</p>
 <p>Most of the Q&amp;A was about the possible impact of AI on jobs, inequality and security/privacy.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/installing-kerasr/" class="u-url">Installing kerasR</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Brian Baquiran
-            </span></p>
-            <p class="dateline"><a href="posts/installing-kerasr/" rel="bookmark"><time class="published dt-published" datetime="2017-06-10T08:43:10+08:00" title="2017-06-10 08:43">2017-06-10 08:43</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/installing-kerasr/#disqus_thread" data-disqus-identifier="cache/posts/installing-kerasr.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>This is a quick reference to installing kerasR, a slim wrapper around <a class="reference external" href="https://keras.io/">Keras</a> starting with the required Python packages.</p>
-<div class="section" id="python-packages">
-<h2>Python packages</h2>
-<p>Create a virtualenv:</p>
-<pre class="literal-block">
-$ virtualenv pydata --python=/usr/bin/python3
-Running virtualenv with interpreter /usr/bin/python3
-Using base prefix '/usr'
-New python executable in /home/brian/pydata/bin/python3
-Also creating executable in /home/brian/pydata/bin/python
-Installing setuptools, pip, wheel...done.
-$ source pydata/bin/activate
-(pydata) $
-</pre>
-<p>Install <tt class="docutils literal">keras</tt>. This will also install the other prerequisites for doing any sort of datasciency stuff in Python
-(<tt class="docutils literal">numpy</tt>, <tt class="docutils literal">pandas</tt>) as well as Theano. Tensorflow will be installed in the next step.</p>
-<pre class="literal-block">
-(pydata) $ pip install keras
-Collecting keras
-Collecting six (from keras)
-Using cached six-1.10.0-py2.py3-none-any.whl
-Collecting theano (from keras)
-Collecting pyyaml (from keras)
-Collecting scipy&gt;=0.14 (from theano-&gt;keras)
-  Downloading scipy-0.19.0-cp35-cp35m-manylinux1_x86_64.whl (47.9MB)
-    100% |████████████████████████████████| 47.9MB 27kB/s
-Collecting numpy&gt;=1.9.1 (from theano-&gt;keras)
-  Downloading numpy-1.13.0-cp35-cp35m-manylinux1_x86_64.whl (16.9MB)
-    100% |████████████████████████████████| 16.9MB 66kB/s
-Installing collected packages: six, numpy, scipy, theano, pyyaml, keras
-Successfully installed keras-2.0.4 numpy-1.13.0 pyyaml-3.12 scipy-0.19.0 six-1.10.0 theano-0.9.0
-</pre>
-<p>Install Tensorflow:</p>
-<pre class="literal-block">
-(pydata) $ pip install tensorflow
-</pre>
-</div>
-<div class="section" id="kerasr">
-<h2>kerasR</h2>
-<p>In R, install the <tt class="docutils literal">kerasR</tt> package:</p>
-<pre class="literal-block">
-&gt; install.packages("kerasR")
-Installing package into ‘/home/brian/R/x86_64-pc-linux-gnu-library/3.4’
-...
-** testing if installed package can be loaded
-successfully loaded keras
-* DONE (kerasR)
-</pre>
-<p>This may also install the <tt class="docutils literal">reticulate</tt> package, which is an interface to Python objects and methods.</p>
-<p>A <a class="reference external" href="https://cran.r-project.org/web/packages/kerasR/vignettes/introduction.html">guide</a> to using <tt class="docutils literal">kerasR</tt> is provided as a vignette.</p>
-</div>
-<div class="section" id="troubleshooting">
-<h2>Troubleshooting</h2>
-<p>If you get an error message when executing <tt class="docutils literal">library(kerasR)</tt> saying:</p>
-<pre class="literal-block">
-&gt; library(kerasR)
-
-keras not available
-See reticulate::use_python() to set python path,
-then use kerasR::keras_init() to retry
-</pre>
-<p>this means <tt class="docutils literal">kerasR</tt> (or more specifically, <tt class="docutils literal">reticulate</tt>) can't find the <tt class="docutils literal">keras</tt> python package, you need to start R <em>after</em> loading your virtualenv:</p>
-<pre class="literal-block">
-$ source pydata/bin/activate
-(pydata) $ R
-&gt; library(kerasR)
-Using TensorFlow backend.
-successfully loaded keras
-&gt;
-</pre>
-</div>
 </div>
     </div>
     </article>

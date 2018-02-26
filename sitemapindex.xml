@@ -51,7 +51,7 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/economics.xml</loc>
-  <lastmod>2018-02-11T15:10:00Z</lastmod>
+  <lastmod>2018-02-11T23:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/execution.xml</loc>
@@ -78,6 +78,10 @@
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/jupyter.xml</loc>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/linux.xml</loc>
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
@@ -102,6 +106,10 @@
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/public-speaking.xml</loc>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/pycharm.xml</loc>
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
@@ -111,7 +119,7 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/python.xml</loc>
-  <lastmod>2017-12-29T06:06:00Z</lastmod>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/r-language.xml</loc>
@@ -122,8 +130,12 @@
   <lastmod>2017-12-29T06:06:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://brianbaquiran.com/categories/slides.xml</loc>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://brianbaquiran.com/categories/startups.xml</loc>
-  <lastmod>2018-02-11T15:10:00Z</lastmod>
+  <lastmod>2018-02-11T23:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/categories/strategy.xml</loc>
@@ -159,10 +171,10 @@
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/rss.xml</loc>
-  <lastmod>2018-02-11T15:10:00Z</lastmod>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://brianbaquiran.com/sitemap.xml</loc>
-  <lastmod>2018-02-11T15:10:00Z</lastmod>
+  <lastmod>2018-02-26T09:31:00Z</lastmod>
  </sitemap>
 </sitemapindex>

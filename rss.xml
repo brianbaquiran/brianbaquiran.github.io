@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lateral Thunking</title><link>http://brianbaquiran.com/</link><description>Random thoughts and stories</description><atom:link rel="self" href="http://brianbaquiran.com/rss.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 11 Feb 2018 23:43:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Why Governments Block Startups</title><link>http://brianbaquiran.com/posts/why-governments-block-startups/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;There are a lot of permits and regulations needed in order to open a hotel, in the same way there are regulations needed to open a taxi franchise. This is a major barrier to new entrants in these markets.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lateral Thunking</title><link>http://brianbaquiran.com/</link><description>Random thoughts and stories</description><atom:link type="application/rss+xml" href="http://brianbaquiran.com/rss.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 26 Feb 2018 09:46:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>My Jupyter Notebook Slides Setup</title><link>http://brianbaquiran.com/posts/my-jupyter-notebook-slides-setup/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;Here's how I set up Jupyter notebook for presentations:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --sys-prefix
+jupyter nbextension enable splitcell/splitcell
+pip install rise
+jupyter-nbextension install rise -py --sys-prefix
+&lt;/pre&gt;&lt;/div&gt;</description><category>jupyter</category><category>public speaking</category><category>python</category><category>slides</category><guid>http://brianbaquiran.com/posts/my-jupyter-notebook-slides-setup/</guid><pubDate>Mon, 26 Feb 2018 08:46:37 GMT</pubDate></item><item><title>Why Governments Block Startups</title><link>http://brianbaquiran.com/posts/why-governments-block-startups/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;There are a lot of permits and regulations needed in order to open a hotel, in the same way there are regulations needed to open a taxi franchise. This is a major barrier to new entrants in these markets.&lt;/p&gt;
 &lt;p&gt;It's in the interests of the entrenched  &lt;tt class="docutils literal"&gt;(hotel|taxi)&lt;/tt&gt; franchisees to have this barrier to new entrants as high as possible, since they're already past it. So they lobby and push government to enforce and even make the barrier even higher for new entrants in order to preserve their hold over the market.&lt;/p&gt;
 &lt;p&gt;This, of course, stifles competition and decreases innovation. It gets ridiculous when even plumbers, manicurists, and barbers need certification and licensing.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;It's always in the interests of entrenched players to increase regulation. Whenever you see regulations, certification and licensing required, it usually indicates a stagnant industry ripe for disruption.&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;</description><category>economics</category><category>startups</category><guid>http://brianbaquiran.com/posts/why-governments-block-startups/</guid><pubDate>Sun, 11 Feb 2018 14:56:10 GMT</pubDate></item><item><title>Apprentice, Journeyman, Master</title><link>http://brianbaquiran.com/posts/apprentice-journeyman-master/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;A bachelors' in computer science doesn't make you a good computer scientist or programmer any more than a bachelors' in physics makes you qualified to call yourself a physicist.&lt;/p&gt;
@@ -83,74 +90,4 @@ You're worth whatever the market determines you're worth.&lt;/blockquote&gt;
 
 &lt;p&gt;Yesterday morning at Microsoft Philippines, I gave a short talk introducing AI and machine learning to software engineers.
 Instead of walking through my usual R or Python code, I did a demo using Microsoft's own ML Studio, which was helpful for visualizing the machine learning process.&lt;/p&gt;
-&lt;p&gt;Most of the Q&amp;amp;A was about the possible impact of AI on jobs, inequality and security/privacy.&lt;/p&gt;&lt;/div&gt;</description><guid>http://brianbaquiran.com/posts/ai-and-machine-learning-for-software-engineers-at-dev-festival/</guid><pubDate>Sun, 18 Jun 2017 00:15:39 GMT</pubDate></item><item><title>Installing kerasR</title><link>http://brianbaquiran.com/posts/installing-kerasr/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;This is a quick reference to installing kerasR, a slim wrapper around &lt;a class="reference external" href="https://keras.io/"&gt;Keras&lt;/a&gt; starting with the required Python packages.&lt;/p&gt;
-&lt;div class="section" id="python-packages"&gt;
-&lt;h2&gt;Python packages&lt;/h2&gt;
-&lt;p&gt;Create a virtualenv:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ virtualenv pydata --python=/usr/bin/python3
-Running virtualenv with interpreter /usr/bin/python3
-Using base prefix '/usr'
-New python executable in /home/brian/pydata/bin/python3
-Also creating executable in /home/brian/pydata/bin/python
-Installing setuptools, pip, wheel...done.
-$ source pydata/bin/activate
-(pydata) $
-&lt;/pre&gt;
-&lt;p&gt;Install &lt;tt class="docutils literal"&gt;keras&lt;/tt&gt;. This will also install the other prerequisites for doing any sort of datasciency stuff in Python
-(&lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt;) as well as Theano. Tensorflow will be installed in the next step.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-(pydata) $ pip install keras
-Collecting keras
-Collecting six (from keras)
-Using cached six-1.10.0-py2.py3-none-any.whl
-Collecting theano (from keras)
-Collecting pyyaml (from keras)
-Collecting scipy&amp;gt;=0.14 (from theano-&amp;gt;keras)
-  Downloading scipy-0.19.0-cp35-cp35m-manylinux1_x86_64.whl (47.9MB)
-    100% |████████████████████████████████| 47.9MB 27kB/s
-Collecting numpy&amp;gt;=1.9.1 (from theano-&amp;gt;keras)
-  Downloading numpy-1.13.0-cp35-cp35m-manylinux1_x86_64.whl (16.9MB)
-    100% |████████████████████████████████| 16.9MB 66kB/s
-Installing collected packages: six, numpy, scipy, theano, pyyaml, keras
-Successfully installed keras-2.0.4 numpy-1.13.0 pyyaml-3.12 scipy-0.19.0 six-1.10.0 theano-0.9.0
-&lt;/pre&gt;
-&lt;p&gt;Install Tensorflow:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-(pydata) $ pip install tensorflow
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kerasr"&gt;
-&lt;h2&gt;kerasR&lt;/h2&gt;
-&lt;p&gt;In R, install the &lt;tt class="docutils literal"&gt;kerasR&lt;/tt&gt; package:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-&amp;gt; install.packages("kerasR")
-Installing package into ‘/home/brian/R/x86_64-pc-linux-gnu-library/3.4’
-...
-** testing if installed package can be loaded
-successfully loaded keras
-* DONE (kerasR)
-&lt;/pre&gt;
-&lt;p&gt;This may also install the &lt;tt class="docutils literal"&gt;reticulate&lt;/tt&gt; package, which is an interface to Python objects and methods.&lt;/p&gt;
-&lt;p&gt;A &lt;a class="reference external" href="https://cran.r-project.org/web/packages/kerasR/vignettes/introduction.html"&gt;guide&lt;/a&gt; to using &lt;tt class="docutils literal"&gt;kerasR&lt;/tt&gt; is provided as a vignette.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="troubleshooting"&gt;
-&lt;h2&gt;Troubleshooting&lt;/h2&gt;
-&lt;p&gt;If you get an error message when executing &lt;tt class="docutils literal"&gt;library(kerasR)&lt;/tt&gt; saying:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-&amp;gt; library(kerasR)
-
-keras not available
-See reticulate::use_python() to set python path,
-then use kerasR::keras_init() to retry
-&lt;/pre&gt;
-&lt;p&gt;this means &lt;tt class="docutils literal"&gt;kerasR&lt;/tt&gt; (or more specifically, &lt;tt class="docutils literal"&gt;reticulate&lt;/tt&gt;) can't find the &lt;tt class="docutils literal"&gt;keras&lt;/tt&gt; python package, you need to start R &lt;em&gt;after&lt;/em&gt; loading your virtualenv:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ source pydata/bin/activate
-(pydata) $ R
-&amp;gt; library(kerasR)
-Using TensorFlow backend.
-successfully loaded keras
-&amp;gt;
-&lt;/pre&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>machine learning</category><guid>http://brianbaquiran.com/posts/installing-kerasr/</guid><pubDate>Sat, 10 Jun 2017 00:43:10 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Most of the Q&amp;amp;A was about the possible impact of AI on jobs, inequality and security/privacy.&lt;/p&gt;&lt;/div&gt;</description><guid>http://brianbaquiran.com/posts/ai-and-machine-learning-for-software-engineers-at-dev-festival/</guid><pubDate>Sun, 18 Jun 2017 00:15:39 GMT</pubDate></item></channel></rss>

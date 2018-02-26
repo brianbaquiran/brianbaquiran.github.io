@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Lateral Thunking (Posts about python)</title><link>http://brianbaquiran.com/</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://brianbaquiran.com/categories/python.xml"></atom:link><language>en</language><lastBuildDate>Fri, 29 Dec 2017 06:06:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Progress bars with tqdm</title><link>http://brianbaquiran.com/posts/progress-bars-with-tqdm/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;At your shell:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lateral Thunking (Posts about python)</title><link>http://brianbaquiran.com/</link><description></description><atom:link type="application/rss+xml" href="http://brianbaquiran.com/categories/python.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 26 Feb 2018 09:46:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>My Jupyter Notebook Slides Setup</title><link>http://brianbaquiran.com/posts/my-jupyter-notebook-slides-setup/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;Here's how I set up Jupyter notebook for presentations:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --sys-prefix
+jupyter nbextension enable splitcell/splitcell
+pip install rise
+jupyter-nbextension install rise -py --sys-prefix
+&lt;/pre&gt;&lt;/div&gt;</description><category>jupyter</category><category>public speaking</category><category>python</category><category>slides</category><guid>http://brianbaquiran.com/posts/my-jupyter-notebook-slides-setup/</guid><pubDate>Mon, 26 Feb 2018 08:46:37 GMT</pubDate></item><item><title>Progress bars with tqdm</title><link>http://brianbaquiran.com/posts/progress-bars-with-tqdm/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;At your shell:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ pip install tqdm
 &lt;/pre&gt;
