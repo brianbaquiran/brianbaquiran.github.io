@@ -47,7 +47,7 @@ key">
             </a>
         </div>
 <!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+        <div class="collapse navbar-collapse" id="bs-navbar" role="navigation" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
 <a href="../../archive.html">Archive</a>
@@ -103,21 +103,21 @@ key">
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>It is easy to create EC2 keypairs with the AWS CLI:</p>
-<pre class="code shell"><a name="rest_code_8bdd66d2cd6a4dc9b5d2ce44653e6a70-1"></a>$ aws ec2 create-key-pair --key-name mynewkeypair &gt; keystuff.json
+<pre class="code shell"><a name="rest_code_2d68aa9ddda645519668e3af6ac5e398-1"></a>$ aws ec2 create-key-pair --key-name mynewkeypair &gt; keystuff.json
 </pre>
 <p>After creating the keypair it should appear in your EC2 key pairs listing. The
 <tt class="docutils literal">keystuff.json</tt> file will contain the RSA private key you will need to use
 to connect to any instances you create with the keypair, as well as the name of
 the key and its fingerprint.</p>
-<pre class="code text"><a name="rest_code_3ce97ce9b4c548338052710aaf64d530-1"></a>{
-<a name="rest_code_3ce97ce9b4c548338052710aaf64d530-2"></a>    "KeyMaterial": "-----BEGIN RSA PRIVATE KEY-----\n&lt;your private key&gt;==\n-----END RSA PRIVATE KEY-----",
-<a name="rest_code_3ce97ce9b4c548338052710aaf64d530-3"></a>    "KeyName": "mynewkeypair",
-<a name="rest_code_3ce97ce9b4c548338052710aaf64d530-4"></a>    "KeyFingerprint": "53:47:ee:01:3a:35:9b:52:1c:4f:99:6f:87:b0:0f:8b:ed:83:55:3b"
-<a name="rest_code_3ce97ce9b4c548338052710aaf64d530-5"></a>}
+<pre class="code text"><a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-1"></a>{
+<a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-2"></a>    "KeyMaterial": "-----BEGIN RSA PRIVATE KEY-----\n&lt;your private key&gt;==\n-----END RSA PRIVATE KEY-----",
+<a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-3"></a>    "KeyName": "mynewkeypair",
+<a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-4"></a>    "KeyFingerprint": "53:47:ee:01:3a:35:9b:52:1c:4f:99:6f:87:b0:0f:8b:ed:83:55:3b"
+<a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-5"></a>}
 </pre>
 <p>To extract the private key into a separate file, use the
 <a class="reference external" href="https://stedolan.github.io/jq/">jq JSON filter</a>.</p>
-<pre class="code shell"><a name="rest_code_753d28660e64448182d9aaa4113edf3f-1"></a>$ jq <span class="s1">'.KeyMaterial'</span> keystuff.json --raw &gt; mynewkey.pem
+<pre class="code shell"><a name="rest_code_fb5aae0e58be4578aaaba6d6125981eb-1"></a>$ jq <span class="s1">'.KeyMaterial'</span> keystuff.json --raw &gt; mynewkey.pem
 </pre>
 </div>
     </div>

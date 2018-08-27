@@ -45,7 +45,7 @@ need to change in your">
             </a>
         </div>
 <!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+        <div class="collapse navbar-collapse" id="bs-navbar" role="navigation" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
 <a href="../../archive.html">Archive</a>
@@ -125,11 +125,11 @@ jinja-based theme, upgrading is probably a bad idea right now.</dd>
 using a custom theme. Also, some templates have been tweaked, but nothing should
 break for you.</p>
 <p>Facebook comments support changed the HTML tag to:</p>
-<pre class="code mako"><a name="rest_code_93b7bfba26d54f3c8cc9e75e1bb6a429-1"></a><span class="x">&lt;html</span>
-<a name="rest_code_93b7bfba26d54f3c8cc9e75e1bb6a429-2"></a><span class="cp">%</span><span class="k">if</span> <span class="n">comment_system</span> <span class="o">==</span> <span class="s1">'facebook'</span><span class="p">:</span><span class="x"></span>
-<a name="rest_code_93b7bfba26d54f3c8cc9e75e1bb6a429-3"></a><span class="x">xmlns:fb="http://ogp.me/ns/fb#"</span>
-<a name="rest_code_93b7bfba26d54f3c8cc9e75e1bb6a429-4"></a><span class="cp">%</span><span class="k">endif</span><span class="x"></span>
-<a name="rest_code_93b7bfba26d54f3c8cc9e75e1bb6a429-5"></a><span class="x">lang="</span><span class="cp">${</span><span class="n">lang</span><span class="cp">}</span><span class="x">"&gt;</span>
+<pre class="code mako"><a name="rest_code_da453e73026041e1b8b44f4818639721-1"></a><span class="x">&lt;html</span>
+<a name="rest_code_da453e73026041e1b8b44f4818639721-2"></a><span class="cp">%</span><span class="k">if</span> <span class="n">comment_system</span> <span class="o">==</span> <span class="s1">'facebook'</span><span class="p">:</span><span class="x"></span>
+<a name="rest_code_da453e73026041e1b8b44f4818639721-3"></a><span class="x">xmlns:fb="http://ogp.me/ns/fb#"</span>
+<a name="rest_code_da453e73026041e1b8b44f4818639721-4"></a><span class="cp">%</span><span class="k">endif</span><span class="x"></span>
+<a name="rest_code_da453e73026041e1b8b44f4818639721-5"></a><span class="x">lang="</span><span class="cp">${</span><span class="n">lang</span><span class="cp">}</span><span class="x">"&gt;</span>
 </pre>
 <p>If you do not want to use Facebook comments, you can leave the old <tt class="docutils literal">&lt;html
 <span class="pre">lang="${lang}"&gt;</span></tt> tag in and it will work just fine.</p>
@@ -153,22 +153,22 @@ should be <strong>exactly</strong> as before.</p>
 story short, anything that had a <tt class="docutils literal">True</tt> as the <tt class="docutils literal">use_in_feeds</tt>
 (last) value goes to <tt class="docutils literal">POSTS</tt> and anything with <tt class="docutils literal">False</tt> goes to
 <tt class="docutils literal">PAGES</tt>.  For example:</p>
-<pre class="code python"><a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-1"></a><span class="n">post_pages</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-2"></a>    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">,</span> <span class="bp">True</span><span class="p">),</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-3"></a>    <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-4"></a>    <span class="p">(</span><span class="s2">"stories/*.html"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-5"></a><span class="p">)</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-6"></a>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-7"></a><span class="c1">### becomes ###</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-8"></a>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-9"></a><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-10"></a>    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-11"></a><span class="p">)</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-12"></a>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-13"></a><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-14"></a>    <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-15"></a>    <span class="p">(</span><span class="s2">"stories/*.html"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
-<a name="rest_code_a16e8a3a2b584eb39eb8fe378285d8bd-16"></a><span class="p">)</span>
+<pre class="code python"><a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-1"></a><span class="n">post_pages</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-2"></a>    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">,</span> <span class="bp">True</span><span class="p">),</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-3"></a>    <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-4"></a>    <span class="p">(</span><span class="s2">"stories/*.html"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-5"></a><span class="p">)</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-6"></a>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-7"></a><span class="c1">### becomes ###</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-8"></a>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-9"></a><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-10"></a>    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-11"></a><span class="p">)</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-12"></a>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-13"></a><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-14"></a>    <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-15"></a>    <span class="p">(</span><span class="s2">"stories/*.html"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-16"></a><span class="p">)</span>
 </pre>
 <p>Also, you will get warnings. That doesn't mean things broke. They are
 there to inform you of what's happening, and that you need to tweak your
