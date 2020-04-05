@@ -21,7 +21,7 @@ BLOG_AUTHOR = "Brian Baquiran"  # (translatable)
 BLOG_TITLE = "Lateral Thunking"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "http://brianbaquiran.github.io/"
+SITE_URL = "https://brianbaquiran.github.io/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
