@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,14 +9,14 @@
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="http://brianbaquiran.com/posts/creating-ec2-keypairs-with-aws-cli/">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="http://brianbaquiran.github.io/posts/creating-ec2-keypairs-with-aws-cli/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian Baquiran">
 <link rel="prev" href="../gitlab-weirdness/" title="GitLab Weirdness" type="text/html">
 <link rel="next" href="../disablingenabling-the-asus-ux303-touchscreen/" title="Disabling/Enabling the Asus UX303 Touchscreen in Ubuntu 16.04" type="text/html">
 <meta property="og:site_name" content="Lateral Thunking">
 <meta property="og:title" content="Creating EC2 keypairs with AWS CLI">
-<meta property="og:url" content="http://brianbaquiran.com/posts/creating-ec2-keypairs-with-aws-cli/">
+<meta property="og:url" content="http://brianbaquiran.github.io/posts/creating-ec2-keypairs-with-aws-cli/">
 <meta property="og:description" content="It is easy to create EC2 keypairs with the AWS CLI:
 $ aws ec2 create-key-pair --key-name mynewkeypair &gt; keystuff.json
 After creating the keypair it should appear in your EC2 key pairs listing. The
@@ -41,7 +41,7 @@ key">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://brianbaquiran.com/">
+            <a class="navbar-brand" href="http://brianbaquiran.github.io/">
 
                 <span id="blog-title">Lateral Thunking</span>
             </a>
@@ -60,6 +60,9 @@ key">
                 </li>
 <li>
 <a href="https://github.com/brianbaquiran">Github</a>
+                </li>
+<li>
+<a href="https://ph.linkedin.com/in/bbaquiran">Linkedin</a>
 
                 
             </li>
@@ -84,10 +87,13 @@ key">
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Creating EC2 keypairs with AWS CLI</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
                     Brian Baquiran
             </span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2016-09-29T18:48:37+08:00" itemprop="datePublished" title="2016-09-29 18:48">2016-09-29 18:48</time></a></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2016-09-29T18:48:37+08:00" itemprop="datePublished" title="2016-09-29 18:48">2016-09-29 18:48</time></a>
+            </p>
                 <p class="commentline">
         
     <a href="#disqus_thread" data-disqus-identifier="cache/posts/creating-ec2-keypairs-with-aws-cli.html">Comments</a>
@@ -103,21 +109,21 @@ key">
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>It is easy to create EC2 keypairs with the AWS CLI:</p>
-<pre class="code shell"><a name="rest_code_2d68aa9ddda645519668e3af6ac5e398-1"></a>$ aws ec2 create-key-pair --key-name mynewkeypair &gt; keystuff.json
+<pre class="code shell"><a name="rest_code_54baac340f4d4b759b2c6a86bc7a42b5-1"></a>$ aws ec2 create-key-pair --key-name mynewkeypair &gt; keystuff.json
 </pre>
 <p>After creating the keypair it should appear in your EC2 key pairs listing. The
-<tt class="docutils literal">keystuff.json</tt> file will contain the RSA private key you will need to use
+<code class="docutils literal">keystuff.json</code> file will contain the RSA private key you will need to use
 to connect to any instances you create with the keypair, as well as the name of
 the key and its fingerprint.</p>
-<pre class="code text"><a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-1"></a>{
-<a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-2"></a>    "KeyMaterial": "-----BEGIN RSA PRIVATE KEY-----\n&lt;your private key&gt;==\n-----END RSA PRIVATE KEY-----",
-<a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-3"></a>    "KeyName": "mynewkeypair",
-<a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-4"></a>    "KeyFingerprint": "53:47:ee:01:3a:35:9b:52:1c:4f:99:6f:87:b0:0f:8b:ed:83:55:3b"
-<a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-5"></a>}
+<pre class="code text"><a name="rest_code_0c5117297074421eb0d19625adc37d1b-1"></a>{
+<a name="rest_code_0c5117297074421eb0d19625adc37d1b-2"></a>    "KeyMaterial": "-----BEGIN RSA PRIVATE KEY-----\n&lt;your private key&gt;==\n-----END RSA PRIVATE KEY-----",
+<a name="rest_code_0c5117297074421eb0d19625adc37d1b-3"></a>    "KeyName": "mynewkeypair",
+<a name="rest_code_0c5117297074421eb0d19625adc37d1b-4"></a>    "KeyFingerprint": "53:47:ee:01:3a:35:9b:52:1c:4f:99:6f:87:b0:0f:8b:ed:83:55:3b"
+<a name="rest_code_0c5117297074421eb0d19625adc37d1b-5"></a>}
 </pre>
 <p>To extract the private key into a separate file, use the
 <a class="reference external" href="https://stedolan.github.io/jq/">jq JSON filter</a>.</p>
-<pre class="code shell"><a name="rest_code_fb5aae0e58be4578aaaba6d6125981eb-1"></a>$ jq <span class="s1">'.KeyMaterial'</span> keystuff.json --raw &gt; mynewkey.pem
+<pre class="code shell"><a name="rest_code_1023106430dc42d2b5d6c63eed0733ed-1"></a>$ jq <span class="s1">'.KeyMaterial'</span> keystuff.json --raw &gt; mynewkey.pem
 </pre>
 </div>
     </div>
@@ -139,7 +145,7 @@ the key and its fingerprint.</p>
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="lateralthunking",
-            disqus_url="http://brianbaquiran.com/posts/creating-ec2-keypairs-with-aws-cli/",
+            disqus_url="http://brianbaquiran.github.io/posts/creating-ec2-keypairs-with-aws-cli/",
         disqus_title="Creating EC2 keypairs with AWS CLI",
         disqus_identifier="cache/posts/creating-ec2-keypairs-with-aws-cli.html",
         disqus_config = function () {
@@ -160,17 +166,23 @@ the key and its fingerprint.</p>
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2018        Brian Baquiran
+            Contents © 2020        Brian Baquiran
             
         </footer>
 </div>
 </div>
 
 
-            <script src="../../assets/js/all-nocdn.js"></script><a href="https://twitter.com/brianbaquiran" class="twitter-follow-button" data-show-count="false">Follow @brianbaquiran</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+            <script src="../../assets/js/all-nocdn.js"></script><a href="https://twitter.com/brianbaquiran" class="twitter-follow-button" data-show-count="false">Follow @brianbaquiran</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><!-- fancy dates --><script>
     moment.locale("en");
     fancydates(0, "YYYY-MM-DD HH:mm");
     </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

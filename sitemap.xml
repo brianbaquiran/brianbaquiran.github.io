@@ -6,419 +6,423 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>http://brianbaquiran.com/</loc>
+  <loc>http://brianbaquiran.github.io/</loc>
   <lastmod>2018-11-04T03:55:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/2015/</loc>
+  <loc>http://brianbaquiran.github.io/2015/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/2016/</loc>
+  <loc>http://brianbaquiran.github.io/2016/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/2017/</loc>
+  <loc>http://brianbaquiran.github.io/2017/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/2018/</loc>
+  <loc>http://brianbaquiran.github.io/2018/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/archive.html</loc>
-  <lastmod>2018-11-04T03:55:00Z</lastmod>
+  <loc>http://brianbaquiran.github.io/archive.html</loc>
+  <lastmod>2020-04-05T09:25:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/</loc>
+  <loc>http://brianbaquiran.github.io/categories/</loc>
+  <lastmod>2020-04-05T09:22:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/categories/ai/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/ai/</loc>
+  <loc>http://brianbaquiran.github.io/categories/api/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/api/</loc>
+  <loc>http://brianbaquiran.github.io/categories/asus/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/asus/</loc>
+  <loc>http://brianbaquiran.github.io/categories/aws/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/aws/</loc>
+  <loc>http://brianbaquiran.github.io/categories/books/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/books/</loc>
+  <loc>http://brianbaquiran.github.io/categories/career/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/career/</loc>
+  <loc>http://brianbaquiran.github.io/categories/cat_events/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/cat_events/</loc>
+  <loc>http://brianbaquiran.github.io/categories/cat_posts/</loc>
+  <lastmod>2020-04-05T09:22:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://brianbaquiran.github.io/categories/centos/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/centos/</loc>
+  <loc>http://brianbaquiran.github.io/categories/coding/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/coding/</loc>
+  <loc>http://brianbaquiran.github.io/categories/datascience/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/datascience/</loc>
+  <loc>http://brianbaquiran.github.io/categories/dplyr/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/dplyr/</loc>
+  <loc>http://brianbaquiran.github.io/categories/economics/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/economics/</loc>
+  <loc>http://brianbaquiran.github.io/categories/execution/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/execution/</loc>
+  <loc>http://brianbaquiran.github.io/categories/ggplot2/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/ggplot2/</loc>
+  <loc>http://brianbaquiran.github.io/categories/git/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/git/</loc>
+  <loc>http://brianbaquiran.github.io/categories/google/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/google/</loc>
+  <loc>http://brianbaquiran.github.io/categories/graphs/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/graphs/</loc>
+  <loc>http://brianbaquiran.github.io/categories/json/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/json/</loc>
+  <loc>http://brianbaquiran.github.io/categories/jupyter/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/jupyter/</loc>
+  <loc>http://brianbaquiran.github.io/categories/linux/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/linux/</loc>
+  <loc>http://brianbaquiran.github.io/categories/machine-learning/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/machine-learning/</loc>
+  <loc>http://brianbaquiran.github.io/categories/namedtuple/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/namedtuple/</loc>
+  <loc>http://brianbaquiran.github.io/categories/nlp/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/nlp/</loc>
+  <loc>http://brianbaquiran.github.io/categories/planning/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/planning/</loc>
+  <loc>http://brianbaquiran.github.io/categories/programming/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/programming/</loc>
+  <loc>http://brianbaquiran.github.io/categories/public-speaking/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/public-speaking/</loc>
+  <loc>http://brianbaquiran.github.io/categories/pycharm/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/pycharm/</loc>
+  <loc>http://brianbaquiran.github.io/categories/pydata/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/pydata/</loc>
+  <loc>http://brianbaquiran.github.io/categories/python/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/python/</loc>
+  <loc>http://brianbaquiran.github.io/categories/r-language/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/r-language/</loc>
+  <loc>http://brianbaquiran.github.io/categories/salaries/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/salaries/</loc>
+  <loc>http://brianbaquiran.github.io/categories/slides/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/slides/</loc>
+  <loc>http://brianbaquiran.github.io/categories/startups/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/startups/</loc>
+  <loc>http://brianbaquiran.github.io/categories/strategy/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/strategy/</loc>
+  <loc>http://brianbaquiran.github.io/categories/tips/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/tips/</loc>
+  <loc>http://brianbaquiran.github.io/categories/twitter/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/twitter/</loc>
+  <loc>http://brianbaquiran.github.io/categories/visualization/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/categories/visualization/</loc>
-  <lastmod>2018-08-27T02:06:00Z</lastmod>
- </url>
- <url>
-  <loc>http://brianbaquiran.com/galleries/</loc>
+  <loc>http://brianbaquiran.github.io/galleries/</loc>
   <lastmod>2018-08-27T02:05:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/galleries/demo/</loc>
+  <loc>http://brianbaquiran.github.io/galleries/demo/</loc>
   <lastmod>2018-08-27T02:05:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/galleries/sebago/</loc>
+  <loc>http://brianbaquiran.github.io/galleries/sebago/</loc>
   <lastmod>2018-08-27T02:05:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/galleries/wwcodemnl-4/</loc>
+  <loc>http://brianbaquiran.github.io/galleries/wwcodemnl-4/</loc>
   <lastmod>2018-08-27T02:05:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/galleries/xiaomi4Xsucks/</loc>
+  <loc>http://brianbaquiran.github.io/galleries/xiaomi4Xsucks/</loc>
   <lastmod>2018-08-27T02:05:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/index-1.html</loc>
-  <lastmod>2018-11-04T03:55:00Z</lastmod>
+  <loc>http://brianbaquiran.github.io/index-1.html</loc>
+  <lastmod>2020-04-05T09:32:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/index-2.html</loc>
-  <lastmod>2018-11-04T03:55:00Z</lastmod>
+  <loc>http://brianbaquiran.github.io/index-2.html</loc>
+  <lastmod>2020-04-05T09:32:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/listings/</loc>
+  <loc>http://brianbaquiran.github.io/listings/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/listings/hello.py.html</loc>
-  <lastmod>2018-11-04T03:55:00Z</lastmod>
+  <loc>http://brianbaquiran.github.io/listings/hello.py.html</loc>
+  <lastmod>2020-04-05T09:25:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/ai-and-machine-learning-for-software-engineers-at-dev-festival/</loc>
+  <loc>http://brianbaquiran.github.io/posts/ai-and-machine-learning-for-software-engineers-at-dev-festival/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/ai-ph-mixer/</loc>
+  <loc>http://brianbaquiran.github.io/posts/ai-ph-mixer/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/alien-employment-permit-dataset/</loc>
+  <loc>http://brianbaquiran.github.io/posts/alien-employment-permit-dataset/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/apprentice-journeyman-master/</loc>
+  <loc>http://brianbaquiran.github.io/posts/apprentice-journeyman-master/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/creating-ec2-keypairs-with-aws-cli/</loc>
+  <loc>http://brianbaquiran.github.io/posts/creating-ec2-keypairs-with-aws-cli/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/disablingenabling-the-asus-ux303-touchscreen/</loc>
+  <loc>http://brianbaquiran.github.io/posts/disablingenabling-the-asus-ux303-touchscreen/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/dream-in-years-ship-daily/</loc>
+  <loc>http://brianbaquiran.github.io/posts/dream-in-years-ship-daily/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/gitlab-weirdness/</loc>
+  <loc>http://brianbaquiran.github.io/posts/gitlab-weirdness/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/google-cloud-natural-language-api/</loc>
+  <loc>http://brianbaquiran.github.io/posts/google-cloud-natural-language-api/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/google-io-extended-2017/</loc>
+  <loc>http://brianbaquiran.github.io/posts/google-io-extended-2017/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/hello-world/</loc>
+  <loc>http://brianbaquiran.github.io/posts/hello-world/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/ineffective-coding-habits/</loc>
+  <loc>http://brianbaquiran.github.io/posts/ineffective-coding-habits/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/installing-kerasr/</loc>
+  <loc>http://brianbaquiran.github.io/posts/installing-kerasr/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/installing-python-2711-on-centos-7/</loc>
+  <loc>http://brianbaquiran.github.io/posts/installing-python-2711-on-centos-7/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/life-satisfaction-two-cohorts/</loc>
+  <loc>http://brianbaquiran.github.io/posts/life-satisfaction-two-cohorts/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/my-jupyter-notebook-slides-setup/</loc>
+  <loc>http://brianbaquiran.github.io/posts/my-jupyter-notebook-slides-setup/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/namedtuple-comes-in-handy/</loc>
+  <loc>http://brianbaquiran.github.io/posts/namedtuple-comes-in-handy/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/philippine-startups-wordcloud/</loc>
+  <loc>http://brianbaquiran.github.io/posts/philippine-startups-wordcloud/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/programmers-dont-understand-economics/</loc>
+  <loc>http://brianbaquiran.github.io/posts/programmers-dont-understand-economics/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/progress-bars-with-tqdm/</loc>
+  <loc>http://brianbaquiran.github.io/posts/progress-bars-with-tqdm/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/the-art-of-data-science/</loc>
+  <loc>http://brianbaquiran.github.io/posts/the-art-of-data-science/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/the-business-of-big-data-analytics-meetup-3/</loc>
+  <loc>http://brianbaquiran.github.io/posts/the-business-of-big-data-analytics-meetup-3/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/why-governments-block-startups/</loc>
+  <loc>http://brianbaquiran.github.io/posts/why-governments-block-startups/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/posts/wwcode-manila-ai-ml-study-group/</loc>
+  <loc>http://brianbaquiran.github.io/posts/wwcode-manila-ai-ml-study-group/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/salary-survey-2017.nb.html</loc>
+  <loc>http://brianbaquiran.github.io/salary-survey-2017.nb.html</loc>
   <lastmod>2018-08-27T01:43:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/a-study-in-scarlet/</loc>
+  <loc>http://brianbaquiran.github.io/stories/a-study-in-scarlet/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/about-nikola/</loc>
+  <loc>http://brianbaquiran.github.io/stories/about-nikola/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/bootstrap-demo/</loc>
+  <loc>http://brianbaquiran.github.io/stories/bootstrap-demo/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/charts/</loc>
+  <loc>http://brianbaquiran.github.io/stories/charts/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/creating-a-theme/</loc>
+  <loc>http://brianbaquiran.github.io/stories/creating-a-theme/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/dr-nikolas-vendetta/</loc>
+  <loc>http://brianbaquiran.github.io/stories/dr-nikolas-vendetta/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/extending/</loc>
+  <loc>http://brianbaquiran.github.io/stories/extending/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/handbook/</loc>
+  <loc>http://brianbaquiran.github.io/stories/handbook/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/internals/</loc>
+  <loc>http://brianbaquiran.github.io/stories/internals/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/listings-demo/</loc>
+  <loc>http://brianbaquiran.github.io/stories/listings-demo/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/notes-on-developing-python-packages/</loc>
+  <loc>http://brianbaquiran.github.io/stories/notes-on-developing-python-packages/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/path-handlers/</loc>
+  <loc>http://brianbaquiran.github.io/stories/path-handlers/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/quickref/</loc>
+  <loc>http://brianbaquiran.github.io/stories/quickref/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/quickstart/</loc>
+  <loc>http://brianbaquiran.github.io/stories/quickstart/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/salary-survey-2017-part2/</loc>
+  <loc>http://brianbaquiran.github.io/stories/salary-survey-2017-part2/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/salary-survey-2017-part2/index.src.html</loc>
+  <loc>http://brianbaquiran.github.io/stories/salary-survey-2017-part2/index.src.html</loc>
   <lastmod>2018-08-27T01:43:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/salary-survey-2017/</loc>
+  <loc>http://brianbaquiran.github.io/stories/salary-survey-2017/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/salary-survey-2017/index.src.html</loc>
+  <loc>http://brianbaquiran.github.io/stories/salary-survey-2017/index.src.html</loc>
   <lastmod>2018-08-27T01:43:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/slides-demo/</loc>
+  <loc>http://brianbaquiran.github.io/stories/slides-demo/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/social_buttons/</loc>
+  <loc>http://brianbaquiran.github.io/stories/social_buttons/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/take-home-programming-exam-pez/</loc>
+  <loc>http://brianbaquiran.github.io/stories/take-home-programming-exam-pez/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/take-home-programming-exam/</loc>
+  <loc>http://brianbaquiran.github.io/stories/take-home-programming-exam/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/theming/</loc>
+  <loc>http://brianbaquiran.github.io/stories/theming/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/tidying-alien-work-permit-dataset/</loc>
+  <loc>http://brianbaquiran.github.io/stories/tidying-alien-work-permit-dataset/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/tidying-alien-work-permit-dataset/index.src.html</loc>
+  <loc>http://brianbaquiran.github.io/stories/tidying-alien-work-permit-dataset/index.src.html</loc>
   <lastmod>2018-08-27T01:43:00Z</lastmod>
  </url>
  <url>
-  <loc>http://brianbaquiran.com/stories/upgrading-to-v6/</loc>
+  <loc>http://brianbaquiran.github.io/stories/upgrading-to-v6/</loc>
   <lastmod>2018-08-27T02:06:00Z</lastmod>
  </url>
 </urlset>

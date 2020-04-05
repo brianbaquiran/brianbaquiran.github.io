@@ -1,4 +1,4 @@
-Sitemap: http://brianbaquiran.com/sitemapindex.xml
+Sitemap: http://brianbaquiran.github.io/sitemapindex.xml
 
 User-Agent: *
-Host: brianbaquiran.com
+Host: brianbaquiran.github.io

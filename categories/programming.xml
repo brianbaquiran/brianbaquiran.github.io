@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Lateral Thunking (Posts about programming)</title><link>http://brianbaquiran.com/</link><description></description><atom:link type="application/rss+xml" href="http://brianbaquiran.com/categories/programming.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 04 Nov 2018 03:55:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Progress bars with tqdm</title><link>http://brianbaquiran.com/posts/progress-bars-with-tqdm/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;At your shell:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ pip install tqdm
-&lt;/pre&gt;
-&lt;p&gt;Whenever you iterate over something, wrap it in a &lt;tt class="docutils literal"&gt;tqdm&lt;/tt&gt; like so:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-In [1]: from tqdm import tqdm
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lateral Thunking (Posts about programming)</title><link>http://brianbaquiran.github.io/</link><description></description><atom:link href="http://brianbaquiran.github.io/categories/programming.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 05 Apr 2020 09:32:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Progress bars with tqdm</title><link>http://brianbaquiran.github.io/posts/progress-bars-with-tqdm/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;At your shell:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ pip install tqdm&lt;/pre&gt;
+&lt;p&gt;Whenever you iterate over something, wrap it in a &lt;code class="docutils literal"&gt;tqdm&lt;/code&gt; like so:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;In [1]: from tqdm import tqdm
 
 In [2]: from time import sleep
 
@@ -14,14 +11,13 @@ In [3]: for i in tqdm(range(1000)):
    ...:
       100%|█████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:10&amp;lt;00:00, 98.49it/s]
 
-In [4]:
-&lt;/pre&gt;&lt;/div&gt;</description><category>programming</category><category>python</category><guid>http://brianbaquiran.com/posts/progress-bars-with-tqdm/</guid><pubDate>Sat, 18 Nov 2017 23:27:26 GMT</pubDate></item><item><title>Hello, World!</title><link>http://brianbaquiran.com/posts/hello-world/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;pre class="code c"&gt;&lt;a name="rest_code_7111d33b3ce949378e226b29f4bd1e34-1"&gt;&lt;/a&gt;&lt;span class="cm"&gt;/* Hello World program */&lt;/span&gt;
-&lt;a name="rest_code_7111d33b3ce949378e226b29f4bd1e34-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7111d33b3ce949378e226b29f4bd1e34-3"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_7111d33b3ce949378e226b29f4bd1e34-4"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7111d33b3ce949378e226b29f4bd1e34-5"&gt;&lt;/a&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;a name="rest_code_7111d33b3ce949378e226b29f4bd1e34-6"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_7111d33b3ce949378e226b29f4bd1e34-7"&gt;&lt;/a&gt;    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello World"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_7111d33b3ce949378e226b29f4bd1e34-8"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7111d33b3ce949378e226b29f4bd1e34-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;</description><category>programming</category><guid>http://brianbaquiran.com/posts/hello-world/</guid><pubDate>Sun, 25 Oct 2015 05:02:45 GMT</pubDate></item></channel></rss>
+In [4]:&lt;/pre&gt;&lt;/div&gt;</description><category>programming</category><category>python</category><guid>http://brianbaquiran.github.io/posts/progress-bars-with-tqdm/</guid><pubDate>Sat, 18 Nov 2017 23:27:26 GMT</pubDate></item><item><title>Hello, World!</title><link>http://brianbaquiran.github.io/posts/hello-world/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;pre class="code c"&gt;&lt;a name="rest_code_1bff0a4e35634ee9a68b60551147aa36-1"&gt;&lt;/a&gt;&lt;span class="cm"&gt;/* Hello World program */&lt;/span&gt;
+&lt;a name="rest_code_1bff0a4e35634ee9a68b60551147aa36-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1bff0a4e35634ee9a68b60551147aa36-3"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt;&lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_1bff0a4e35634ee9a68b60551147aa36-4"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1bff0a4e35634ee9a68b60551147aa36-5"&gt;&lt;/a&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_1bff0a4e35634ee9a68b60551147aa36-6"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_1bff0a4e35634ee9a68b60551147aa36-7"&gt;&lt;/a&gt;    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Hello World"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_1bff0a4e35634ee9a68b60551147aa36-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1bff0a4e35634ee9a68b60551147aa36-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;</description><category>programming</category><guid>http://brianbaquiran.github.io/posts/hello-world/</guid><pubDate>Sun, 25 Oct 2015 05:02:45 GMT</pubDate></item></channel></rss>

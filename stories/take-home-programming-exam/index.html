@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +9,12 @@
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="http://brianbaquiran.com/stories/take-home-programming-exam/">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="http://brianbaquiran.github.io/stories/take-home-programming-exam/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian Baquiran">
 <meta property="og:site_name" content="Lateral Thunking">
 <meta property="og:title" content="Take Home Programming Exam">
-<meta property="og:url" content="http://brianbaquiran.com/stories/take-home-programming-exam/">
+<meta property="og:url" content="http://brianbaquiran.github.io/stories/take-home-programming-exam/">
 <meta property="og:description" content="Instructions
 You are free to use any programming language for these problems, but you must use the same language for all three problems.
 To submit your work, you will need an account on GitLab. We ass">
@@ -39,7 +39,7 @@ To submit your work, you will need an account on GitLab. We ass">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://brianbaquiran.com/">
+            <a class="navbar-brand" href="http://brianbaquiran.github.io/">
 
                 <span id="blog-title">Lateral Thunking</span>
             </a>
@@ -58,6 +58,9 @@ To submit your work, you will need an account on GitLab. We ass">
                 </li>
 <li>
 <a href="https://github.com/brianbaquiran">Github</a>
+                </li>
+<li>
+<a href="https://ph.linkedin.com/in/bbaquiran">Linkedin</a>
 
                 
             </li>
@@ -91,42 +94,40 @@ To submit your work, you will need an account on GitLab. We ass">
 To submit your work, you will need an account on <a class="reference external" href="https://gitlab.com">GitLab</a>. We assume you already know how to use <a class="reference external" href="http://www.git-scm.com/">git</a>.</p>
 <p>You should follow the following steps before beginning work on the problems.</p>
 <ol class="arabic simple">
-<li>Create a new project repository in GitLab with the name <strong>rtprogexam-&lt;firstname&gt;-&lt;lastname&gt;</strong> (using your own first/last name, of course).</li>
-<li>Set the visibility level to <strong>Private (Project access must be granted explicitly for each user)</strong>
-</li>
-<li>Add Wilson Santos (wilsonsantos) to the project members, with <strong>Reporter</strong> access permissions.</li>
+<li><p>Create a new project repository in GitLab with the name <strong>rtprogexam-&lt;firstname&gt;-&lt;lastname&gt;</strong> (using your own first/last name, of course).</p></li>
+<li><p>Set the visibility level to <strong>Private (Project access must be granted explicitly for each user)</strong></p></li>
+<li><p>Add Wilson Santos (wilsonsantos) to the project members, with <strong>Reporter</strong> access permissions.</p></li>
 </ol>
 <p>You can begin working on the problems locally.</p>
 <ul class="simple">
-<li>
-<tt class="docutils literal">git clone</tt> the project to your local machine.</li>
-<li>Be sure to commit and push often.</li>
-<li>You are strongly encouraged to provide unit tests and documentation for your work.</li>
-<li>You are given 48 hours to complete all three problems. Most applicants finish within 12 hours.</li>
+<li><p><code class="docutils literal">git clone</code> the project to your local machine.</p></li>
+<li><p>Be sure to commit and push often.</p></li>
+<li><p>You are strongly encouraged to provide unit tests and documentation for your work.</p></li>
+<li><p>You are given 48 hours to complete all three problems. Most applicants finish within 12 hours.</p></li>
 </ul>
 </div>
 <div class="section" id="problem-1-translate-a-block-of-text-into-an-array-structure">
 <h2>Problem 1: Translate a block of text into an array structure</h2>
 <p>Given a text file that looks like this:</p>
-<pre class="code text"><a name="rest_code_e699560a36f447b09f517f7e4d1d627d-1"></a>XXOOXOXOXO
-<a name="rest_code_e699560a36f447b09f517f7e4d1d627d-2"></a>XOOXOXOXOX
-<a name="rest_code_e699560a36f447b09f517f7e4d1d627d-3"></a>OXX XOOXOX
-<a name="rest_code_e699560a36f447b09f517f7e4d1d627d-4"></a>OXXXOOX XO
-<a name="rest_code_e699560a36f447b09f517f7e4d1d627d-5"></a>XOOXOXOXXO
-<a name="rest_code_e699560a36f447b09f517f7e4d1d627d-6"></a>XOX XXO OX
-<a name="rest_code_e699560a36f447b09f517f7e4d1d627d-7"></a>XXOOXOXOXO
-<a name="rest_code_e699560a36f447b09f517f7e4d1d627d-8"></a>XO OXOOXOO
-<a name="rest_code_e699560a36f447b09f517f7e4d1d627d-9"></a>OXXXOO OXO
-<a name="rest_code_e699560a36f447b09f517f7e4d1d627d-10"></a>OOOOOOOXOX
+<pre class="code text"><a name="rest_code_16eef1b838684760bf3a9a38ff9a3dc2-1"></a>XXOOXOXOXO
+<a name="rest_code_16eef1b838684760bf3a9a38ff9a3dc2-2"></a>XOOXOXOXOX
+<a name="rest_code_16eef1b838684760bf3a9a38ff9a3dc2-3"></a>OXX XOOXOX
+<a name="rest_code_16eef1b838684760bf3a9a38ff9a3dc2-4"></a>OXXXOOX XO
+<a name="rest_code_16eef1b838684760bf3a9a38ff9a3dc2-5"></a>XOOXOXOXXO
+<a name="rest_code_16eef1b838684760bf3a9a38ff9a3dc2-6"></a>XOX XXO OX
+<a name="rest_code_16eef1b838684760bf3a9a38ff9a3dc2-7"></a>XXOOXOXOXO
+<a name="rest_code_16eef1b838684760bf3a9a38ff9a3dc2-8"></a>XO OXOOXOO
+<a name="rest_code_16eef1b838684760bf3a9a38ff9a3dc2-9"></a>OXXXOO OXO
+<a name="rest_code_16eef1b838684760bf3a9a38ff9a3dc2-10"></a>OOOOOOOXOX
 </pre>
 <p>Each character represents a space in a rectangular grid. The space may be occupied by either an agent, or it may be an empty space. There are two types of agents: X and O.</p>
-<p><strong>Write a function</strong> <tt class="docutils literal">loadgrid</tt> <strong>that reads a text file and returns an object or data structure array representing the grid, populated with the contents of the text file.</strong></p>
+<p><strong>Write a function</strong> <code class="docutils literal">loadgrid</code> <strong>that reads a text file and returns an object or data structure array representing the grid, populated with the contents of the text file.</strong></p>
 <ul class="simple">
-<li>The function should take a single parameter, the filename, and return a single object or data structure.</li>
-<li>You may implement the data structure using existing types, define a new class for the data structure, or use a library that makes handling 2-d arrays convenient, e.g. numpy arrays.</li>
-<li>The function should not make any assumptions regarding the dimensions of the input grid, but should determine them from the contents of the file.</li>
-<li>You may assume the text file exists and will be clean. No characters other than X, O and whitespace (space or CRLF) will be in the file.</li>
-<li>You can use the example data, available <a class="reference external" href="https://raw.githubusercontent.com/brianbaquiran/brianbaquiran.github.io/source/files/schelling10x10.txt">here</a>. Feel free to generate your own input files for testing.</li>
+<li><p>The function should take a single parameter, the filename, and return a single object or data structure.</p></li>
+<li><p>You may implement the data structure using existing types, define a new class for the data structure, or use a library that makes handling 2-d arrays convenient, e.g. numpy arrays.</p></li>
+<li><p>The function should not make any assumptions regarding the dimensions of the input grid, but should determine them from the contents of the file.</p></li>
+<li><p>You may assume the text file exists and will be clean. No characters other than X, O and whitespace (space or CRLF) will be in the file.</p></li>
+<li><p>You can use the example data, available <a class="reference external" href="https://raw.githubusercontent.com/brianbaquiran/brianbaquiran.github.io/source/files/schelling10x10.txt">here</a>. Feel free to generate your own input files for testing.</p></li>
 </ul>
 </div>
 <div class="section" id="problem-2-compute-the-index-of-dissimilarity-for-a-subregion">
@@ -137,36 +138,31 @@ To submit your work, you will need an account on <a class="reference external" h
 <p><span class="math">\(\text{Index of Dissimilarity} = 0.5 \sum_{i=1}^N\big|\frac{x_i}{X} - \frac{o_i}{O}\big|\)</span></p>
 <p>Where:</p>
 <ul class="simple">
-<li>
-<span class="math">\(x_i\)</span> = number of X's in the subregion</li>
-<li>
-<span class="math">\(X\)</span> = number of X's in the entire region</li>
-<li>
-<span class="math">\(o_i\)</span> = number of O's in the subregion</li>
-<li>
-<span class="math">\(O\)</span> = number of O's in the entire region</li>
+<li><p><span class="math">\(x_i\)</span> = number of X's in the subregion</p></li>
+<li><p><span class="math">\(X\)</span> = number of X's in the entire region</p></li>
+<li><p><span class="math">\(o_i\)</span> = number of O's in the subregion</p></li>
+<li><p><span class="math">\(O\)</span> = number of O's in the entire region</p></li>
 </ul>
 </blockquote>
 <p>For our purposes, it is sufficient to consider <span class="math">\(x_i\)</span> and <span class="math">\(o_i\)</span> to be the number of X's and O's in the subregion we're interested in. The formula simplifies to:</p>
 <blockquote>
-<span class="math">\(\text{Index of Dissimilarity} = 0.5 \big|\frac{x_i}{X} - \frac{o_i}{O}\big|\)</span>
+<p><span class="math">\(\text{Index of Dissimilarity} = 0.5 \big|\frac{x_i}{X} - \frac{o_i}{O}\big|\)</span></p>
 </blockquote>
 <p>For example, if we take the upper rightmost 4x4 region from the example grid above:</p>
-<pre class="code text"><a name="rest_code_3175685b2afe4459b7b9bdd2346d00d8-1"></a>XOXO
-<a name="rest_code_3175685b2afe4459b7b9bdd2346d00d8-2"></a>OXOX
-<a name="rest_code_3175685b2afe4459b7b9bdd2346d00d8-3"></a>OXOX
-<a name="rest_code_3175685b2afe4459b7b9bdd2346d00d8-4"></a>X XO
+<pre class="code text"><a name="rest_code_da047d45e4a3405c838b97a817878f0d-1"></a>XOXO
+<a name="rest_code_da047d45e4a3405c838b97a817878f0d-2"></a>OXOX
+<a name="rest_code_da047d45e4a3405c838b97a817878f0d-3"></a>OXOX
+<a name="rest_code_da047d45e4a3405c838b97a817878f0d-4"></a>X XO
 </pre>
 <p>that contains 8 X's and 7 O's, we would compute the Index of Dissimilarity as</p>
 <blockquote>
 <p>Index of Dissimilarity = <span class="math">\(0.5 \big|\frac{8}{44} - \frac{7}{50}\big|\)</span> (there are 44 X's and 50 O's in the entire region)</p>
 <p>Index of Dissimilarity = <span class="math">\(0.02090909090909 \approx 0.021\)</span></p>
 </blockquote>
-<p><strong>Write a function</strong> <tt class="docutils literal">dissimilarity</tt> <strong>that computes the index of dissimilarity for a subregion in a grid</strong></p>
+<p><strong>Write a function</strong> <code class="docutils literal">dissimilarity</code> <strong>that computes the index of dissimilarity for a subregion in a grid</strong></p>
 <ul class="simple">
-<li>The function should take five parameters: the grid data structure or object returned by <tt class="docutils literal">loadgrid</tt>, the row and column indexes of one corner of the subregion, the row and column indexes of the diagonally opposite corner of the subregion, e.g. <tt class="docutils literal">dissimilarity(grid, row1, col1, row2, col2)</tt>
-</li>
-<li>The function should return a numeric value, the index of dissimilarity</li>
+<li><p>The function should take five parameters: the grid data structure or object returned by <code class="docutils literal">loadgrid</code>, the row and column indexes of one corner of the subregion, the row and column indexes of the diagonally opposite corner of the subregion, e.g. <code class="docutils literal">dissimilarity(grid, row1, col1, row2, col2)</code></p></li>
+<li><p>The function should return a numeric value, the index of dissimilarity</p></li>
 </ul>
 </div>
 <div class="section" id="problem-3-simulate-schelling-s-segregation-model">
@@ -175,35 +171,41 @@ To submit your work, you will need an account on <a class="reference external" h
 <p>In Schelling's model, a <strong>satisfied</strong> agent is one that is surrounded by at least <em>t</em> percent of agents that are like itself. This threshold <em>t</em> is one that will apply to all agents in the model, even though in reality everyone might have a different threshold they are satisfied with. Note that the higher the threshold, the higher the likelihood the agents will not be satisfied with their current location.</p>
 <p>For example, if t = 0.30, agent X is satisfied if at least 30% of its neighbors are also X. If fewer than 30% are X, then the agent is not satisfied, and it will want to leave its space in the grid.</p>
 <p>All dissatisfied agents leave the grid at the same time, and leave behind an empty space.</p>
-<p><strong>Write a function</strong> <tt class="docutils literal">schelling</tt> <strong>that removes dissatisfied agents from the grid.</strong></p>
+<p><strong>Write a function</strong> <code class="docutils literal">schelling</code> <strong>that removes dissatisfied agents from the grid.</strong></p>
 <ul class="simple">
-<li>The function should take two parameters, the grid data structure or object returned by <tt class="docutils literal">loadgrid</tt>, and the threshold <tt class="docutils literal">t</tt>.</li>
-<li>The threshold <tt class="docutils literal">t</tt> should be a numeric value between 0 and 1. Check for invalid values.</li>
-<li>The function should return a grid data structure, the input grid with dissatisfied agents replaced by an empty space.</li>
+<li><p>The function should take two parameters, the grid data structure or object returned by <code class="docutils literal">loadgrid</code>, and the threshold <code class="docutils literal">t</code>.</p></li>
+<li><p>The threshold <code class="docutils literal">t</code> should be a numeric value between 0 and 1. Check for invalid values.</p></li>
+<li><p>The function should return a grid data structure, the input grid with dissatisfied agents replaced by an empty space.</p></li>
 </ul>
 </div>
 </div>
     </div>
     
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
         </script></article>
 </div>
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2018        Brian Baquiran
+            Contents © 2020        Brian Baquiran
             
         </footer>
 </div>
 </div>
 
 
-            <script src="../../assets/js/all-nocdn.js"></script><a href="https://twitter.com/brianbaquiran" class="twitter-follow-button" data-show-count="false">Follow @brianbaquiran</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+            <script src="../../assets/js/all-nocdn.js"></script><a href="https://twitter.com/brianbaquiran" class="twitter-follow-button" data-show-count="false">Follow @brianbaquiran</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><!-- fancy dates --><script>
     moment.locale("en");
     fancydates(0, "YYYY-MM-DD HH:mm");
     </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

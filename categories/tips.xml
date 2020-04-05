@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Lateral Thunking (Posts about tips)</title><link>http://brianbaquiran.com/</link><description></description><atom:link type="application/rss+xml" href="http://brianbaquiran.com/categories/tips.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 04 Nov 2018 03:55:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating EC2 keypairs with AWS CLI</title><link>http://brianbaquiran.com/posts/creating-ec2-keypairs-with-aws-cli/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;It is easy to create EC2 keypairs with the AWS CLI:&lt;/p&gt;
-&lt;pre class="code shell"&gt;&lt;a name="rest_code_2d68aa9ddda645519668e3af6ac5e398-1"&gt;&lt;/a&gt;$ aws ec2 create-key-pair --key-name mynewkeypair &amp;gt; keystuff.json
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lateral Thunking (Posts about tips)</title><link>http://brianbaquiran.github.io/</link><description></description><atom:link href="http://brianbaquiran.github.io/categories/tips.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 05 Apr 2020 09:32:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating EC2 keypairs with AWS CLI</title><link>http://brianbaquiran.github.io/posts/creating-ec2-keypairs-with-aws-cli/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;It is easy to create EC2 keypairs with the AWS CLI:&lt;/p&gt;
+&lt;pre class="code shell"&gt;&lt;a name="rest_code_54baac340f4d4b759b2c6a86bc7a42b5-1"&gt;&lt;/a&gt;$ aws ec2 create-key-pair --key-name mynewkeypair &amp;gt; keystuff.json
 &lt;/pre&gt;&lt;p&gt;After creating the keypair it should appear in your EC2 key pairs listing. The
-&lt;tt class="docutils literal"&gt;keystuff.json&lt;/tt&gt; file will contain the RSA private key you will need to use
+&lt;code class="docutils literal"&gt;keystuff.json&lt;/code&gt; file will contain the RSA private key you will need to use
 to connect to any instances you create with the keypair, as well as the name of
 the key and its fingerprint.&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-1"&gt;&lt;/a&gt;{
-&lt;a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-2"&gt;&lt;/a&gt;    "KeyMaterial": "-----BEGIN RSA PRIVATE KEY-----\n&amp;lt;your private key&amp;gt;==\n-----END RSA PRIVATE KEY-----",
-&lt;a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-3"&gt;&lt;/a&gt;    "KeyName": "mynewkeypair",
-&lt;a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-4"&gt;&lt;/a&gt;    "KeyFingerprint": "53:47:ee:01:3a:35:9b:52:1c:4f:99:6f:87:b0:0f:8b:ed:83:55:3b"
-&lt;a name="rest_code_4766cbdf06f74db882b6bc4f5d6b9b2b-5"&gt;&lt;/a&gt;}
+&lt;pre class="code text"&gt;&lt;a name="rest_code_0c5117297074421eb0d19625adc37d1b-1"&gt;&lt;/a&gt;{
+&lt;a name="rest_code_0c5117297074421eb0d19625adc37d1b-2"&gt;&lt;/a&gt;    "KeyMaterial": "-----BEGIN RSA PRIVATE KEY-----\n&amp;lt;your private key&amp;gt;==\n-----END RSA PRIVATE KEY-----",
+&lt;a name="rest_code_0c5117297074421eb0d19625adc37d1b-3"&gt;&lt;/a&gt;    "KeyName": "mynewkeypair",
+&lt;a name="rest_code_0c5117297074421eb0d19625adc37d1b-4"&gt;&lt;/a&gt;    "KeyFingerprint": "53:47:ee:01:3a:35:9b:52:1c:4f:99:6f:87:b0:0f:8b:ed:83:55:3b"
+&lt;a name="rest_code_0c5117297074421eb0d19625adc37d1b-5"&gt;&lt;/a&gt;}
 &lt;/pre&gt;&lt;p&gt;To extract the private key into a separate file, use the
 &lt;a class="reference external" href="https://stedolan.github.io/jq/"&gt;jq JSON filter&lt;/a&gt;.&lt;/p&gt;
-&lt;pre class="code shell"&gt;&lt;a name="rest_code_fb5aae0e58be4578aaaba6d6125981eb-1"&gt;&lt;/a&gt;$ jq &lt;span class="s1"&gt;'.KeyMaterial'&lt;/span&gt; keystuff.json --raw &amp;gt; mynewkey.pem
-&lt;/pre&gt;&lt;/div&gt;</description><category>AWS</category><category>JSON</category><category>tips</category><guid>http://brianbaquiran.com/posts/creating-ec2-keypairs-with-aws-cli/</guid><pubDate>Thu, 29 Sep 2016 10:48:37 GMT</pubDate></item><item><title>GitLab Weirdness</title><link>http://brianbaquiran.com/posts/gitlab-weirdness/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;If you're using GitLab.com for hosting your repositories, you may have encountered
+&lt;pre class="code shell"&gt;&lt;a name="rest_code_1023106430dc42d2b5d6c63eed0733ed-1"&gt;&lt;/a&gt;$ jq &lt;span class="s1"&gt;'.KeyMaterial'&lt;/span&gt; keystuff.json --raw &amp;gt; mynewkey.pem
+&lt;/pre&gt;&lt;/div&gt;</description><category>AWS</category><category>JSON</category><category>tips</category><guid>http://brianbaquiran.github.io/posts/creating-ec2-keypairs-with-aws-cli/</guid><pubDate>Thu, 29 Sep 2016 10:48:37 GMT</pubDate></item><item><title>GitLab Weirdness</title><link>http://brianbaquiran.github.io/posts/gitlab-weirdness/</link><dc:creator>Brian Baquiran</dc:creator><description>&lt;div&gt;&lt;p&gt;If you're using GitLab.com for hosting your repositories, you may have encountered
 a strange problem wherein your newly-created repository's dashboard doesn't update.&lt;/p&gt;
-&lt;a class="reference external image-reference" href="http://brianbaquiran.com/images/gitlab-weirdness.png"&gt;&lt;img alt="/images/gitlab-weirdness.thumbnail.png" src="http://brianbaquiran.com/images/gitlab-weirdness.thumbnail.png"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="http://brianbaquiran.github.io/images/gitlab-weirdness.png"&gt;&lt;img alt="/images/gitlab-weirdness.thumbnail.png" src="http://brianbaquiran.github.io/images/gitlab-weirdness.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;That is, when you &lt;cite&gt;git push&lt;/cite&gt; your changes to the repository, the interface still
 looks like a newly-created repository, and neither your files nor your commits
 are visible in the web UI. This is weird because the remote repository works in
@@ -23,8 +23,8 @@ all other respects. You can push code up to it, clone it, etc. You just can't se
 it on the GitLab website.&lt;/p&gt;
 &lt;p&gt;I've seen this happen a couple of times, and so far I've found that the quick fix is to
 run Housekeeping on the repository from the Edit Project page.&lt;/p&gt;
-&lt;a class="reference external image-reference" href="http://brianbaquiran.com/images/gitlab-housekeeping.png"&gt;&lt;img alt="/images/gitlab-housekeeping.thumbnail.png" src="http://brianbaquiran.com/images/gitlab-housekeeping.thumbnail.png"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="http://brianbaquiran.github.io/images/gitlab-housekeeping.png"&gt;&lt;img alt="/images/gitlab-housekeeping.thumbnail.png" src="http://brianbaquiran.github.io/images/gitlab-housekeeping.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Housekeeping can take a couple of minutes but most of the time it works and you
 can see your repository's files and commit history after running it. If it
 doesn't work, you have to delete the repository in GitLab and re-create it,
-pushing your code up again.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>tips</category><guid>http://brianbaquiran.com/posts/gitlab-weirdness/</guid><pubDate>Wed, 28 Sep 2016 07:35:40 GMT</pubDate></item></channel></rss>
+pushing your code up again.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>tips</category><guid>http://brianbaquiran.github.io/posts/gitlab-weirdness/</guid><pubDate>Wed, 28 Sep 2016 07:35:40 GMT</pubDate></item></channel></rss>

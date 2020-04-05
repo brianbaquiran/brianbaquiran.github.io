@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,19 +9,21 @@
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="http://brianbaquiran.com/stories/upgrading-to-v6/">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="http://brianbaquiran.github.io/stories/upgrading-to-v6/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Brian Baquiran">
 <meta property="og:site_name" content="Lateral Thunking">
 <meta property="og:title" content="Upgrading to v6">
-<meta property="og:url" content="http://brianbaquiran.com/stories/upgrading-to-v6/">
-<meta property="og:description" content="Version:
+<meta property="og:url" content="http://brianbaquiran.github.io/stories/upgrading-to-v6/">
+<meta property="og:description" content="Upgrading to v6
+
+Version
 7.4.1
 
 
 Nikola tries fairly hard to be compatible between versions. However, there were
 a few areas which were getting clunky, and needed fxing. So, here's what you may
-need to change in your">
+need t">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2013-08-23T23:00:00-03:00">
 </head>
@@ -39,7 +41,7 @@ need to change in your">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://brianbaquiran.com/">
+            <a class="navbar-brand" href="http://brianbaquiran.github.io/">
 
                 <span id="blog-title">Lateral Thunking</span>
             </a>
@@ -58,6 +60,9 @@ need to change in your">
                 </li>
 <li>
 <a href="https://github.com/brianbaquiran">Github</a>
+                </li>
+<li>
+<a href="https://ph.linkedin.com/in/bbaquiran">Linkedin</a>
 
                 
             </li>
@@ -84,91 +89,92 @@ need to change in your">
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<table class="docinfo" frame="void" rules="none">
-<col class="docinfo-name">
-<col class="docinfo-content">
-<tbody valign="top"><tr>
-<th class="docinfo-name">Version:</th>
-<td>7.4.1</td>
-</tr></tbody>
-</table>
+    <div class="section" id="upgrading-to-v6">
+<h2>Upgrading to v6</h2>
+<dl class="field-list simple">
+<dt>Version</dt>
+<dd>
+<p>7.4.1</p>
+</dd>
+</dl>
 <p class="lead">Nikola tries fairly hard to be compatible between versions. However, there were
 a few areas which were getting clunky, and needed fxing. So, here's what you may
 need to change in your site.</p>
 <p>If you need to change anything else, or something breaks, please write at nikola-discuss
 and I'll add further tweaks here.</p>
 <div class="section" id="themes">
-<h2>Themes</h2>
-<dl class="docutils">
+<h3>Themes</h3>
+<dl class="simple">
 <dt><strong>NOTE</strong></dt>
-<dd>There is no equivalent for the jinja-default theme yet. If you have a custom,
-jinja-based theme, upgrading is probably a bad idea right now.</dd>
+<dd>
+<p>There is no equivalent for the jinja-default theme yet. If you have a custom,
+jinja-based theme, upgrading is probably a bad idea right now.</p>
+</dd>
 </dl>
 <p>Themes have been renamed:</p>
 <ul class="simple">
-<li>site =&gt; bootstrap</li>
-<li>orphan =&gt; base</li>
+<li><p>site =&gt; bootstrap</p></li>
+<li><p>orphan =&gt; base</p></li>
 </ul>
 <p>Theme added:</p>
 <ul class="simple">
-<li>base-jinja</li>
+<li><p>base-jinja</p></li>
 </ul>
 <p>Themes have been moved out of nikola and into nikola-themes:</p>
 <ul class="simple">
-<li>default =&gt; oldfashioned at nikola-themes</li>
-<li>jinja-default =&gt; not there yet, coming soon</li>
-<li>monospace =&gt; monospace at nikola-themes</li>
-<li>site-reveal =&gt; reveal at nikola-themes</li>
+<li><p>default =&gt; oldfashioned at nikola-themes</p></li>
+<li><p>jinja-default =&gt; not there yet, coming soon</p></li>
+<li><p>monospace =&gt; monospace at nikola-themes</p></li>
+<li><p>site-reveal =&gt; reveal at nikola-themes</p></li>
 </ul>
-<p>You may have to change your <tt class="docutils literal">THEME</tt> setting, or change the <tt class="docutils literal">parent</tt> if you are
+<p>You may have to change your <code class="docutils literal">THEME</code> setting, or change the <code class="docutils literal">parent</code> if you are
 using a custom theme. Also, some templates have been tweaked, but nothing should
 break for you.</p>
 <p>Facebook comments support changed the HTML tag to:</p>
-<pre class="code mako"><a name="rest_code_da453e73026041e1b8b44f4818639721-1"></a><span class="x">&lt;html</span>
-<a name="rest_code_da453e73026041e1b8b44f4818639721-2"></a><span class="cp">%</span><span class="k">if</span> <span class="n">comment_system</span> <span class="o">==</span> <span class="s1">'facebook'</span><span class="p">:</span><span class="x"></span>
-<a name="rest_code_da453e73026041e1b8b44f4818639721-3"></a><span class="x">xmlns:fb="http://ogp.me/ns/fb#"</span>
-<a name="rest_code_da453e73026041e1b8b44f4818639721-4"></a><span class="cp">%</span><span class="k">endif</span><span class="x"></span>
-<a name="rest_code_da453e73026041e1b8b44f4818639721-5"></a><span class="x">lang="</span><span class="cp">${</span><span class="n">lang</span><span class="cp">}</span><span class="x">"&gt;</span>
+<pre class="code mako"><a name="rest_code_1209f109131c4d18a3515e1b4dd8b599-1"></a><span class="x">&lt;html</span>
+<a name="rest_code_1209f109131c4d18a3515e1b4dd8b599-2"></a><span class="cp">%</span><span class="k">if</span> <span class="n">comment_system</span> <span class="o">==</span> <span class="s1">'facebook'</span><span class="p">:</span><span class="x"></span>
+<a name="rest_code_1209f109131c4d18a3515e1b4dd8b599-3"></a><span class="x">xmlns:fb="http://ogp.me/ns/fb#"</span>
+<a name="rest_code_1209f109131c4d18a3515e1b4dd8b599-4"></a><span class="cp">%</span><span class="k">endif</span><span class="x"></span>
+<a name="rest_code_1209f109131c4d18a3515e1b4dd8b599-5"></a><span class="x">lang="</span><span class="cp">${</span><span class="n">lang</span><span class="cp">}</span><span class="x">"&gt;</span>
 </pre>
-<p>If you do not want to use Facebook comments, you can leave the old <tt class="docutils literal">&lt;html
-<span class="pre">lang="${lang}"&gt;</span></tt> tag in and it will work just fine.</p>
+<p>If you do not want to use Facebook comments, you can leave the old <code class="docutils literal">&lt;html
+<span class="pre">lang="${lang}"&gt;</span></code> tag in and it will work just fine.</p>
 <div class="section" id="comments">
-<h3>Comments</h3>
+<h4>Comments</h4>
 <p>If you want a custom theme to support comment systems other than disqus, you will need to:</p>
 <ol class="arabic simple">
-<li>Replace mentions of disqus_helper.tmpl with comments_helper.tmpl</li>
-<li>Replace mentions of html_disqus with comment_form</li>
-<li>Replace mentions of html_disqus_link with comment_link</li>
-<li>Replace mentions of html_disqus_script with comment_link_script</li>
+<li><p>Replace mentions of disqus_helper.tmpl with comments_helper.tmpl</p></li>
+<li><p>Replace mentions of html_disqus with comment_form</p></li>
+<li><p>Replace mentions of html_disqus_link with comment_link</p></li>
+<li><p>Replace mentions of html_disqus_script with comment_link_script</p></li>
 </ol>
 <p>If you don't, your theme should work just fine, but support only disqus comments.</p>
 </div>
 </div>
 <div class="section" id="configuration">
-<h2>Configuration</h2>
+<h3>Configuration</h3>
 <p>A number of options have been renamed. In most cases, the behaviour
 should be <strong>exactly</strong> as before.</p>
-<p>However, <tt class="docutils literal">post_pages</tt> was split into <tt class="docutils literal">POSTS</tt> and <tt class="docutils literal">PAGES</tt>.  Long
-story short, anything that had a <tt class="docutils literal">True</tt> as the <tt class="docutils literal">use_in_feeds</tt>
-(last) value goes to <tt class="docutils literal">POSTS</tt> and anything with <tt class="docutils literal">False</tt> goes to
-<tt class="docutils literal">PAGES</tt>.  For example:</p>
-<pre class="code python"><a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-1"></a><span class="n">post_pages</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-2"></a>    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">,</span> <span class="bp">True</span><span class="p">),</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-3"></a>    <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-4"></a>    <span class="p">(</span><span class="s2">"stories/*.html"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-5"></a><span class="p">)</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-6"></a>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-7"></a><span class="c1">### becomes ###</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-8"></a>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-9"></a><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-10"></a>    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-11"></a><span class="p">)</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-12"></a>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-13"></a><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-14"></a>    <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-15"></a>    <span class="p">(</span><span class="s2">"stories/*.html"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
-<a name="rest_code_ae9ba3fd2fda4801bb2d0a4b56e0fa78-16"></a><span class="p">)</span>
+<p>However, <code class="docutils literal">post_pages</code> was split into <code class="docutils literal">POSTS</code> and <code class="docutils literal">PAGES</code>.  Long
+story short, anything that had a <code class="docutils literal">True</code> as the <code class="docutils literal">use_in_feeds</code>
+(last) value goes to <code class="docutils literal">POSTS</code> and anything with <code class="docutils literal">False</code> goes to
+<code class="docutils literal">PAGES</code>.  For example:</p>
+<pre class="code python"><a name="rest_code_979d5023211745d08b4b1d22beca4667-1"></a><span class="n">post_pages</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-2"></a>    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-3"></a>    <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-4"></a>    <span class="p">(</span><span class="s2">"stories/*.html"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-5"></a><span class="p">)</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-6"></a>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-7"></a><span class="c1">### becomes ###</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-8"></a>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-9"></a><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-10"></a>    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-11"></a><span class="p">)</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-12"></a>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-13"></a><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-14"></a>    <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-15"></a>    <span class="p">(</span><span class="s2">"stories/*.html"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+<a name="rest_code_979d5023211745d08b4b1d22beca4667-16"></a><span class="p">)</span>
 </pre>
 <p>Also, you will get warnings. That doesn't mean things broke. They are
 there to inform you of what's happening, and that you need to tweak your
@@ -185,17 +191,23 @@ removed in v7, when those warnings will become errors.</p>
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2018        Brian Baquiran
+            Contents © 2020        Brian Baquiran
             
         </footer>
 </div>
 </div>
 
 
-            <script src="../../assets/js/all-nocdn.js"></script><a href="https://twitter.com/brianbaquiran" class="twitter-follow-button" data-show-count="false">Follow @brianbaquiran</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+            <script src="../../assets/js/all-nocdn.js"></script><a href="https://twitter.com/brianbaquiran" class="twitter-follow-button" data-show-count="false">Follow @brianbaquiran</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><!-- fancy dates --><script>
     moment.locale("en");
     fancydates(0, "YYYY-MM-DD HH:mm");
     </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
